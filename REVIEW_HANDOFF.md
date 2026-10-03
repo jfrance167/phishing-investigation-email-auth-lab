@@ -127,12 +127,9 @@ ARC, SRS, public-provider testing, external enrichment, malware and real victim 
 5. For a new machine, follow docs/SETUP.md with fresh private keys and official verified artifacts.
    No private VM/image/key files are distributed in the Git repository.
 
-## Pending external actions
+## Hosted publication follow-up
 
-Independent human/security review remains required. Prepared CodeQL/test/Bandit workflows have not
-run on GitHub. After explicit publication approval, inspect visibility/default branch/CodeQL eligibility,
-enable applicable code and secret scanning/push protection/Dependabot, configure reviews/checks without
-weakening protections, run hosted checks and address findings. No remote settings were changed here.
+Public repository: https://github.com/jfrance167/phishing-investigation-email-auth-lab . Jake explicitly approved the preserved evidence/history upload after the portfolio PR review. Initial published commit bd4f431 passed CodeQL, Python/Bandit, the PowerShell guard and Dependabot; no open CodeQL alerts were returned. Secret scanning/push protection, dependency updates, private vulnerability reporting and read-only default workflow permissions are enabled. The main branch will require the observed offline, powershell and python jobs. Review current checks/settings before merging new work. Human security review remains recommended before operational reuse; publication did not rerun live experiments.
 The October 3 portfolio review updated the Obsidian codebase/review notes. Raw evidence remains in Git; no credentials or operational inventory were imported.
 
 ## Portfolio review follow-up — October 3, 2026

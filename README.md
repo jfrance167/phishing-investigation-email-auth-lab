@@ -4,7 +4,7 @@ An isolated training lab that explains what SPF, DKIM and DMARC establish, and w
 still needs to investigate. Real Postfix/Rspamd processing produces signed messages, DNS failures,
 queue holds, SMTP rejections and forwarding outcomes. All identities and messages are synthetic.
 
-**Local implementation and agent review complete.** Public GitHub upload, including the preserved evidence and history, was explicitly approved October 3, 2026. Publication and hosted validation are in progress. See [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md)
+**Published and validated on GitHub.** The preserved synthetic evidence and history were publicly uploaded with explicit approval on October 3, 2026. Python/Bandit, the PowerShell guard and CodeQL passed on the initial published commit; see [current workflow results](https://github.com/jfrance167/phishing-investigation-email-auth-lab/actions). See [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md)
 for verified results and remaining manual/GitHub checks. The completed review is in [docs/REVIEW.md](docs/REVIEW.md). See [evidence/INDEX.json](evidence/INDEX.json)
 for 31 passing authentication scenarios; failed and partial attempts remain separate.
 
@@ -117,8 +117,11 @@ report header identity/time ranges, forgery claims, malformed/oversized inputs, 
 regression, scenario command boundaries, relay transformation and report XML/gzip bounds.
 Integration evidence comes from the running guests, not mocked authentication verdicts.
 Hash manifests detect changes against the preserved manifest; they cannot authenticate a compromised
-administrator. Manual security review remains required. GitHub CodeQL, hosted CI, repository visibility,
-branch protections, secret scanning and push protection have not run or been configured remotely.
+administrator. Manual security review remains recommended before operational reuse. GitHub CodeQL,
+hosted Python/Bandit and PowerShell checks passed on the published checkpoint. Secret scanning,
+push protection, dependency security updates and private vulnerability reporting are enabled.
+Default-branch protection requires the offline, PowerShell and CodeQL jobs; inspect current settings
+and checks before proposing future changes.
 
 For the offline ownership guard test, run `pwsh -NoProfile -File tests/test_Repair-ConsoleBootstrap.ps1`.
 It exercises only the pure path/state/explicit-assertion guard and does not invoke VirtualBox or inspect
