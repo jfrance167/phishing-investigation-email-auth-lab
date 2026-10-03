@@ -36,6 +36,22 @@ Evidence root: [review-01](../evidence/review-01/). All 31 authentication cases 
 
 Final-source baseline/rotation, exact three-message/two-report correlation and three-guest isolation/connectivity results are recorded alongside the matrix. Original failed/partial attempts and prior verification are retained; no historical evidence is rewritten. Hash checks detect changes against a trusted manifest, not malicious replacement of both.
 
+## Changes in this revision (October 3, 2026)
+
+This revision adds bounded evidence hashing and tighter VM console recovery guards. Historical
+VM/authentication evidence below is from the earlier reviewed source revision; these changes do
+not claim fresh guest-state verification or regenerate historical evidence.
+
+| Priority | Finding | Proposed correction |
+|---|---|---|
+| P2 | Evidence bundle hashing loaded each entire file into memory, the tree was sorted before limits could apply, and the manifest JSON read was unbounded | Stream file hashes in 64 KiB chunks; lazily stop traversal after 20,000 total file/directory entries; enforce 16 MiB/file, 256 MiB/bundle, 10,000 files and a 4 MiB manifest bound. Existing evidence hashes are preserved because the SHA-256 byte input and manifest format do not change. |
+| P2 | Recovery helper accepted a VM path by substring and typed a root password without checking command success for Enter keystrokes | Require exact normalized ownership path, successful VM inventory, running VM state, and explicit `-ConfirmFreshLogin` operator assertion. Check both text and Enter operations. Console visibility/freshness remains a human precondition and is not automatically verified. |
+
+Offline checks cover chunked digest equivalence, byte/file/entry/manifest limits, exact VM path
+matching, running state and required operator assertion. No historical live guest or authentication
+evidence was regenerated. The recovery helper still relies on a human to confirm the visible console
+is at a fresh login prompt; its switch records that assertion and does not verify console contents.
+
 ## Remaining limits
 
 Independent human review of authentication settings, ingress stripping, root SSH commands, ownership/firewall gates, relay retries and queue/report evidence remains recommended before portfolio publication. Hosted CodeQL/CI and GitHub security eligibility/protections have not been executed; no remote exists. ISO signed checksum signature, full transitive CVE assessment, ARC/SRS and current-standard report/XSD conformance remain outside the verified scope. The README and handoff state these limits.

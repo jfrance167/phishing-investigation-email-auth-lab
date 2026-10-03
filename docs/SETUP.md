@@ -42,4 +42,16 @@ For existing guests, reviewed copying helpers are `tools.lab.upload`, `download`
 they use pinned SSH, fixed role addresses and single argv path arguments. Package/network
 provisioning is deliberately separate from the experiment runner: a gate failure never adds NAT.
 `Repair-ConsoleBootstrap.ps1` is preserved historical recovery for the initial two consoles; it
-is not a general unattended installer or a required step in a fresh corrected bootstrap.
+is not a general unattended installer or a required step in a fresh corrected bootstrap. It now
+requires `-ConfirmFreshLogin` as an explicit operator assertion, requires the exact owned VM
+configuration path and a running VM, and checks each VirtualBox keyboard operation. The switch
+does not detect the visible guest console: before using it, the operator must verify the named
+owned guest is showing a fresh tty login prompt. Do not use this recovery helper on another VM or
+console. Its offline guard tests do not access VirtualBox or read credentials.
+
+The evidence-manifest proposal streams SHA-256 input in 64 KiB chunks and rejects more than
+16 MiB per file, 256 MiB total per bundle, 10,000 evidence files, or a 4 MiB manifest. These
+limits are above the reviewed snapshot's 2,227 evidence files, 20,000 directory-entry cap,
+17,474,908 bytes total and 119,836-byte largest file. The entry limit counts files and directories
+and stops the lazy tree walk before sorting or hashing. Incremental SHA-256 preserves each existing
+file digest; the manifest format is unchanged.

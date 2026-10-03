@@ -12,15 +12,21 @@ from email.parser import BytesParser
 from pathlib import Path
 
 MAX_BYTES = 2_097_152
+MAX_MANIFEST_BYTES = 4 * 1024 * 1024
+MAX_BUNDLE_FILES = 10_000
+MAX_BUNDLE_ENTRIES = 20_000
+MAX_FILE_BYTES = 16 * 1024 * 1024
+MAX_BUNDLE_BYTES = 256 * 1024 * 1024
+HASH_CHUNK_BYTES = 64 * 1024
 AUTH_RE = re.compile(r'\b(spf|dkim|dmarc)\s*=\s*([a-z]+)', re.I)
 
 
-def bounded_bytes(path):
+def bounded_bytes(path, max_bytes=MAX_BYTES):
     # Bound the actual read, including files that grow/change after opening.
     with path.open('rb') as stream:
-        content=stream.read(MAX_BYTES+1)
-    if len(content) > MAX_BYTES:
-        raise ValueError('Evidence exceeds 2 MiB parser limit')
+        content=stream.read(max_bytes+1)
+    if len(content) > max_bytes:
+        raise ValueError(f'File exceeds {max_bytes} byte read limit')
     return content
 
 
@@ -64,18 +70,42 @@ def summarize_receiver(path):
 
 
 def manifest(directory):
+    """Hash a bounded evidence bundle incrementally without changing digest semantics."""
     root = directory.resolve()
     files = {}
-    for path in sorted(root.rglob('*')):
+    total_bytes = 0
+    entry_count = 0
+    for path in root.rglob('*'):
+        entry_count += 1
+        if entry_count > MAX_BUNDLE_ENTRIES:
+            raise ValueError('Evidence bundle exceeds directory-entry limit')
         if path.is_symlink():
             raise ValueError('Symlink in evidence bundle')
         if path.is_file() and path.name != 'SHA256.json':
-            files[path.relative_to(root).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
-    return files
+            if len(files) >= MAX_BUNDLE_FILES:
+                raise ValueError('Evidence bundle exceeds file-count limit')
+            digest = hashlib.sha256()
+            file_bytes = 0
+            with path.open('rb') as stream:
+                while True:
+                    chunk = stream.read(HASH_CHUNK_BYTES)
+                    if not chunk:
+                        break
+                    file_bytes += len(chunk)
+                    total_bytes += len(chunk)
+                    if file_bytes > MAX_FILE_BYTES:
+                        raise ValueError('Evidence file exceeds per-file size limit')
+                    if total_bytes > MAX_BUNDLE_BYTES:
+                        raise ValueError('Evidence bundle exceeds total-size limit')
+                    digest.update(chunk)
+            files[path.relative_to(root).as_posix()] = digest.hexdigest()
+    return dict(sorted(files.items()))
 
 
 def verify(directory):
-    expected = json.loads((directory / 'SHA256.json').read_text())
+    expected = json.loads(bounded_bytes(directory / 'SHA256.json', MAX_MANIFEST_BYTES))
+    if not isinstance(expected, dict) or len(expected) > MAX_BUNDLE_FILES:
+        raise ValueError('Malformed or oversized evidence manifest')
     if expected != manifest(directory):
         raise ValueError('Evidence file set or hashes changed')
 

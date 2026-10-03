@@ -1,7 +1,10 @@
+import hashlib
 import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
+from tools import evidence
 from tools.evidence import claims, manifest, verify, summarize_receiver
 
 
@@ -27,6 +30,57 @@ class EvidenceTests(unittest.TestCase):
             with self.assertRaises(ValueError): verify(root)
             (root/'raw.eml').unlink()
             with self.assertRaises(ValueError): verify(root)
+
+    def test_streamed_manifest_preserves_sha256_digest(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            raw=b'prior-evidence\x00bytes\r\n'*5
+            (root/'raw.eml').write_bytes(raw)
+            self.assertEqual(manifest(root)['raw.eml'],hashlib.sha256(raw).hexdigest())
+
+    def test_manifest_enforces_per_file_and_total_byte_limits(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/'oversized.bin').write_bytes(b'x'*33)
+            with patch.object(evidence,'HASH_CHUNK_BYTES',8), \
+                 patch.object(evidence,'MAX_FILE_BYTES',32), \
+                 patch.object(evidence,'MAX_BUNDLE_BYTES',64):
+                with self.assertRaisesRegex(ValueError,'per-file'):
+                    manifest(root)
+            (root/'oversized.bin').unlink()
+            (root/'first.bin').write_bytes(b'a'*17)
+            (root/'second.bin').write_bytes(b'b'*17)
+            with patch.object(evidence,'HASH_CHUNK_BYTES',8), \
+                 patch.object(evidence,'MAX_FILE_BYTES',32), \
+                 patch.object(evidence,'MAX_BUNDLE_BYTES',32):
+                with self.assertRaisesRegex(ValueError,'total-size'):
+                    manifest(root)
+
+    def test_manifest_enforces_file_count_limit(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/'one').write_bytes(b'1')
+            (root/'two').write_bytes(b'2')
+            with patch.object(evidence,'MAX_BUNDLE_FILES',1):
+                with self.assertRaisesRegex(ValueError,'file-count'):
+                    manifest(root)
+
+    def test_manifest_enforces_lazy_directory_entry_limit(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/'one').write_bytes(b'1')
+            (root/'two').write_bytes(b'2')
+            with patch.object(evidence,'MAX_BUNDLE_ENTRIES',1):
+                with self.assertRaisesRegex(ValueError,'directory-entry'):
+                    manifest(root)
+
+    def test_verify_bounds_manifest_json_read(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/'SHA256.json').write_bytes(b' '*33)
+            with patch.object(evidence,'MAX_MANIFEST_BYTES',32):
+                with self.assertRaisesRegex(ValueError,'read limit'):
+                    verify(root)
 
     def test_oversized_untrusted_message_is_rejected(self):
         with tempfile.TemporaryDirectory() as folder:

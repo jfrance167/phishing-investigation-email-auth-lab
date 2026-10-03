@@ -120,6 +120,10 @@ Hash manifests detect changes against the preserved manifest; they cannot authen
 administrator. Manual security review remains required. GitHub CodeQL, hosted CI, repository visibility,
 branch protections, secret scanning and push protection have not run or been configured remotely.
 
+For the offline ownership guard test, run `pwsh -NoProfile -File tests/test_Repair-ConsoleBootstrap.ps1`.
+It exercises only the pure path/state/explicit-assertion guard and does not invoke VirtualBox or inspect
+the visible VM console.
+
 ## Limits and attribution
 
 This is not a production MTA, cryptographic bypass, malware sandbox or real phishing campaign.
