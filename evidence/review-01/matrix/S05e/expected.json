@@ -1,0 +1,14 @@
+{
+  "id": "S05e",
+  "name": "Wrong DKIM public key",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": true,
+  "key": "wrong",
+  "spf": "fail",
+  "dkim": "fail",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered"
+}

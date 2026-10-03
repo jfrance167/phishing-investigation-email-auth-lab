@@ -1,0 +1,9 @@
+2026-10-03T03:49:12.828880+00:00 receiver postfix/smtpd[15474]: CA54440138: client=unknown[10.77.0.10]
+2026-10-03T03:49:12.829742+00:00 receiver postfix/cleanup[15478]: CA54440138: message-id=<S06b@sender.test>
+2026-10-03T03:49:12.927199+00:00 receiver postfix/qmgr[12134]: CA54440138: from=<analyst@sender.test>, size=596, nrcpt=1 (queue active)
+2026-10-03T03:49:12.929239+00:00 receiver postfix/smtp[15479]: CA54440138: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=0.1, delays=0.1/0/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 0txnG6LXtfpmKwKE7xaVK9)
+2026-10-03T03:49:12.929321+00:00 receiver postfix/qmgr[12134]: CA54440138: removed
+2026-10-03 03:49:12 #20084(rspamd_proxy) <8673d2>; proxy; rspamd_message_parse: loaded message; id: <S06b@sender.test>; queue-id: <CA54440138>; size: 370; checksum: <2a7ee5ecade81d5bafb6cc57dfe07fa5>
+2026-10-03 03:49:12 #20084(rspamd_proxy) <8673d2>; proxy; rspamd_task_write_log: id: <S06b@sender.test>, qid: <CA54440138>, ip: 10.77.0.10, from: <analyst@sender.test>, (default: F (no action): [-0.10/1000.00] [R_SPF_ALLOW(-0.20){+ip4:10.77.0.10;},DMARC_POLICY_SOFTFAIL(0.10){mail.sender.test : SPF not aligned (strict), No valid DKIM;none;},R_DKIM_NA(0.00){}]), len: 370, time: 51.730ms, dns req: 3, digest: <2a7ee5ecade81d5bafb6cc57dfe07fa5>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>
+{"queue_name": "hold", "queue_id": "9FE774019D", "arrival_time": 1790999220, "message_size": 596, "forced_expire": false, "sender": "analyst@sender.test", "recipients": [{"address": "analyst@recipient.test"}]}
+{"queue_name": "hold", "queue_id": "5D22F40137", "arrival_time": 1790997586, "message_size": 596, "forced_expire": false, "sender": "analyst@sender.test", "recipients": [{"address": "analyst@recipient.test"}]}

@@ -4,9 +4,9 @@ An isolated training lab that explains what SPF, DKIM and DMARC establish, and w
 still needs to investigate. Real Postfix/Rspamd processing produces signed messages, DNS failures,
 queue holds, SMTP rejections and forwarding outcomes. All identities and messages are synthetic.
 
-**Local review build.** There is no remote repository or publication. See [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md)
-for verified results and remaining manual/GitHub checks. See [evidence/INDEX.json](evidence/INDEX.json)
-for 26 passing authentication scenarios; failed and partial attempts remain separate.
+**Local implementation and agent review complete.** There is no remote repository or publication. See [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md)
+for verified results and remaining manual/GitHub checks. The completed review is in [docs/REVIEW.md](docs/REVIEW.md). See [evidence/INDEX.json](evidence/INDEX.json)
+for 31 passing authentication scenarios; failed and partial attempts remain separate.
 
 ## Architecture and trust
 
@@ -69,9 +69,9 @@ After host suspension, `python -m tools.sync_clock --output evidence/my-clock-re
 the marked guest clocks; rerun the gate. Never change existing evidence timestamps.
 
 `python -m tools.reset_replay --output evidence/my-reset-replay` verifies completed evidence before
-reset, exports pending queue entries, removes only individually exported entries with valid synthetic
-scenario markers, restores baseline config, clears authentication caches by restart, and replays nine
-cases. Keys, report data and Mailpit capture remain retained. Unmarked queue entries remain deferred;
+reset, exports pending queue entries, removes only individually exported entries linked by role, queue ID, scenario and fresh run nonce
+to a verified controlled collection, restores baseline config, clears authentication caches by restart, and replays nine
+cases. Keys, report data and Mailpit capture remain retained. Unknown or unlinked queue entries remain retained;
 reset is a semantic reset, not VM destruction or a full database wipe. Run tools serially: they share
 guest staging files and policy state. Avoid host sleep while a case is running.
 
@@ -87,9 +87,11 @@ Temporary NAT is provisioning only; remove it before enabling experiments.
 | Scenario | Measured behavior |
 |---|---|
 | S01 | SPF/DKIM/DMARC pass, captured through receiver |
+| S02/S02a | Unauthorized IP fails SPF; valid aligned DKIM independently rescues DMARC |
 | S03/S04 | Passing but unaligned SPF/DKIM does not pass DMARC |
 | S05a | Altered signed body breaks DKIM; aligned SPF still passes DMARC |
-| S06r/S06s | Same sibling identities pass relaxed alignment and fail strict alignment |
+| S06r/S06s | Combined sibling identities pass relaxed alignment and fail strict alignment |
+| S06a–d | Separate SPF-only and DKIM-only sibling identities demonstrate relaxed/strict alignment |
 | S07n/S07q/S07x | Failed DMARC: deliver / actual hold queue / SMTP rejection |
 | S08a–d | Missing SPF, malformed DMARC, lookup-budget permanent error, DNS temporary error |
 | S09f/S09m | Forwarding retains DKIM / footer modification breaks it |
@@ -107,10 +109,11 @@ limits are in [docs/REPORTING.md](docs/REPORTING.md).
 python -m unittest discover -s tests -v
 python -m bandit -r tools
 python -m tools.build_index
-python -m tools.evidence verify evidence/reset-replay-02
+python -m tools.evidence verify evidence/review-01/reset-replay
 ```
 
-Local tests cover forgery claims, malformed/oversized inputs, evidence tampering, DNS newline
+21 offline tests passed. Local tests cover queue cleanup provenance, failed restoration, selector identity, stale logs,
+report header identity/time ranges, forgery claims, malformed/oversized inputs, evidence tampering, DNS newline
 regression, scenario command boundaries, relay transformation and report XML/gzip bounds.
 Integration evidence comes from the running guests, not mocked authentication verdicts.
 Hash manifests detect changes against the preserved manifest; they cannot authenticate a compromised

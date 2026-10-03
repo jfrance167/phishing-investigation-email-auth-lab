@@ -1,0 +1,38 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Sat, 3 Oct 2026 03:45:09 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id 857CB4019D
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:45:09 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=pass header.d=sender.test header.s=lab1 header.b=SImVwpEi;
+	dmarc=fail reason="No valid SPF, DKIM not aligned (relaxed)" header.from=lookalike.test (policy=none);
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.11 as permitted sender) smtp.mailfrom=analyst@sender.test
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id F3A77943
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:45:07 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790999108;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=SImVwpEijLpt0JqAcNoB161hyLXw7RhaGAwY7aE0DPdhQ48TbAaF5lnoA3PzPBGVaQv+jD
+	asUhx8YRwHoH2HYG99vb2df3xLNvN7dVcM78N/u6aVAjvf5pFc2OcokcOvMjmIkGP3G7jX
+	OSlNmAbH1eP6j3Nmx77cPknz/W/h4LqW4ZPYhEZd7WKbaLFWlfldlpdgIGhAJdxPSsDqiU
+	igE7NU4amYY6wBa6XQAXc9W8RsrKHra/IF1TvF7D1jeGgumNkPsFDYA5yBBsQn+EXXQ/Lj
+	fiE9yPzqRNOTZudg0e/B6x1fsuQqxy0Lkgbreea1btIE5/1P8NaOkpnMPo9mEg==
+From: Synthetic Lab Analyst <analyst@lookalike.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S04 Valid unaligned DKIM
+Message-ID: <S04@sender.test>
+X-Lab-Scenario: S04
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 655a976b10124bac841d2071cf99c7ec
+Date: Sat, 03 Oct 2026 03:45:07 +0000 (UTC)
+X-Rspamd-Queue-Id: 857CB4019D
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+

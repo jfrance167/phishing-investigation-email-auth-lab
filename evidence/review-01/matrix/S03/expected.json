@@ -1,0 +1,13 @@
+{
+  "id": "S03",
+  "name": "Passing unaligned SPF",
+  "from": "lookalike.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.10",
+  "signed": false,
+  "spf": "pass",
+  "dkim": "none",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered"
+}

@@ -1,0 +1,60 @@
+2026-10-03T03:20:22.626146+00:00 relay postfix/smtpd[2349]: connect from localhost[127.0.0.1]
+2026-10-03T03:20:22.626898+00:00 relay postfix/smtpd[2349]: 990679AB: client=localhost[127.0.0.1]
+2026-10-03T03:20:22.627368+00:00 relay postfix/cleanup[2346]: 990679AB: message-id=<S09m@sender.test>
+2026-10-03T03:20:22.628554+00:00 relay postfix/smtpd[2349]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+2026-10-03T03:20:22.628598+00:00 relay postfix/qmgr[2287]: 990679AB: from=<analyst@sender.test>, size=1974, nrcpt=1 (queue active)
+2026-10-03T03:20:22.635226+00:00 relay postfix/pipe[2347]: 8FE1598E: to=<analyst@recipient.test>, relay=pealfilter, delay=0.05, delays=0/0/0/0.04, dsn=2.0.0, status=sent (delivered via pealfilter service)
+2026-10-03T03:20:22.635279+00:00 relay postfix/qmgr[2287]: 8FE1598E: removed
+2026-10-03T03:20:22.732456+00:00 relay postfix/smtp[2350]: 990679AB: to=<analyst@recipient.test>, relay=10.77.0.20[10.77.0.20]:25, delay=0.11, delays=0/0/0/0.1, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 31589401A3)
+2026-10-03T03:20:22.732852+00:00 relay postfix/qmgr[2287]: 990679AB: removed
+2026-10-03T03:23:42.790315+00:00 relay postfix/anvil[2344]: statistics: max connection rate 2/60s for (smtp:10.77.0.10) at Oct  3 03:20:22
+2026-10-03T03:23:42.790771+00:00 relay postfix/anvil[2344]: statistics: max connection count 1 for (smtp:10.77.0.10) at Oct  3 03:20:07
+2026-10-03T03:23:42.790886+00:00 relay postfix/anvil[2344]: statistics: max cache size 1 at Oct  3 03:20:07
+2026-10-03T03:48:20.714997+00:00 relay postfix/smtpd[2633]: connect from unknown[10.77.0.10]
+2026-10-03T03:48:20.722170+00:00 relay postfix/smtpd[2633]: B048498E: client=unknown[10.77.0.10]
+2026-10-03T03:48:20.722982+00:00 relay postfix/cleanup[2637]: B048498E: message-id=<S09f@sender.test>
+2026-10-03T03:48:20.724452+00:00 relay postfix/qmgr[2287]: B048498E: from=<analyst@sender.test>, size=1750, nrcpt=1 (queue active)
+2026-10-03T03:48:20.724595+00:00 relay postfix/smtpd[2633]: disconnect from unknown[10.77.0.10] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+2026-10-03T03:48:20.763709+00:00 relay postfix/smtpd[2640]: connect from localhost[127.0.0.1]
+2026-10-03T03:48:20.764799+00:00 relay postfix/smtpd[2640]: BAAFD9B3: client=localhost[127.0.0.1]
+2026-10-03T03:48:20.765156+00:00 relay postfix/cleanup[2637]: BAAFD9B3: message-id=<S09f@sender.test>
+2026-10-03T03:48:20.766265+00:00 relay postfix/qmgr[2287]: BAAFD9B3: from=<analyst@sender.test>, size=1929, nrcpt=1 (queue active)
+2026-10-03T03:48:20.773219+00:00 relay postfix/smtpd[2640]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+2026-10-03T03:48:20.778111+00:00 relay postfix/pipe[2638]: B048498E: to=<analyst@recipient.test>, relay=pealfilter, delay=0.06, delays=0.01/0/0/0.05, dsn=2.0.0, status=sent (delivered via pealfilter service)
+2026-10-03T03:48:20.778289+00:00 relay postfix/qmgr[2287]: B048498E: removed
+2026-10-03T03:48:20.945605+00:00 relay postfix/smtp[2641]: BAAFD9B3: to=<analyst@recipient.test>, relay=10.77.0.20[10.77.0.20]:25, delay=0.18, delays=0/0.01/0/0.17, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 54EFE40138)
+2026-10-03T03:48:20.945872+00:00 relay postfix/qmgr[2287]: BAAFD9B3: removed
+2026-10-03T03:48:36.641865+00:00 relay postfix/smtpd[2633]: connect from unknown[10.77.0.10]
+2026-10-03T03:48:36.643470+00:00 relay postfix/smtpd[2633]: 9D0D499B: client=unknown[10.77.0.10]
+2026-10-03T03:48:36.644305+00:00 relay postfix/cleanup[2637]: 9D0D499B: message-id=<S09m@sender.test>
+2026-10-03T03:48:36.645531+00:00 relay postfix/qmgr[2287]: 9D0D499B: from=<analyst@sender.test>, size=1752, nrcpt=1 (queue active)
+2026-10-03T03:48:36.645568+00:00 relay postfix/smtpd[2633]: disconnect from unknown[10.77.0.10] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+2026-10-03T03:48:36.678272+00:00 relay postfix/smtpd[2640]: connect from localhost[127.0.0.1]
+2026-10-03T03:48:36.678965+00:00 relay postfix/smtpd[2640]: A5BF09BA: client=localhost[127.0.0.1]
+2026-10-03T03:48:36.679398+00:00 relay postfix/cleanup[2637]: A5BF09BA: message-id=<S09m@sender.test>
+2026-10-03T03:48:36.680661+00:00 relay postfix/qmgr[2287]: A5BF09BA: from=<analyst@sender.test>, size=1974, nrcpt=1 (queue active)
+2026-10-03T03:48:36.680792+00:00 relay postfix/smtpd[2640]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+2026-10-03T03:48:36.688215+00:00 relay postfix/pipe[2638]: 9D0D499B: to=<analyst@recipient.test>, relay=pealfilter, delay=0.05, delays=0/0/0/0.04, dsn=2.0.0, status=sent (delivered via pealfilter service)
+2026-10-03T03:48:36.688403+00:00 relay postfix/qmgr[2287]: 9D0D499B: removed
+2026-10-03T03:48:36.833772+00:00 relay postfix/smtp[2641]: A5BF09BA: to=<analyst@recipient.test>, relay=10.77.0.20[10.77.0.20]:25, delay=0.15, delays=0/0/0/0.15, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 3E1D540138)
+2026-10-03T03:48:36.834177+00:00 relay postfix/qmgr[2287]: A5BF09BA: removed
+2026-10-03T03:51:11.718852+00:00 relay postfix/postfix-script[3003]: stopping the Postfix mail system
+2026-10-03T03:51:11.719689+00:00 relay postfix/master[2285]: terminating on signal 15
+2026-10-03T03:51:11.723032+00:00 relay postfix/anvil[2635]: statistics: max connection rate 2/60s for (smtp:10.77.0.10) at Oct  3 03:48:36
+2026-10-03T03:51:11.723067+00:00 relay postfix/anvil[2635]: statistics: max connection count 1 for (smtp:10.77.0.10) at Oct  3 03:48:20
+2026-10-03T03:51:11.723117+00:00 relay postfix/anvil[2635]: statistics: max cache size 1 at Oct  3 03:48:20
+2026-10-03T03:51:11.939018+00:00 relay postfix/master[3116]: daemon started -- version 3.10.13, configuration /etc/postfix
+2026-10-03T03:52:15.613297+00:00 relay postfix/smtpd[3172]: connect from unknown[10.77.0.10]
+2026-10-03T03:52:15.620795+00:00 relay postfix/smtpd[3172]: 9789898E: client=unknown[10.77.0.10]
+2026-10-03T03:52:15.621673+00:00 relay postfix/cleanup[3176]: 9789898E: message-id=<S09f@sender.test>
+2026-10-03T03:52:15.623508+00:00 relay postfix/qmgr[3118]: 9789898E: from=<analyst@sender.test>, size=1750, nrcpt=1 (queue active)
+2026-10-03T03:52:15.623684+00:00 relay postfix/smtpd[3172]: disconnect from unknown[10.77.0.10] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+2026-10-03T03:52:15.663146+00:00 relay postfix/smtpd[3179]: connect from localhost[127.0.0.1]
+2026-10-03T03:52:15.664105+00:00 relay postfix/smtpd[3179]: A21EB9BF: client=localhost[127.0.0.1]
+2026-10-03T03:52:15.664531+00:00 relay postfix/cleanup[3176]: A21EB9BF: message-id=<S09f@sender.test>
+2026-10-03T03:52:15.665986+00:00 relay postfix/qmgr[3118]: A21EB9BF: from=<analyst@sender.test>, size=1929, nrcpt=1 (queue active)
+2026-10-03T03:52:15.667705+00:00 relay postfix/smtpd[3179]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+2026-10-03T03:52:15.677445+00:00 relay postfix/pipe[3177]: 9789898E: to=<analyst@recipient.test>, relay=pealfilter, delay=0.06, delays=0.01/0/0/0.05, dsn=2.0.0, status=sent (delivered via pealfilter service)
+2026-10-03T03:52:15.677669+00:00 relay postfix/qmgr[3118]: 9789898E: removed
+2026-10-03T03:52:15.776892+00:00 relay postfix/smtp[3180]: A21EB9BF: to=<analyst@recipient.test>, relay=10.77.0.20[10.77.0.20]:25, delay=0.11, delays=0/0.01/0/0.1, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 3CFBA401D3)
+2026-10-03T03:52:15.776957+00:00 relay postfix/qmgr[3118]: A21EB9BF: removed

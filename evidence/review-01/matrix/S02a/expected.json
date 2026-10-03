@@ -1,0 +1,13 @@
+{
+  "id": "S02a",
+  "name": "Unauthorized IP with independent aligned DKIM",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": true,
+  "spf": "fail",
+  "dkim": "pass",
+  "dmarc": "pass",
+  "policy": "none",
+  "disposition": "delivered"
+}

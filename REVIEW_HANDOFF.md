@@ -1,4 +1,4 @@
-# Independent review handoff
+# Reviewed local implementation handoff
 
 Repository: **C:/Users/Jake/OneDrive - Alfred State College/Documents/New project/phishing-investigation-email-auth-lab**
 
@@ -8,10 +8,28 @@ commit; use `git rev-parse HEAD` for its final revision and `git status --short`
 No remote repository, push, publication, merge or remote protection change was made. Ignored `.private`
 contains VM disks, installer/evidence drafts, disposable keys and pinned host keys; do not publish it.
 
+## Completed agent review, October 2–3, 2026
+
+Jake authorized review and completion. Codex reviewed its own implementation and fixed the required findings; this is not independent human review. See [docs/REVIEW.md](docs/REVIEW.md) for findings, scope, five review dimensions and limitations. Reviewed pre-fix base: b272b952e217f5b37cd174e8f5c8ac0527a4b9fe. Use `git rev-parse HEAD` for the local review commit.
+
+Latest evidence is `evidence/review-01`: all 31 real authentication cases audited, 9 actual replay comparisons passed, 21 offline tests passed, Bandit zero findings. Final-source S01 and all four rotation cases passed. Two real aggregate reports exactly cover three controlled messages in UTC range 1790999960–1791000006. Full three-guest gate and six fixed connectivity checks passed after restoration.
+
+Reproduce the updated checks from repository root with fresh output paths:
+
+```powershell
+python -m unittest discover -s tests -v
+python -m bandit -r tools
+python -m tools.evidence verify evidence/review-01
+python -m tools.compare_replay --replay evidence/review-01/reset-replay --output evidence/my-fresh-comparison.json
+python -m tools.correlate_reports --window evidence/review-01/report-window --reports evidence/review-01/reports --output evidence/my-fresh-correlation.json
+```
+
+Reset removed only two verified held entries after preserved exports and byte rechecks. Unknown entries remain outside deletion authorization. Latest hold queue CE6C240114 is preserved in `review-01/reset-replay/S07q`; the exact post-reset state is in final-isolation. The older table below remains historical evidence (26 cases/12 tests at the previous checkpoint), not the latest review totals.
+
 ## Delivered scope
 
 Three real Debian guests; isolated internal SMTP/DNS and restricted host-only SSH; signed local
-authentication; 26 passing authentication scenarios covering all 12 authentication categories;
+authentication; 31 passing authentication scenarios covering all 12 authentication categories;
 real aggregate reports/correlation covering category 13; real quarantine and rejection; separate
 untrusted claims/trusted receiver collection; toolkit offline adapter; rotation/cache experiments;
 guarded semantic reset and nine-case replay; two analyst capstones; reusable scripts and local checks;
@@ -20,7 +38,7 @@ prepared GitHub security workflows; attribution, threat model and learning recor
 Deviations: private .test suffix and explicit child policies are required for this selected implementation.
 SPF DNS request budget is explicitly 10 rather than default 30; it is not a full RFC lookup-term
 conformance test. Current-window reports use a separate documented two-edit upstream Lua adapter;
-the upstream daily command is unchanged. Reset retains captures/keys/Redis and unmarked queues,
+the upstream daily command is unchanged. Reset retains captures/keys/Redis and unknown or unlinked queues,
 rather than destroying VMs or wiping databases. No optional fourth DNS VM was needed.
 
 ## Runtime and entry points
@@ -84,8 +102,8 @@ suspension caused SSH timeouts and stale guest clocks; `clock-recovery-01` recor
 Rerun the full gate after suspension; tools never modify historical evidence timestamps. Last named
 guests remain running and isolated; inspect actual state before reuse.
 
-One unmarked early sender staging queue entry was exported and retained/deferred rather than removed
-by reset. Captures and reporting data remain retained by design. Runtime tools share guest paths and
+An earlier unmarked sender staging entry was retained/deferred by that historical reset. The current
+reset exports every pending entry and requires verified queue/run linkage before deletion. Captures and reporting data remain retained by design. Runtime tools share guest paths and
 must run serially. SSH loss can prevent finally restoration; recovery requires gate/reset before sending.
 Report generator consumes its own data; keep RDB backups. The failed first report generation lacked
 correct cross-domain authorization and consumed its keys, but its pre-generation RDB remains preserved.

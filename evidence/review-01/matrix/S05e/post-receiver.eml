@@ -1,0 +1,38 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Sat, 3 Oct 2026 03:46:15 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id 854A74019D
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:46:15 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=fail ("headers rsa verify failed") header.d=sender.test header.s=lab1 header.b="v9/1mGwu";
+	dmarc=fail reason="No valid SPF" header.from=sender.test (policy=none);
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.11 as permitted sender) smtp.mailfrom=analyst@sender.test
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id 00AB199F
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:46:14 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790999174;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=v9/1mGwuU5QN3XV3qE8Y2fwtONtCmSOGfUqzfSDnwVM3xIBf1ii9Xqd5DE+G3ITtzkfVJx
+	TX83Kukunn7DKm7LLrvIdu+1q0b7/5nYF3vrKOx5hlD1j5Xg0EirLHfYgPcU/5AIv4pxro
+	Pt3qqtc+zhH6rrD7e4oPtC0CToRh6prZXi50HGk7mqPJhT403IJNnWNzn7NxnV0LJZTtaP
+	1Ic1leI3yj06npuqJq2uMcelGnUKCJ0XOC+g7alEIuK9cLYjG1QYS/JWbScAKGuwTli0TF
+	oLeu1qGxQ84xS4BpJbXmMo3UuSd25vxNIQZKqqgA7kjuQj68UG+JzlQFPgaaww==
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05e Wrong DKIM public key
+Message-ID: <S05e@sender.test>
+X-Lab-Scenario: S05e
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 36fe627a20774a94b32d29450729db48
+Date: Sat, 03 Oct 2026 03:46:14 +0000 (UTC)
+X-Rspamd-Queue-Id: 854A74019D
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+

@@ -1,0 +1,14 @@
+{
+  "id": "S05d",
+  "name": "Missing DKIM key",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": true,
+  "key": "missing",
+  "spf": "fail",
+  "dkim": "permerror",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered"
+}

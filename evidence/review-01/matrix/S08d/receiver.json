@@ -1,0 +1,87 @@
+{
+    "run_claim": "06c8288d797d4583881d4784f2ed09b3",
+    "symbols": [
+        {
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "R_DKIM_NA",
+            "group": "policies"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "options": [
+                "temporary DNS error"
+            ],
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "name": "R_SPF_DNSFAIL",
+            "group": "policies"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "options": [
+                "sender.test : query timed out"
+            ],
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "name": "DMARC_DNSFAIL",
+            "group": "policies"
+        }
+    ],
+    "ip": "10.77.0.11",
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790999265,
+    "queue_id": "9284D40138",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>"
+        }
+    ],
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S08d"
+}

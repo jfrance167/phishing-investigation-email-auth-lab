@@ -1,0 +1,9 @@
+{
+  "scenario": "S09f",
+  "run_id": "38255d6f78b74fdabfc5b983241dbb4c",
+  "envelope_from": "analyst@sender.test",
+  "envelope_to": "analyst@recipient.test",
+  "reinjected": true,
+  "before_sha256": "bfc58be568d12951dca13b80aa01208a767c1d2693cb00b7f4874981407d5f67",
+  "after_sha256": "bfc58be568d12951dca13b80aa01208a767c1d2693cb00b7f4874981407d5f67"
+}

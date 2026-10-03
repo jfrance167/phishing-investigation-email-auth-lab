@@ -1,0 +1,2 @@
+syntax OK
+Mail configured. Isolation and baseline verification still required.

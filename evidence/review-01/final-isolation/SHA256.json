@@ -1,0 +1,9 @@
+{
+  "connectivity.json": "7cbdcbecff99addadf7ee4ef4a43b7888597e20ee5b78c67bef9a5b1a5bcf2fa",
+  "receiver-gate.json": "ef519cbe9a4fe5adbbbc2818be0b18b37807832e86d029135cea7e516a25ca85",
+  "receiver-vbox.txt": "de5839d615c49f441ec8e30caef2849f6e3420d068420b58239bfbde22bdd45a",
+  "relay-gate.json": "9cf38548ab21823aed58e7b270af8425f0745abeaa372abef23107ebaeda9424",
+  "relay-vbox.txt": "47ca1e75e9451e1d8da59d115f74c4f2a5ebd4bcb1be16e4c19b682057f103cc",
+  "sender-gate.json": "d00202c6713c74561bf1ca54591c99f01d05a62868898d58dfcb657e38349878",
+  "sender-vbox.txt": "a8f63c1ce2fae67242bca0fb63b43950db040635107d13a790372427623c6a25"
+}

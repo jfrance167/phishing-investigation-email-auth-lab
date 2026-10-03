@@ -1,0 +1,53 @@
+Return-Path: <reports@recipient.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <reports@recipient.test>; Sat, 3 Oct 2026 04:00:06 +0000 (UTC)
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+	by receiver.recipient.test (Postfix) with SMTP id B870E401D3;
+	Sat, 03 Oct 2026 04:00:06 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=none;
+	spf=none (receiver.recipient.test: domain of reports@recipient.test has no SPF policy when checking 127.0.0.1) smtp.mailfrom=reports@recipient.test
+From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Subject: Report Domain: lookalike.test
+	Submitter: recipient.test
+	Report-ID: lookalike.test.1790999960.1791000006
+Date: Sat, 03 Oct 2026 04:00:06 GMT
+MIME-Version: 1.0
+Message-ID: <730a6eff5f853bb0@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_69c9390c-2095-47d4-a8e7-4d460e872f63"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+X-Rspamd-Queue-Id: B870E401D3
+
+This is a multipart message in MIME format.
+
+------=_NextPart_69c9390c-2095-47d4-a8e7-4d460e872f63
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: lookalike.test
+Submitter: recipient.test
+Report ID: lookalike.test.1790999960.1791000006
+
+------=_NextPart_69c9390c-2095-47d4-a8e7-4d460e872f63
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!lookalike.test!1790999960!1791000006.xml.gz"
+
+H4sIAAAAAAAAA61TsXLbMAzd8xU67xXtJU7uGKZDr1+QzDpKhGycKZJHUkn694UESrKTDB3KR
+eQD8IAHQPL5Y7DVG8SE3j3tDvV+V4HrvEF3etq9vvz+8bCrntWd7AFMq7uLuqsqGSH4mJsBsj
+Y66wkj1MdT4/QA6hem4JNuLVQwaLSV1a0Uq5m9Z4tipvQzQocBweU6Q8pSsJU9SzY0ynp/0RY
+vMHvVh+Pj/pHO/X66HvbTuZdi8+d4KhGaqN2ppCaohRM6tcVLwchiB2fUNeX0ZjJxy7Zmu+6F
+DN5i96cJY2sxnWEtxJMq90kFMTLMPtpccFBRCr4UMIV+xqYvQ0E570CKUN5pAdKChC4rEkAud
+JlL/VoW9bbz0fBQ/fvC5cfYQYOB4uvjsab2Es2GslfnR0cZpOBLScop4E3bkRpl1o6aeScw05
+qVQq+R1WvSHHRKZF7lz+r6Am8dEN/lonmwDImGtgl7pNUuAWfQBmLTRz98mcG1bab5FC71mM9
+NhDTavPDdVPgPs51XeSIoUspj2att3KvG/8FbyGh5bhRMbjx6KdZ/+y9UzQXsDgQAAA==
+------=_NextPart_69c9390c-2095-47d4-a8e7-4d460e872f63--

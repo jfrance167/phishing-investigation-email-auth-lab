@@ -1,0 +1,22 @@
+*** Section dmarc ***
+check_local = true;
+check_authed = true;
+actions {
+    reject = "reject";
+    quarantine = "quarantine";
+    softfail = "no action";
+}
+reporting {
+    enabled = true;
+    email = "reports@recipient.test";
+    domain = "recipient.test";
+    org_name = "Disposable email lab";
+    smtp = "127.0.0.1";
+    smtp_port = 25;
+    helo = "receiver.recipient.test";
+    bcc_addrs [
+        "reports@recipient.test",
+    ]
+}
+
+*** End of section dmarc ***

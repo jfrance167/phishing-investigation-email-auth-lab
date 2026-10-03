@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "compared_actual_runs": 9,
+  "fields": [
+    "ip",
+    "spf",
+    "dkim",
+    "dmarc",
+    "disposition"
+  ],
+  "comparisons": [
+    {
+      "scenario": "S01",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S01",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S01",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.10",
+        "spf": "pass",
+        "dkim": "pass",
+        "dmarc": "pass",
+        "disposition": "delivered"
+      }
+    },
+    {
+      "scenario": "S02",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S02",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S02",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.11",
+        "spf": "fail",
+        "dkim": "none",
+        "dmarc": "fail",
+        "disposition": "delivered"
+      }
+    },
+    {
+      "scenario": "S05a",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S05a",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S05a",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.10",
+        "spf": "pass",
+        "dkim": "fail",
+        "dmarc": "pass",
+        "disposition": "delivered"
+      }
+    },
+    {
+      "scenario": "S07q",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S07q",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S07q",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.11",
+        "spf": "fail",
+        "dkim": "none",
+        "dmarc": "fail",
+        "disposition": "held"
+      }
+    },
+    {
+      "scenario": "S07x",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S07x",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S07x",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.11",
+        "spf": "fail",
+        "dkim": "none",
+        "dmarc": "fail",
+        "disposition": "rejected"
+      }
+    },
+    {
+      "scenario": "S09f",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S09f",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S09f",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.30",
+        "spf": "fail",
+        "dkim": "pass",
+        "dmarc": "pass",
+        "disposition": "delivered"
+      }
+    },
+    {
+      "scenario": "S09m",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S09m",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S09m",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.30",
+        "spf": "fail",
+        "dkim": "fail",
+        "dmarc": "fail",
+        "disposition": "delivered"
+      }
+    },
+    {
+      "scenario": "S10",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S10",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S10",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.11",
+        "spf": "fail",
+        "dkim": "none",
+        "dmarc": "fail",
+        "disposition": "delivered"
+      }
+    },
+    {
+      "scenario": "S11",
+      "before": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\matrix\\S11",
+      "after": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reset-replay\\S11",
+      "semantic_equal": true,
+      "normalized": {
+        "ip": "10.77.0.10",
+        "spf": "pass",
+        "dkim": "pass",
+        "dmarc": "pass",
+        "disposition": "delivered"
+      }
+    }
+  ],
+  "note": "Queue IDs, timestamps and signatures are intentionally not required to match."
+}

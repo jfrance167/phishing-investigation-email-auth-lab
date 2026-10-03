@@ -1,0 +1,23 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Sat, 3 Oct 2026 03:49:12 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.10])
+	by receiver.recipient.test (Postfix) with ESMTP id CA54440138
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:49:12 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	spf=pass (receiver.recipient.test: domain of analyst@sender.test designates 10.77.0.10 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=fail reason="SPF not aligned (strict), No valid DKIM" header.from=mail.sender.test (policy=none)
+From: Synthetic Lab Analyst <analyst@mail.sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S06b SPF-only sibling s
+Message-ID: <S06b@sender.test>
+X-Lab-Scenario: S06b
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 2007f632b0fc4e57b1e1f014530aed82
+X-Rspamd-Queue-Id: CA54440138
+
+Harmless synthetic lab content. No real credentials or attachments.
+

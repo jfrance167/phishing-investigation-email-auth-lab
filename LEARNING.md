@@ -13,3 +13,8 @@
 - Upstream reporting dates select data keys separately from metadata bounds. Verify report timestamps against actual message collection; counts alone can conceal a misleading time range.
 - Host suspension paused guest clocks despite VMs resuming. Recovery uses host UTC on owned guests and a fresh gate, never rewriting old evidence.
 - The second local README draft incorrectly described selector overlap as a strict-policy bypass. Raw draft retained privately; documentation was corrected from measured evidence. Local worker restarted after initial loopback refusal; no remote/paid fallback used.
+
+- Reviewed evidence can still support an unsafe operation if authorization relies on copyable headers. Link the exact queue and fresh nonce to its controlled collection before cleanup.
+- A verdict is not enough: independently check SMTP identities and the actual signing selector, and exclude stale or substring queue logs.
+- Completion includes cleanup. Preserve a failed restoration as an unsealed attempt instead of presenting it as a completed run.
+- The local review-note draft incorrectly claimed guarantees and header authenticity. Its raw text remains private; reviewed corrections explain limited provenance and DKIM signing identity without those claims.

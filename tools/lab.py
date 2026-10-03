@@ -4,6 +4,9 @@ Prerequisite: Test-LabReady.ps1 passes immediately before each case. No browser 
 Only fixed guest addresses and scenario IDs from the reviewed manifest are accepted.
 """
 import argparse
+from datetime import datetime,timezone
+from email import policy
+from email.parser import BytesParser
 import json
 import re
 import shlex
@@ -16,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from tools.evidence import summarize_receiver, manifest
+from tools.evidence import summarize_receiver, manifest,bounded_bytes
 
 SSH = Path('C:/Windows/System32/OpenSSH/ssh.exe')
 SCP = Path('C:/Windows/System32/OpenSSH/scp.exe')
@@ -36,6 +39,60 @@ def upload(role, local, remote):
 
 def download(role, remote, local):
     subprocess.run([str(SCP),*OPTIONS,'root@'+ADDRESSES[role]+':'+remote,str(local)],check=True,timeout=40)  # nosec B603 # Guest sources are fixed paths or validated queue-ID paths; no shell.
+
+
+def ready(output, include_relay=False):
+    """Require the owned guest/host gate before any experiment or report submission."""
+    args=['-IncludeRelay'] if include_relay else []
+    subprocess.run([str(POWERSHELL),'-NoProfile','-File',str(ROOT/'tools/Test-LabReady.ps1'),
+        '-OutputDirectory',str(output),*args],check=True,timeout=60)  # nosec B603 # Absolute executable and reviewed fixed script; output path is one argv value.
+
+
+def dns_queries(case):
+    """Query the selector actually used, preserving independent DNS observations."""
+    selector=case.get('selector','lab1')
+    return f'dig @10.77.0.20 {case["envelope"]} TXT; dig @10.77.0.20 _dmarc.{case["from"]} TXT; dig @10.77.0.20 {selector}._domainkey.{case["envelope"]} TXT'
+
+
+def identities_match(case,record):
+    """Check actual SMTP identities separately from headers, authentication and policy."""
+    def addresses(name): return [item.get('addr') for item in record.get(name,[]) if isinstance(item,dict)]
+    return (record.get('ip')==case['ip']
+        and record.get('helo')==('relay.sender.test' if case.get('forward') else 'sender.sender.test')
+        and addresses('envelope_from')==['analyst@'+case['envelope']]
+        and addresses('envelope_to')==['analyst@recipient.test']
+        and addresses('header_from')==['analyst@'+case['from']])
+
+
+def signature_identity_matches(raw,domain,selector):
+    """Check the intended signing identity before verification; this does not validate cryptography."""
+    headers=BytesParser(policy=policy.default).parsebytes(raw).get_all('DKIM-Signature',[])
+    if len(headers)!=1: return False
+    tags={}
+    for item in str(headers[0]).split(';'):
+        if '=' not in item: continue
+        name,value=item.split('=',1); name=name.strip()
+        if name in tags: return False
+        tags[name]=value.strip()
+    return tags.get('d')==domain and tags.get('s')==selector
+
+
+def current_queue_logs(raw,qid,collected):
+    """Exclude reused queue IDs and substring matches from disposition proof; retain candidates too."""
+    if not re.fullmatch(r'[A-Za-z0-9]{5,30}',qid): raise ValueError('Unsafe queue ID')
+    lines=[]
+    postfix=re.compile(r'\]: '+re.escape(qid)+r': ')
+    rspamd=re.compile(r'(?:queue-id|qid): <'+re.escape(qid)+r'>')
+    for line in raw.decode('utf-8',errors='replace').splitlines():
+        if not (postfix.search(line) or rspamd.search(line)): continue
+        try:
+            stamp=line.split(' ',1)[0] if line[10:11]=='T' else line[:19].replace(' ','T')
+            date=datetime.fromisoformat(stamp)
+            if date.tzinfo is None: date=date.replace(tzinfo=timezone.utc) # Guest logs are explicitly UTC.
+            moment=date.timestamp()
+        except ValueError: continue
+        if collected-1 <= moment <= collected+600: lines.append(line)
+    return ('\n'.join(lines)+'\n').encode()
 
 
 def validate_case(case):
@@ -104,9 +161,7 @@ def run_case(case, output):
     validate_case(case)
     output.mkdir(parents=True,exist_ok=False)
     (output/'expected.json').write_text(json.dumps(case,indent=2))
-    gate_args=['-IncludeRelay'] if case.get('forward') else []
-    subprocess.run([str(POWERSHELL),'-NoProfile','-File',str(ROOT/'tools/Test-LabReady.ps1'),
-                    '-OutputDirectory',str(output/'gate'),*gate_args],check=True,timeout=60)  # nosec B603 # Fixed reviewed local gate script and absolute executable; output is a single path argument.
+    ready(output/'gate',case.get('forward',False))
     original=output/'original.eml'
     run_id=uuid.uuid4().hex
     started=time.time()
@@ -117,13 +172,18 @@ def run_case(case, output):
     zone.write_text(replace_zone(base,case),newline='\n')
     upload('receiver',zone,'/opt/peal/case.zone')
     submitted=output/'submitted-to-receiver.eml'
+    selector_before=None
     try:
         restart='named' if case.get('warm') else 'named rspamd'
         ssh('receiver','named-checkzone test /opt/peal/case.zone && cp /opt/peal/case.zone /etc/bind/peal.test.zone && systemctl restart '+restart)
         if case['signed']:
+            saved_selector=ssh('sender',"grep '^selector = ' /etc/rspamd/local.d/dkim_signing.conf").stdout.decode().strip()
+            match=re.fullmatch(r'selector = "(lab1|lab2)";',saved_selector)
+            if not match: raise ValueError('Unrecognized initial signing selector')
+            selector_before=match[1]
             upload('sender',original,'/opt/peal/case-original.eml')
             selector=case.get('selector','lab1')
-            ssh('sender',"sed -i 's/^selector = .*/selector = \""+selector+"\";/' /etc/rspamd/local.d/dkim_signing.conf; systemctl restart rspamd; postconf -e 'defer_transports = smtp'; postfix reload")
+            ssh('sender',"sed -i 's/^selector = .*/selector = \""+selector+"\";/' /etc/rspamd/local.d/dkim_signing.conf && systemctl restart rspamd && postconf -e 'defer_transports = smtp' && postfix reload")
             time.sleep(1)
             sender=ssh('sender',f'swaks --server 127.0.0.1 --helo sender.sender.test --from analyst@{case["envelope"]} --to analyst@recipient.test --data @/opt/peal/case-original.eml --timeout 15')
             (output/'sender-smtp.txt').write_bytes(sender.stdout+sender.stderr)
@@ -136,7 +196,7 @@ def run_case(case, output):
             raw=re.sub(rb'^\*\*\* MESSAGE CONTENTS[^\n]*\n',b'',raw)
             raw=re.sub(rb'\n\*\*\* HEADER EXTRACTED[^\n]*\n.*',b'\n',raw,flags=re.S)
             raw=re.sub(rb'\n\*\*\* MESSAGE FILE END[^\n]*\n?',b'\n',raw)
-            if b'DKIM-Signature:' not in raw: raise ValueError('Sender did not DKIM-sign')
+            if not signature_identity_matches(raw,case['envelope'],selector): raise ValueError('Sender signature identity/selector differs from the requested case')
             submitted.write_bytes(raw)
             # Delete only this preserved disposable staging queue entry.
             ssh('sender','postsuper -d '+qid)
@@ -146,7 +206,7 @@ def run_case(case, output):
         if case.get('mutate')=='subject': raw=re.sub(rb'(?m)^Subject:[^\r\n]*',b'Subject: changed after signing',raw)
         submitted.write_bytes(raw)
         upload('sender',submitted,'/opt/peal/case-submitted.eml')
-        answers=ssh('sender',f'dig @10.77.0.20 {case["envelope"]} TXT; dig @10.77.0.20 _dmarc.{case["from"]} TXT; dig @10.77.0.20 lab1._domainkey.{case["envelope"]} TXT')
+        answers=ssh('sender',dns_queries(case))
         (output/'dns-answers.txt').write_bytes(answers.stdout+answers.stderr)
         if case.get('dns')=='unavailable': ssh('receiver','systemctl stop named')
         target='10.77.0.30' if case.get('forward') else '10.77.0.20'
@@ -162,19 +222,22 @@ def run_case(case, output):
         record_path=ssh('receiver',finder).stdout.decode().strip()
         if not re.fullmatch(r'/var/lib/rspamd/peal/[A-Za-z0-9]+\.json',record_path): raise ValueError('Unsafe record path')
         download('receiver',record_path,output/'receiver.json')
+        receiver_record=json.loads(bounded_bytes(output/'receiver.json'))
         record=summarize_receiver(output/'receiver.json')
         qid=record['queue_id']
         logs=ssh('receiver',f'grep {qid} /var/log/mail.log; grep {qid} /var/log/rspamd/rspamd.log; postqueue -j')
-        (output/'receiver-logs.txt').write_bytes(logs.stdout+logs.stderr)
+        (output/'receiver-log-candidates.txt').write_bytes(logs.stdout+logs.stderr)
+        current=current_queue_logs(logs.stdout,qid,receiver_record['collected_unix'])
+        (output/'receiver-logs.txt').write_bytes(current)
         if case['disposition']=='rejected':
-            disposition='rejected' if re.search(rb'<[^\r\n]*\b5[0-9]{2}\b',transcript.stdout) and b'milter-reject' in logs.stdout else 'unproven'
+            disposition='rejected' if re.search(rb'<[^\r\n]*\b5[0-9]{2}\b',transcript.stdout) and b'milter-reject' in current else 'unproven'
         elif case['disposition']=='held':
             queues=ssh('receiver','postqueue -j').stdout.splitlines()
             held=any(json.loads(line).get('queue_id')==qid and json.loads(line).get('queue_name')=='hold' for line in queues)
             disposition='held' if held else 'unproven'
             if held: (output/'post-receiver-held.eml').write_bytes(ssh('receiver','postcat -bhq '+qid).stdout)
         else:
-            found=re.search(rb'status=sent \(250 2\.0\.0 Ok: queued as ([A-Za-z0-9]+)\)',logs.stdout)
+            found=re.search(rb'status=sent \(250 2\.0\.0 Ok: queued as ([A-Za-z0-9]+)\)',current)
             if found:
                 capture=found[1].decode()
                 ssh('receiver',f'curl --fail -s http://127.0.0.1:8025/api/v1/message/{capture}/raw -o /opt/peal/case-post.eml')
@@ -182,20 +245,26 @@ def run_case(case, output):
                 disposition='delivered'
             else: disposition='unproven'
         record['disposition']=disposition
-        record['expected_match']=all(record.get(field)==case[field] for field in ('spf','dkim','dmarc','disposition')) and record['ip']==case['ip']
+        record['identities_match']=identities_match(case,receiver_record)
+        record['expected_match']=all(record.get(field)==case[field] for field in ('spf','dkim','dmarc','disposition')) and record['identities_match']
         record['swaks_exit']=transcript.returncode
         (output/'observed.json').write_text(json.dumps(record,indent=2))
         versions=ssh('receiver','dpkg-query -W; date -u; rspamadm configdump; postconf -n')
         (output/'versions-config-time.txt').write_bytes(versions.stdout+versions.stderr)
-        (output/'SHA256.json').write_text(json.dumps(manifest(output),indent=2))
-        return record
     finally:
         restore=output/'restore.zone'
         restore.write_text('\n'.join(line for line in base.splitlines() if line.strip())+'\n',newline='\n')
         upload('receiver',restore,'/opt/peal/restore.zone')
         restart='named' if case.get('keep_cache') else 'named rspamd'
-        ssh('receiver','cp /opt/peal/restore.zone /etc/bind/peal.test.zone; systemctl restart '+restart)
+        ssh('receiver','cp /opt/peal/restore.zone /etc/bind/peal.test.zone && systemctl restart '+restart)
+        if selector_before:
+            ssh('sender',"sed -i 's/^selector = .*/selector = \""+selector_before+"\";/' /etc/rspamd/local.d/dkim_signing.conf && systemctl restart rspamd")
         restore.unlink()
+    # Seal only after restoration completed. An interrupted cleanup remains an unsealed attempt.
+    (output/'restoration.json').write_text(json.dumps({'dns_restored':True,'selector_restored':selector_before,
+        'receiver_cache_kept':case.get('keep_cache',False),'completed_unix':time.time()},indent=2))
+    (output/'SHA256.json').write_text(json.dumps(manifest(output),indent=2))
+    return record
 
 
 if __name__=='__main__':

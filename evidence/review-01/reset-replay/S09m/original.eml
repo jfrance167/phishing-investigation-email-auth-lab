@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S09m Forwarding with footer
+Message-ID: <S09m@sender.test>
+X-Lab-Scenario: S09m
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 534b5e27756a4173abd9138d3b0c333f
+
+Harmless synthetic lab content. No real credentials or attachments.

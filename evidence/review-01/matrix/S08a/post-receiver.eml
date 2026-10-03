@@ -1,0 +1,23 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Sat, 3 Oct 2026 03:47:18 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id D345C401BE
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:47:17 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=sender.test (policy=none);
+	spf=none (receiver.recipient.test: domain of analyst@sender.test has no SPF policy when checking 10.77.0.11) smtp.mailfrom=analyst@sender.test
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S08a Missing SPF record
+Message-ID: <S08a@sender.test>
+X-Lab-Scenario: S08a
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 2a49168c92c74b15a5aef3468a415c21
+X-Rspamd-Queue-Id: D345C401BE
+
+Harmless synthetic lab content. No real credentials or attachments.
+

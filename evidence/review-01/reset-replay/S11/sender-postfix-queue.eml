@@ -1,0 +1,31 @@
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id CBEBD99F
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:52:55 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=lookalike.test;
+	s=lab1; t=1790999575;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=QIV+ZrFwumbppgbZQbhxAZ9xkkRZXYcF/six+ph2nME=;
+	b=R6raxCJAA1lbfAGtljfjM1l0Y6WpJWN+uyM4rxPYGrLYz6aumAr+N/Kd/PLuauNQ+B8hxL
+	/OGz82uSZOQDNl51TfgQrod+zJM3kWoZSADO77T43MtF5iuTTA9b5o0gzqOH47ASDLZoW9
+	AU1da9c6V4sIwmFyAswle9Yhd0JG5ljnH5NWeXpSeSiJl++Q3x6J9L1bg6IxgqavVBcC1b
+	Bjz9UHXirU+DB93yzkY/TydDXRJDb44xKLMHlCwG31kgMsjKoV07UP1C805fhdGNNDh3DY
+	eTDYKiljXUNX/naEPTFURZZwXy+Iyht4NAgh4BRsqIsf3UKSPzsKDvMrKaXEIw==
+Authentication-Results: sender.sender.test;
+	dkim=none;
+	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=lookalike.test (policy=none);
+	spf=fail (sender.sender.test: domain of analyst@lookalike.test does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=analyst@lookalike.test
+From: Campus Security Team <analyst@lookalike.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S11 Authenticated lookalike/display impersonation
+Message-ID: <S11@sender.test>
+X-Lab-Scenario: S11
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 6c628f1ee19947f6860de6f60d5ff53b
+Date: Sat, 03 Oct 2026 03:52:55 +0000 (UTC)
+X-Rspamd-Queue-Id: CBEBD99F
+
+Harmless synthetic lab content. No real credentials or attachments.
+Urgent: review your fictional account at hxxps://portal[.]lookalike[.]test. Do not enter credentials.
+

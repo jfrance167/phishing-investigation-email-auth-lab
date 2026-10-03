@@ -1,0 +1,17 @@
+{
+  "1KCJOpPouns0EUE03MKseu.eml": "245ae9ec6a17ff7afae0689c4541211b2f8773a38f15ccefe859d32db0550ecc",
+  "1KCJOpPouns0EUE03MKseu.xml": "a88cf85fd13cb56c65a5a9c2beeabbbf2c7ee2a8fe1f0200a44edcdcc7a0a58f",
+  "7BBFGCC2g8CvSZx7vmV2kh.eml": "d3bd294b13ce260d00334e700f55b598438fe89400f789c7549aed31038f9c4d",
+  "7BBFGCC2g8CvSZx7vmV2kh.xml": "d7b9b0630fd57e9e397953a386031e1bb152495653467554078775733fe7e63d",
+  "current-window-report.lua": "4b7cbda9d26aee4e88df988d854416c5cdd4f16f9b7f29a93b28571404fa8548",
+  "gate-before/receiver-gate.json": "1eb6e0c9d397cb0aedc3b080c40d0df778120a485355b8542daeced431b7ff30",
+  "gate-before/receiver-vbox.txt": "de5839d615c49f441ec8e30caef2849f6e3420d068420b58239bfbde22bdd45a",
+  "gate-before/sender-gate.json": "4387cbf8d4728568a3a244a198e7dbb75bef3a7de903c558cd31c85c73a6e1d1",
+  "gate-before/sender-vbox.txt": "a8f63c1ce2fae67242bca0fb63b43950db040635107d13a790372427623c6a25",
+  "generator.txt": "eb8d0bf406005c98df17ff3d16482d320d6502c5ffc06c69d898f15dec181f36",
+  "prior-last-collection.txt": "c6dd7c1af3734dc00ecb214651d3e8d3b3debbbbe6fcad541eea81dcec64cb03",
+  "redis-before.rdb": "3c6cc2a59307757f43bfeb9432db45c101f4d8feb516528f4355611ac27d2883",
+  "reporting-config.txt": "d7292ae0a3d263d8f3aac1a58c3ec3c3b89c670a3e704d35743383307775a2a4",
+  "reports.json": "4762af7fa72f3b332e99bdb03322d9aaef40e7de591ebb4e485a3d7eea04b320",
+  "upstream-report.lua": "663af4ddd7bdb15302312a685ff03c9e889628ec4f0de367b768e7de3a0ea5a8"
+}

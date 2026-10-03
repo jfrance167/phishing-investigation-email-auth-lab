@@ -14,11 +14,11 @@ except build_index, which regenerates its derived index. Scripts do not add an I
 | Test-LabReady.ps1 | `-OutputDirectory FRESH -IncludeRelay` | Full NIC/path/host forwarding, routes/IPv6, normalized firewall, sockets/config and clock gate |
 | guest_connectivity.py | Sender with isolation gate passed | Six fixed local permitted/denied connection results; no third-party probes |
 | lab.py | Fixed ID in matrix, `--output FRESH`; gate runs automatically | Original/submitted/post receiver copies, DNS, envelopes/transcripts, fresh run/queue record, logs, assertions and hashes |
-| rotation.py | `python -m tools.rotation --output FRESH` | Disposable lab2 overlap and warm/cold retirement; restores DNS/selector in finally |
-| reports.py | `--output FRESH [--begin ACTUAL_EPOCH]`; exclusive controlled window | RDB backup, delivered report MIME/XML, source adapter where used, hashes. Generator consumes own keys |
+| rotation.py | `python -m tools.rotation --output FRESH` | Disposable lab2 overlap and warm/cold retirement; restores DNS/selector in finally; gate before mutation; fails on any of four outcome mismatches |
+| reports.py | `--output FRESH [--begin ACTUAL_EPOCH]`; exclusive controlled window | Readiness gate, RDB backup, delivered report MIME/XML, source adapter where used, hashes. Generator consumes own keys |
 | correlate_reports.py | `--window PATH --reports PATH --output FRESH.json` | Exact counts/IP/auth/disposition/timestamp assertion for exact-alignment control windows |
 | toolkit_adapter.py | `--toolkit reviewed/phishing_triage.py --sha256 HASH --bundle HASHED_CASE --output FRESH.json` | Offline claim parser + separate receiver evidence. Import executes reviewed module; never enrichs |
-| reset_replay.py | `--output FRESH`; fixed owned guests and intact bundles | Exported queues/config, guarded removal, semantic reset, nine-case replay assertions |
+| reset_replay.py | `--output FRESH`; fixed owned guests and intact bundles | Verified role/queue/scenario/nonce ledger, exported queues/hash, byte recheck and individual removal, semantic reset, nine-case replay assertions |
 | compare_replay.py | `--replay HASHED_REPLAY --output FRESH.json`; earlier measured passes | Compares all nine actual semantic outcomes with earlier queue-correlated runs, excluding signatures/times/queue IDs |
 | sync_clock.py | `--output FRESH`; owned guests after host suspension | Before/after clock evidence; host UTC only, no NTP; rerun gate |
 | evidence.py | `claims/receiver/manifest/verify PATH` | Bounded parser, source-explicit summary, hashes/file-set verification |
@@ -34,3 +34,5 @@ retry with the same run nonce refuses to overwrite existing evidence and remains
 Firewall textual presentation is pinned to the reviewed installed nft output, excluding dynamic counters.
 A package/presentation change intentionally blocks until the entire policy is reviewed and the fixture
 is updated. The reset does not claim a factory-clean disk or empty Mailpit; retained captures support audits.
+
+The shared `lab.ready(output, include_relay=False)` runs the same strict gate for cases, rotation, reset and reports. `queue_ledger(root)` consumes intact controlled bundles; `authorized_queue(role, qid, raw, ledger)` is a pure decision with no deletion. Unknown/duplicate-header/nonced-less records are denied. Case manifests are created only after successful restoration. Report correlation requires positive integer counts, matching header identity and ordered integer time bounds. Tests in `tests/test_review_regressions.py` exercise these failure contracts.

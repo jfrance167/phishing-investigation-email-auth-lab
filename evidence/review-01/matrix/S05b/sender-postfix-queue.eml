@@ -1,0 +1,30 @@
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id 81403943
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:45:33 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790999133;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=sGRDRmwPOMtQ5oaSyJTAkjdQkJ0BEXRM3Fo8yR1GO6dH3V7iV7oMLFyEOaHx3DCe3pDgZk
+	aRvYXzzKY+FVISKNtJg+yT9cSxPGLNYrn01b0rhl0ZczOKz+/PFYTV63saStBYwHQpJ6f6
+	yJELI6FEs70WyWXq/zPqpozXull1i9rFR8guqlhxJphx2Y9xP2X6kuBoFr/pbxQ1my3c9j
+	Rc1tbd18CxSa4H/uTlFJma/Z+Kjr6qn1SxL5OAkpvJMGNUGHXpa1ZriC0l9RJe1tMkzExt
+	3x2NgpaJ8eswuUeIiaKKQOGFm4nF7qjfUngjZtr2qagN77YKRj/ZC2MRVAcY+w==
+Authentication-Results: sender.sender.test;
+	dkim=none;
+	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=sender.test (policy=none);
+	spf=fail (sender.sender.test: domain of analyst@sender.test does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=analyst@sender.test
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05b Changed body without aligned SPF
+Message-ID: <S05b@sender.test>
+X-Lab-Scenario: S05b
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: e2d282cf689b46ed86530cd305c4f07b
+Date: Sat, 03 Oct 2026 03:45:33 +0000 (UTC)
+X-Rspamd-Queue-Id: 81403943
+
+Harmless synthetic lab content. No real credentials or attachments.
+

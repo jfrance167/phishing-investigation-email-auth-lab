@@ -1,0 +1,14 @@
+{
+  "id": "S06b",
+  "name": "SPF-only sibling s",
+  "from": "mail.sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.10",
+  "signed": false,
+  "spf": "pass",
+  "dkim": "none",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered",
+  "alignment": "s"
+}

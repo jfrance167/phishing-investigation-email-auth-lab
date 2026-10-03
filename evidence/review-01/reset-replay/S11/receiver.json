@@ -1,0 +1,117 @@
+{
+    "symbols": [
+        {
+            "weight": 1,
+            "score": -0.500000,
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "name": "DMARC_POLICY_ALLOW",
+            "group": "policies",
+            "options": [
+                "lookalike.test",
+                "none"
+            ]
+        },
+        {
+            "weight": 1,
+            "score": -0.100000,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "R_DKIM_ALLOW",
+            "group": "policies",
+            "options": [
+                "lookalike.test:s=lab1"
+            ]
+        },
+        {
+            "weight": 1,
+            "score": -0.200000,
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "name": "R_SPF_ALLOW",
+            "group": "policies",
+            "options": [
+                "+ip4:10.77.0.10"
+            ]
+        },
+        {
+            "weight": 1,
+            "score": -0.100000,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "R_DKIM_ALIGNED",
+            "group": "policies",
+            "options": [
+                "strict"
+            ]
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "DKIM_TRACE",
+            "group": "policies",
+            "options": [
+                "lookalike.test:+"
+            ]
+        }
+    ],
+    "queue_id": "5172F401D3",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "domain": "lookalike.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@lookalike.test>",
+            "addr": "analyst@lookalike.test",
+            "user": "analyst"
+        }
+    ],
+    "envelope_to": [
+        {
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "addr": "analyst@recipient.test",
+            "user": "analyst"
+        }
+    ],
+    "header_from": [
+        {
+            "domain": "lookalike.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Campus Security Team",
+            "raw": "<analyst@lookalike.test>",
+            "addr": "analyst@lookalike.test",
+            "user": "analyst"
+        }
+    ],
+    "ip": "10.77.0.10",
+    "scenario_claim": "S11",
+    "action": "no action",
+    "run_claim": "6c628f1ee19947f6860de6f60d5ff53b",
+    "collected_unix": 1790999577,
+    "source": "receiver-rspamd-milter"
+}

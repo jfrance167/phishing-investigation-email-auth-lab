@@ -1,0 +1,23 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Sat, 3 Oct 2026 03:47:26 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id 74F0340138
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:47:26 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=permerror reason="Multiple policies defined in DNS" header.from=sender.test (policy=permerror);
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.11 as permitted sender) smtp.mailfrom=analyst@sender.test
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S08b Malformed duplicate DMARC
+Message-ID: <S08b@sender.test>
+X-Lab-Scenario: S08b
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 1741b209df9143eaaf571406d4855d4a
+X-Rspamd-Queue-Id: 74F0340138
+
+Harmless synthetic lab content. No real credentials or attachments.
+

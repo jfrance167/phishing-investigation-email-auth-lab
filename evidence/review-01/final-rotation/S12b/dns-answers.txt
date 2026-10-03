@@ -1,0 +1,69 @@
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14617
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: abb2863be00b02e9010000006ac07d5a72e0a46859ac8e0f (good)
+;; QUESTION SECTION:
+;sender.test.			IN	TXT
+
+;; ANSWER SECTION:
+sender.test.		120	IN	TXT	"v=spf1 ip4:10.77.0.10 -all"
+
+;; Query time: 0 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Sat Oct 03 03:58:18 UTC 2026
+;; MSG SIZE  rcvd: 107
+
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 _dmarc.sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64662
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 6fd79894d5d3802b010000006ac07d5a36b5a0c406c5c883 (good)
+;; QUESTION SECTION:
+;_dmarc.sender.test.		IN	TXT
+
+;; ANSWER SECTION:
+_dmarc.sender.test.	120	IN	TXT	"v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r"
+
+;; Query time: 0 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Sat Oct 03 03:58:18 UTC 2026
+;; MSG SIZE  rcvd: 156
+
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 lab2._domainkey.sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11114
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 92d6e22b4b5d7738010000006ac07d5a6db71bbf281a6a3a (good)
+;; QUESTION SECTION:
+;lab2._domainkey.sender.test.	IN	TXT
+
+;; ANSWER SECTION:
+lab2._domainkey.sender.test. 120 IN	TXT	"v=DKIM1; k=rsa; " "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsMWUYNdx6ZrTGMGkIME74jQrdJ4DEviBnsj0Jnnr9WyoOe8cto/h5kEB+MtgAkin4aJMqOT8pYqRNOXgTH9ovZbjpxJLbSKa5U1RaWMxijAWtsFmVN3yWlgjga3ffr+YEJzT1ijzrWKSTBmwbkpXrtrnUpgSo4x3DTVDedcXEM3zi6jc+9n09DmxYcJRPjYCw6OPIfrUyUu8lMVG7" "mtRImwRJ57X7ok3v2kmccwKe17FCEIvJ/APwi9W/Eqnrcwoym1WryTpClJWsmnba3pSBqpMEo7g/ARMgvqHvCWn23rqLjAqJjYaK2VIyMlqe7yShNSoJ+IF+uxXZ2Mbl57Y/QIDAQAB"
+
+;; Query time: 0 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Sat Oct 03 03:58:18 UTC 2026
+;; MSG SIZE  rcvd: 509
+

@@ -1,0 +1,88 @@
+{
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "action": "reject",
+    "symbols": [
+        {
+            "group": "policies",
+            "weight": 0,
+            "score": 0,
+            "name": "R_DKIM_NA",
+            "groups": [
+                "policies",
+                "dkim"
+            ]
+        },
+        {
+            "group": "policies",
+            "weight": 1,
+            "score": 1,
+            "options": [
+                "-all"
+            ],
+            "name": "R_SPF_FAIL",
+            "groups": [
+                "policies",
+                "spf"
+            ]
+        },
+        {
+            "group": "policies",
+            "weight": 1,
+            "score": 2,
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "reject"
+            ],
+            "name": "DMARC_POLICY_REJECT",
+            "groups": [
+                "policies",
+                "dmarc"
+            ]
+        }
+    ],
+    "run_claim": "3ff8c51e9e5845ce8eaa1ce1228d0ae5",
+    "source": "receiver-rspamd-milter",
+    "scenario_claim": "S07x",
+    "collected_unix": 1790999521,
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "queue_id": "B8CDE401D3",
+    "helo": "sender.sender.test",
+    "ip": "10.77.0.11"
+}

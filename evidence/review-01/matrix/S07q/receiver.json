@@ -1,0 +1,88 @@
+{
+    "symbols": [
+        {
+            "name": "R_DKIM_NA",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0,
+            "score": 0,
+            "group": "policies"
+        },
+        {
+            "name": "R_SPF_FAIL",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "weight": 1,
+            "score": 1,
+            "options": [
+                "-all"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "DMARC_POLICY_QUARANTINE",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "weight": 1,
+            "score": 1.500000,
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "quarantine"
+            ],
+            "group": "policies"
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "queue_id": "9FE774019D",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "sender.test",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "recipient.test",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "sender.test",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "action": "quarantine",
+    "scenario_claim": "S07q",
+    "run_claim": "471cd49f59844811a01a536f0ea89041",
+    "ip": "10.77.0.11",
+    "collected_unix": 1790999220
+}

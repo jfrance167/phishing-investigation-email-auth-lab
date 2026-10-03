@@ -4,12 +4,13 @@ Retains keys, Redis reporting data and Mailpit capture. Deletes only individuall
 synthetic queue entries, never a whole queue, VM, disk, report database or host resource.
 """
 import argparse
+import hashlib
 import json
 import re
-import subprocess  # nosec B404 # Fixed reviewed readiness script; no local shell.
 from pathlib import Path
-from tools.lab import ROOT,ssh,upload,download,run_case,POWERSHELL
+from tools.lab import ROOT,ssh,upload,run_case,ready
 from tools.evidence import manifest,verify
+from tools.queue_ledger import queue_ledger,authorized_queue
 
 
 def reset_replay(output):
@@ -19,8 +20,8 @@ def reset_replay(output):
         verify(path.parent)
         checked.append(path.parent.relative_to(ROOT).as_posix())
     (output/'verified-before-reset.json').write_text(json.dumps(checked,indent=2))
-    subprocess.run([str(POWERSHELL),'-NoProfile','-File',str(ROOT/'tools/Test-LabReady.ps1'),
-        '-IncludeRelay','-OutputDirectory',str(output/'gate-before')],check=True,timeout=60)  # nosec B603 # Absolute executable and fixed reviewed script; path is one argv value.
+    ready(output/'gate-before',True)
+    ledger=queue_ledger(ROOT/'evidence')
     for role in ('sender','receiver','relay'):
         if ssh(role,'cat /etc/peal-owned').stdout.strip()!=('PEAL-'+role).encode(): raise ValueError('Wrong guest')
         snapshot=ssh(role,'postconf -n; postqueue -j; cat /etc/bind/peal.test.zone 2>/dev/null || true').stdout
@@ -30,11 +31,14 @@ def reset_replay(output):
             if not re.fullmatch('[A-Za-z0-9]{5,30}',qid): raise ValueError('Unsafe queue ID')
             raw=ssh(role,'postcat -bhq '+qid).stdout
             saved=output/(role+'-'+qid+'.eml'); saved.write_bytes(raw)
-            # Evidence exists before a narrowly selected disposable message is removed.
-            if re.search(br'(?m)^X-Lab-Scenario: S[0-9]{2}[a-z]?\r?$',raw):
+            (output/(role+'-'+qid+'-export.json')).write_text(json.dumps({'role':role,'queue_id':qid,
+                'sha256':hashlib.sha256(raw).hexdigest(),'authorized':authorized_queue(role,qid,raw,ledger)},indent=2))
+            # A copyable header alone never authorizes deletion; require queue/run linkage to verified exports.
+            if authorized_queue(role,qid,raw,ledger):
+                if ssh(role,'postcat -bhq '+qid).stdout!=raw: raise ValueError('Queue changed after export; retain and review')
                 (output/(role+'-'+qid+'-remove.txt')).write_bytes(ssh(role,'postsuper -d '+qid).stdout)
             else:
-                (output/(role+'-'+qid+'-retained.txt')).write_text('No valid scenario marker: retained, not deleted.')
+                (output/(role+'-'+qid+'-retained.txt')).write_text('No verified queue/run collection linkage: retained, not deleted.')
     # Capture DB is retained unchanged. Restart authentication services to clear their DNS caches.
     for role in ('sender','receiver'):
         upload(role,ROOT/'tools/configure-mail.sh','/opt/peal/configure-mail.sh')

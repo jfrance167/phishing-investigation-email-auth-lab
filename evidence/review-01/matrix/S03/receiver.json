@@ -1,0 +1,88 @@
+{
+    "run_claim": "aba9c7a621b14823a22becd65d6123be",
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790999096,
+    "symbols": [
+        {
+            "name": "R_SPF_ALLOW",
+            "options": [
+                "+ip4:10.77.0.10"
+            ],
+            "group": "policies",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "score": -0.200000,
+            "weight": 1
+        },
+        {
+            "name": "R_DKIM_NA",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "score": 0,
+            "weight": 0
+        },
+        {
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "options": [
+                "lookalike.test : SPF not aligned (relaxed), No valid DKIM",
+                "none"
+            ],
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "score": 0.100000,
+            "weight": 1
+        }
+    ],
+    "queue_id": "D27C14019D",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@lookalike.test>",
+            "user": "analyst",
+            "domain": "lookalike.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@lookalike.test"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S03",
+    "ip": "10.77.0.10"
+}

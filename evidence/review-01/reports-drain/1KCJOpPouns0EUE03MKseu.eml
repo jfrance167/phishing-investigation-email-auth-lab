@@ -1,0 +1,56 @@
+Return-Path: <reports@recipient.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <reports@recipient.test>; Sat, 3 Oct 2026 03:59:17 +0000 (UTC)
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+	by receiver.recipient.test (Postfix) with SMTP id 10EAA401DE;
+	Sat, 03 Oct 2026 03:59:17 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=none;
+	spf=none (receiver.recipient.test: domain of reports@recipient.test has no SPF policy when checking 127.0.0.1) smtp.mailfrom=reports@recipient.test
+From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Subject: Report Domain: sender.test
+	Submitter: recipient.test
+	Report-ID: sender.test.1790999071.1790999957
+Date: Sat, 03 Oct 2026 03:59:17 GMT
+MIME-Version: 1.0
+Message-ID: <d54bdc434b0023bd@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_a01c809c-7026-4369-86a9-d459012ddaad"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+X-Rspamd-Queue-Id: 10EAA401DE
+
+This is a multipart message in MIME format.
+
+------=_NextPart_a01c809c-7026-4369-86a9-d459012ddaad
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: sender.test
+Submitter: recipient.test
+Report ID: sender.test.1790999071.1790999957
+
+------=_NextPart_a01c809c-7026-4369-86a9-d459012ddaad
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!sender.test!1790999071!1790999957.xml.gz"
+
+H4sIAAAAAAAAA+2YW2+bMBTH3/spUN7HpVVFkVzah2mfYHtGBg6JV7A923Tbt98Bm0u2RJuiF
+dEkTzF/H5/bzzYR5OlHU3uvoDQT/HET+eHGA16IkvHt4+bL508fHjbeU3pDKoAyp8VLeuN5RI
+EUymQNGFpSQzsNVaG2GacNpB+ZlkLTvAYPGspqr6Y5CcZpa93PpNaTflZQMMmAG9+ANiSws9b
+SRWNlqoGXoHoTP4qTMEmSMI6GYXIfk2AytosxP8gU5VsXF6Uctoyn03oSWGWYxyDp3GX3bJ0F
++97GaPNGEClqVvzMZJvXTO9gTERgSXxeArqzmjWg5QtrUkUCO3CillWvdb9WkikXHEgg3bMeB
+D0osjBpFIZogoM+zz9zwq4WQpUWp/g++BKtKiBjEtf7ceyHfoTtmVRrVYiWYwQS2IELakPAK6
+1b7FI5trPsdwMzuMFconNltOpqrhA6To/l99VVTp46EByKhTBsGYSVuI9YxXBTuwU7oNj0rFK
+i2Qcwn+h9/LaW0NbsMgW6rY0e+11NWf8Far97u8WucvfgynCekO5elM7MsrlCWhaSBNWAUkK9
+HanwGKnbxUhJqvV6SO2l9++obG37lGb35on8+84sfkhPQf+tpfgeMuxSj+oh/itFpeArFOaK6
+b9julvBZbouSGu6TM8HvX0tnCf6Q6+8daM/fjnfXeipv0J6B5Au5mpeFP31an4f6O8v9NSvEd
+LRv04Pi53Ps/gE8Sbn87RPEMH4ef4XtHywHdEXAAA=
+------=_NextPart_a01c809c-7026-4369-86a9-d459012ddaad--

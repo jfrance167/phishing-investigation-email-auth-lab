@@ -15,8 +15,11 @@ def correlate(window,reports):
     data=json.loads((reports/'reports.json').read_text())
     actual=Counter(); expected=Counter()
     for report in data:
+        if type(report['begin']) is not int or type(report['end']) is not int or report['begin']>=report['end']:
+            raise ValueError('Malformed/reversed report window')
         for row in report['rows']:
-            if row['count']<=0: raise ValueError('Non-positive aggregate count')
+            if type(row['count']) is not int or row['count']<=0: raise ValueError('Non-positive/non-integer aggregate count')
+            if row['header_from']!=report['domain']: raise ValueError('Report header identity differs from controlled policy domain')
             actual[(report['domain'],row['source_ip'],row['aligned_spf'],row['aligned_dkim'],row['disposition'])]+=row['count']
     for bundle in window.iterdir():
         if not bundle.is_dir() or not (bundle/'observed.json').exists(): continue

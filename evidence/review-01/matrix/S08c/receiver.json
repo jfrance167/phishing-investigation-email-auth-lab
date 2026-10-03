@@ -1,0 +1,88 @@
+{
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S08c",
+    "ip": "10.77.0.11",
+    "symbols": [
+        {
+            "name": "R_DKIM_NA",
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "weight": 1,
+            "score": 0.100000,
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "none"
+            ],
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_SPF_PERMFAIL",
+            "weight": 0,
+            "score": 0,
+            "options": [
+                "-any"
+            ],
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies"
+        }
+    ],
+    "run_claim": "48d83748735a4d628856e40bd7fdc9e7",
+    "collected_unix": 1790999254,
+    "source": "receiver-rspamd-milter",
+    "queue_id": "A251540138"
+}

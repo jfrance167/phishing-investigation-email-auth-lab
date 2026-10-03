@@ -1,0 +1,4 @@
+zone test/IN: loaded serial 2026100101
+OK
+/opt/peal/mailpit-linux-amd64.tar.gz: OK
+DNS/capture configured; still require integration baseline.

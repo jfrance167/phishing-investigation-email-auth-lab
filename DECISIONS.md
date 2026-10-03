@@ -11,3 +11,7 @@
 - Register quarantine with no_threshold so DMARC can request a real milter hold. Count a pass only after Postfix hold-queue or SMTP/log evidence, never just a policy symbol.
 - Use a separately preserved two-line Rspamd report adapter for same-day UTC windows; upstream command remains unchanged. One edit selects actual collection end time, the other gives the copied command its own name. Counts and timestamp enclosure are independently correlated.
 - Reset configuration/caches and individually exported synthetic queues; retain captures, keys and Redis data. An unmarked early staging entry remains deferred rather than being silently deleted. No full queue/database wipe or VM destruction.
+
+- Review: queue deletion requires a verified role/queue/scenario/nonce ledger, not copyable headers; export and byte recheck precede removal. Unknown entries remain retained.
+- Review: count completion only after successful restoration; validate full SMTP identities, current exact-queue logs and intended signing selector separately from verdicts. Reports and rotation share the isolation gate.
+- Review: add independent SPF-only and DKIM-only sibling controls so passing one mechanism cannot conceal a broken other mechanism.

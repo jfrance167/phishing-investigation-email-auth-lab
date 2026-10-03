@@ -1,0 +1,104 @@
+{
+    "ip": "10.77.0.11",
+    "queue_id": "857CB4019D",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "raw": "<analyst@sender.test>",
+            "name": "",
+            "domain": "sender.test",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "raw": "<analyst@recipient.test>",
+            "name": "",
+            "domain": "recipient.test",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "raw": "<analyst@lookalike.test>",
+            "name": "Synthetic Lab Analyst",
+            "domain": "lookalike.test",
+            "addr": "analyst@lookalike.test"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S04",
+    "run_claim": "655a976b10124bac841d2071cf99c7ec",
+    "symbols": [
+        {
+            "group": "policies",
+            "name": "R_DKIM_ALLOW",
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "weight": 1,
+            "score": -0.100000,
+            "groups": [
+                "policies",
+                "dkim"
+            ]
+        },
+        {
+            "group": "policies",
+            "name": "R_SPF_FAIL",
+            "options": [
+                "-all"
+            ],
+            "weight": 1,
+            "score": 1,
+            "groups": [
+                "policies",
+                "spf"
+            ]
+        },
+        {
+            "group": "policies",
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "options": [
+                "lookalike.test : No valid SPF, DKIM not aligned (relaxed)",
+                "none"
+            ],
+            "weight": 1,
+            "score": 0.100000,
+            "groups": [
+                "policies",
+                "dmarc"
+            ]
+        },
+        {
+            "group": "policies",
+            "name": "DKIM_TRACE",
+            "options": [
+                "sender.test:+"
+            ],
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ]
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790999109
+}

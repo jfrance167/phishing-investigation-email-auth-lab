@@ -1,0 +1,88 @@
+{
+    "ip": "10.77.0.11",
+    "symbols": [
+        {
+            "name": "R_DKIM_NA",
+            "weight": 0,
+            "score": 0,
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ]
+        },
+        {
+            "name": "R_SPF_FAIL",
+            "options": [
+                "-all"
+            ],
+            "weight": 1,
+            "score": 1,
+            "group": "policies",
+            "groups": [
+                "policies",
+                "spf"
+            ]
+        },
+        {
+            "name": "DMARC_POLICY_REJECT",
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "reject"
+            ],
+            "weight": 1,
+            "score": 2,
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dmarc"
+            ]
+        }
+    ],
+    "action": "reject",
+    "queue_id": "80199401BE",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "collected_unix": 1790999229,
+    "scenario_claim": "S07x",
+    "source": "receiver-rspamd-milter",
+    "run_claim": "2cc10cfaa9d14488a4f5aca2beeac877"
+}

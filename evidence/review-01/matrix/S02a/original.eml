@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S02a Unauthorized IP with independent aligned DKIM
+Message-ID: <S02a@sender.test>
+X-Lab-Scenario: S02a
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 7dcb46ef09bf41708a167dee9e9ec265
+
+Harmless synthetic lab content. No real credentials or attachments.

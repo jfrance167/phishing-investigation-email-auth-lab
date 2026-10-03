@@ -1,0 +1,15 @@
+{
+  "id": "S12c",
+  "name": "Retired old selector warm cache",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": true,
+  "spf": "fail",
+  "dkim": "pass",
+  "dmarc": "pass",
+  "policy": "none",
+  "disposition": "delivered",
+  "key": "missing",
+  "warm": true
+}

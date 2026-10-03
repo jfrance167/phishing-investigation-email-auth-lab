@@ -50,3 +50,7 @@ These concrete differences establish a legacy reporting format, not full RFC 999
 No complete XSD validation or cross-product interoperability test was run. Correct counts and XML
 parsing do not prove standards conformance. Report policy/disposition fields also do not replace
 independently verified hold queues and SMTP rejections.
+
+## Review verification
+
+The fresh `evidence/review-01/report-window` and `reports` bundles repeat the exact three-message/two-report control at UTC 1790999960–1791000006. `report-correlation.json` passed with row header identity and ordered integer time bounds now required. Reports require the shared isolation gate before collection/generation. Prior reports remain immutable historical evidence.

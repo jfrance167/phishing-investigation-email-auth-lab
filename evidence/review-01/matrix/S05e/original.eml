@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05e Wrong DKIM public key
+Message-ID: <S05e@sender.test>
+X-Lab-Scenario: S05e
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 36fe627a20774a94b32d29450729db48
+
+Harmless synthetic lab content. No real credentials or attachments.

@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET  # nosec B405 # Strict UTF-8, bounded decompr
 from email import policy
 from email.parser import BytesParser
 from pathlib import Path
-from tools.lab import ssh,download,upload
+from tools.lab import ssh,download,upload,ready
 from tools.evidence import manifest,MAX_BYTES
 
 
@@ -43,6 +43,7 @@ def extract_report(raw):
 
 def collect(output,begin=None):
     output.mkdir(parents=True,exist_ok=False)
+    ready(output/'gate-before')
     if ssh('receiver','cat /etc/peal-owned').stdout.strip()!=b'PEAL-receiver': raise ValueError('Wrong guest')
     config=ssh('receiver','rspamadm configdump dmarc').stdout
     if b'smtp = "127.0.0.1"' not in config or b'reports@recipient.test' not in config:
@@ -58,7 +59,7 @@ def collect(output,begin=None):
         now=int(ssh('receiver','date -u +%s').stdout)
         if not now-86400 <= begin <= now: raise ValueError('Window begin must be within the preceding day')
         # Upstream CLI dates select Redis keys but metadata always ends at today's midnight.
-        # A separately preserved one-line lab adapter supports a current-day bounded experiment.
+        # A separately preserved two-edit lab adapter supports a current-day bounded experiment.
         source=ssh('receiver','cat /usr/share/rspamd/lualib/rspamadm/dmarc_report.lua').stdout
         old=b'local start_collection = today_midnight()'
         if source.count(old)!=1: raise ValueError('Unsupported upstream report source')
@@ -96,6 +97,6 @@ def collect(output,begin=None):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
-    parser.add_argument('--begin',type=int,help='Use documented one-line lab adapter for a current-day UTC window')
+    parser.add_argument('--begin',type=int,help='Use documented two-edit lab adapter for a current-day UTC window')
     args=parser.parse_args()
     print(json.dumps(collect(args.output.resolve(),args.begin),indent=2))

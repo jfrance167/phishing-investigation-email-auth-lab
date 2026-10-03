@@ -1,0 +1,128 @@
+{
+    "queue_id": "3CFBA401D3",
+    "helo": "relay.sender.test",
+    "envelope_from": [
+        {
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test",
+            "user": "analyst"
+        }
+    ],
+    "envelope_to": [
+        {
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "addr": "analyst@recipient.test",
+            "user": "analyst"
+        }
+    ],
+    "header_from": [
+        {
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test",
+            "user": "analyst"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S09f",
+    "ip": "10.77.0.30",
+    "symbols": [
+        {
+            "options": [
+                "sender.test",
+                "none"
+            ],
+            "weight": 0,
+            "score": 0,
+            "name": "DMARC_POLICY_ALLOW",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies"
+        },
+        {
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "weight": 1,
+            "score": -0.100000,
+            "name": "R_DKIM_ALLOW",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        },
+        {
+            "options": [
+                "-all"
+            ],
+            "weight": 0,
+            "score": 0,
+            "name": "R_SPF_FAIL",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies"
+        },
+        {
+            "options": [
+                "strict"
+            ],
+            "weight": 1,
+            "score": -0.100000,
+            "name": "R_DKIM_ALIGNED",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        },
+        {
+            "weight": 1,
+            "score": -0.500000,
+            "name": "DMARC_POLICY_ALLOW_WITH_FAILURES",
+            "groups": [
+                "policies",
+                "dmarc",
+                "composite"
+            ],
+            "group": "policies"
+        },
+        {
+            "options": [
+                "sender.test:+"
+            ],
+            "weight": 0,
+            "score": 0,
+            "name": "DKIM_TRACE",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "run_claim": "971e0f5e8e644c9587875b3cf25c6ac1",
+    "collected_unix": 1790999535
+}

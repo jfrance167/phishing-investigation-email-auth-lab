@@ -16,9 +16,12 @@ AUTH_RE = re.compile(r'\b(spf|dkim|dmarc)\s*=\s*([a-z]+)', re.I)
 
 
 def bounded_bytes(path):
-    if path.stat().st_size > MAX_BYTES:
+    # Bound the actual read, including files that grow/change after opening.
+    with path.open('rb') as stream:
+        content=stream.read(MAX_BYTES+1)
+    if len(content) > MAX_BYTES:
         raise ValueError('Evidence exceeds 2 MiB parser limit')
-    return path.read_bytes()
+    return content
 
 
 def claims(path):

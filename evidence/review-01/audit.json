@@ -1,0 +1,223 @@
+{
+  "status": "passed",
+  "authentication_cases": 31,
+  "cases": [
+    {
+      "scenario": "S01",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S02",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S03",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S04",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S05a",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S05b",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S05c",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S05d",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S05e",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S06r",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S06s",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S07n",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S07q",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S07x",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S08a",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S08b",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S08c",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S08d",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S10",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S11",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S09f",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S09m",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S12a",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S12b",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S12c",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S12d",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S02a",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S06a",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S06b",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S06c",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    },
+    {
+      "scenario": "S06d",
+      "integrity": true,
+      "identities": true,
+      "nonce_linkage": true,
+      "expected_match": true
+    }
+  ]
+}

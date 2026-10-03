@@ -1,0 +1,54 @@
+Return-Path: <reports@recipient.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <reports@recipient.test>; Sat, 3 Oct 2026 04:00:06 +0000 (UTC)
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+	by receiver.recipient.test (Postfix) with SMTP id B8935401E3;
+	Sat, 03 Oct 2026 04:00:06 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=none;
+	spf=none (receiver.recipient.test: domain of reports@recipient.test has no SPF policy when checking 127.0.0.1) smtp.mailfrom=reports@recipient.test
+From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Subject: Report Domain: sender.test
+	Submitter: recipient.test
+	Report-ID: sender.test.1790999960.1791000006
+Date: Sat, 03 Oct 2026 04:00:06 GMT
+MIME-Version: 1.0
+Message-ID: <078edefddbec761a@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_4991acff-4fd4-40de-a414-4cd17eef3f73"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+X-Rspamd-Queue-Id: B8935401E3
+
+This is a multipart message in MIME format.
+
+------=_NextPart_4991acff-4fd4-40de-a414-4cd17eef3f73
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: sender.test
+Submitter: recipient.test
+Report ID: sender.test.1790999960.1791000006
+
+------=_NextPart_4991acff-4fd4-40de-a414-4cd17eef3f73
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!sender.test!1790999960!1791000006.xml.gz"
+
+H4sIAAAAAAAAA81UyU7DMBC98xVR78TthVLJGA6IL4Bz5MST1iKxLdsp8PdMMs5SQGKTELnEf
+jPzZnmT8OvntsmO4IO25mq1yderDExllTb7q9XD/d355Sq7Fme8BlClrB7FWZZxD876WLQQpZ
+JR9hii1u8LI1sQtzo4G2TZQAat1E3WyJKzyUzeg0UQU7jxUGmnwcQ8QoickZU8UzatRACjwA8
+u+Wa7W+/wuVj3x826fy44m50pGOuDwkuzT3kRKmGvjZjjOSNktGMSsaTs70TGTtmmbMtBcGcb
+Xb0UrisbHQ4wFWKxJbNsAekIIwepHnUrPGd0SGBw9YD1b4KcMNYAZy7dwwiEEXFVFFg9uuBhq
+PN9TTjVynpFctqnkct2voJCO4zPt9scZ4s0M0pele0MZuCMDikppYCjbDqckprGqYZt0BEXLB
+W6RCavvmcnQ0Dz1P7QXZ3geQLso1woBrXBtcI90rXGpU4BB5A49KL2tj0VYGkYON7EctnFQ+E
+hdE0cyU7K+0zVYX376NREuozrNAs9dfdr0sSEO3NSe+9Gin9Z+s0fSl/j9/6B9AT/F+l/JhL1
+8F2R2PTHfQUz3OW2pAUAAA==
+------=_NextPart_4991acff-4fd4-40de-a414-4cd17eef3f73--

@@ -1,0 +1,14 @@
+{
+  "id": "S06c",
+  "name": "DKIM-only sibling r",
+  "from": "mail.sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": true,
+  "spf": "fail",
+  "dkim": "pass",
+  "dmarc": "pass",
+  "policy": "none",
+  "disposition": "delivered",
+  "alignment": "r"
+}

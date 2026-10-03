@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "messages": 3,
+  "reports": 2,
+  "window": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\report-window",
+  "report_bundle": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\phishing-investigation-email-auth-lab\\evidence\\review-01\\reports",
+  "limits": "Requires exclusive lab window. Report disposition remains separately checked against queue/SMTP evidence."
+}

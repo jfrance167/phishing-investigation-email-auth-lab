@@ -1,0 +1,13 @@
+{
+  "id": "S07q",
+  "name": "Failed DMARC quarantine",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": false,
+  "spf": "fail",
+  "dkim": "none",
+  "dmarc": "fail",
+  "policy": "quarantine",
+  "disposition": "held"
+}

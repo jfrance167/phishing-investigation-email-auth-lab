@@ -1,0 +1,87 @@
+{
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "action": "no action",
+    "collected_unix": 1790999246,
+    "symbols": [
+        {
+            "name": "R_DKIM_NA",
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_SPF_FAIL",
+            "options": [
+                "-all"
+            ],
+            "weight": 1,
+            "score": 1,
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "DMARC_BAD_POLICY",
+            "options": [
+                "sender.test : Multiple policies defined in DNS"
+            ],
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies"
+        }
+    ],
+    "run_claim": "1741b209df9143eaaf571406d4855d4a",
+    "ip": "10.77.0.11",
+    "source": "receiver-rspamd-milter",
+    "scenario_claim": "S08b",
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "queue_id": "74F0340138"
+}

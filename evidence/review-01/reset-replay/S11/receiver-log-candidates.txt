@@ -1,0 +1,8 @@
+2026-10-03T03:52:57.333686+00:00 receiver postfix/smtpd[22146]: 5172F401D3: client=unknown[10.77.0.10]
+2026-10-03T03:52:57.334549+00:00 receiver postfix/cleanup[22150]: 5172F401D3: message-id=<S11@sender.test>
+2026-10-03T03:52:57.538110+00:00 receiver postfix/qmgr[21866]: 5172F401D3: from=<analyst@lookalike.test>, size=1599, nrcpt=1 (queue active)
+2026-10-03T03:52:57.540002+00:00 receiver postfix/smtp[22151]: 5172F401D3: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=0.21, delays=0.2/0/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 66pogjmwbOpNI3HwXpqvam)
+2026-10-03T03:52:57.540046+00:00 receiver postfix/qmgr[21866]: 5172F401D3: removed
+2026-10-03 03:52:57 #23667(rspamd_proxy) <963e59>; proxy; rspamd_message_parse: loaded message; id: <S11@sender.test>; queue-id: <5172F401D3>; size: 1362; checksum: <51d2a757a502c691e8225399ceb4ff26>
+2026-10-03 03:52:57 #23667(rspamd_proxy) <963e59>; proxy; rspamd_task_write_log: id: <S11@sender.test>, qid: <5172F401D3>, ip: 10.77.0.10, from: <analyst@lookalike.test>, (default: F (no action): [-0.90/1000.00] [DMARC_POLICY_ALLOW(-0.50){lookalike.test;none;},R_SPF_ALLOW(-0.20){+ip4:10.77.0.10;},R_DKIM_ALIGNED(-0.10){strict;},R_DKIM_ALLOW(-0.10){lookalike.test:s=lab1;},DKIM_TRACE(0.00){lookalike.test:+;}]), len: 1362, time: 52.742ms, dns req: 3, digest: <51d2a757a502c691e8225399ceb4ff26>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>
+{"queue_name": "hold", "queue_id": "CE6C240114", "arrival_time": 1790999511, "message_size": 596, "forced_expire": false, "sender": "analyst@sender.test", "recipients": [{"address": "analyst@recipient.test"}]}

@@ -1,0 +1,88 @@
+{
+    "source": "receiver-rspamd-milter",
+    "ip": "10.77.0.10",
+    "queue_id": "C492A40138",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>"
+        }
+    ],
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "domain": "mail.sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@mail.sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@mail.sender.test>"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S06a",
+    "symbols": [
+        {
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "weight": 1,
+            "score": -0.200000,
+            "group": "policies",
+            "name": "R_SPF_ALLOW",
+            "options": [
+                "+ip4:10.77.0.10"
+            ]
+        },
+        {
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0,
+            "score": 0,
+            "group": "policies",
+            "name": "R_DKIM_NA"
+        },
+        {
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "weight": 1,
+            "score": -0.500000,
+            "group": "policies",
+            "name": "DMARC_POLICY_ALLOW",
+            "options": [
+                "mail.sender.test",
+                "none"
+            ]
+        }
+    ],
+    "run_claim": "0f25681101dd44bbaae5dbd7ea4fa10e",
+    "collected_unix": 1790999342
+}

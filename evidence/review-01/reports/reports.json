@@ -1,0 +1,42 @@
+[
+  {
+    "domain": "lookalike.test",
+    "begin": 1790999960,
+    "end": 1791000006,
+    "rows": [
+      {
+        "source_ip": "10.77.0.10",
+        "count": 1,
+        "disposition": "none",
+        "aligned_spf": "pass",
+        "aligned_dkim": "pass",
+        "header_from": "lookalike.test"
+      }
+    ],
+    "capture_id": "0TXnwopb1EF7XBPWMAKPJQ"
+  },
+  {
+    "domain": "sender.test",
+    "begin": 1790999960,
+    "end": 1791000006,
+    "rows": [
+      {
+        "source_ip": "10.77.0.10",
+        "count": 1,
+        "disposition": "none",
+        "aligned_spf": "pass",
+        "aligned_dkim": "pass",
+        "header_from": "sender.test"
+      },
+      {
+        "source_ip": "10.77.0.11",
+        "count": 1,
+        "disposition": "none",
+        "aligned_spf": "fail",
+        "aligned_dkim": "fail",
+        "header_from": "sender.test"
+      }
+    ],
+    "capture_id": "4k4cyEcmBCqMsKw1giGRxO"
+  }
+]

@@ -1,0 +1,8 @@
+2026-10-03T03:47:09.524786+00:00 receiver postfix/smtpd[15474]: 80199401BE: client=unknown[10.77.0.11]
+2026-10-03T03:47:09.525435+00:00 receiver postfix/cleanup[15478]: 80199401BE: message-id=<S07x@sender.test>
+2026-10-03T03:47:09.628770+00:00 receiver postfix/cleanup[15478]: 80199401BE: milter-reject: END-OF-MESSAGE from unknown[10.77.0.11]: 5.7.1 Spam message rejected; from=<analyst@sender.test> to=<analyst@recipient.test> proto=ESMTP helo=<sender.sender.test>
+2026-10-03T03:47:09.628941+00:00 receiver postfix/cleanup[15478]: 80199401BE: removed (canceled)
+2026-10-03 03:47:09 #17979(rspamd_proxy) <9d02fa>; proxy; rspamd_message_parse: loaded message; id: <S07x@sender.test>; queue-id: <80199401BE>; size: 366; checksum: <02b3cc9748af430461379dde5054b3a5>
+2026-10-03 03:47:09 #17979(rspamd_proxy) <9d02fa>; proxy; rspamd_task_write_log: id: <S07x@sender.test>, qid: <80199401BE>, ip: 10.77.0.11, from: <analyst@sender.test>, (default: T (reject): [1000.00/1000.00] [DMARC_POLICY_REJECT(2.00){sender.test : No valid SPF, No valid DKIM;reject;},R_SPF_FAIL(1.00){-all;},R_DKIM_NA(0.00){}]), len: 366, time: 47.058ms, dns req: 2, digest: <02b3cc9748af430461379dde5054b3a5>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>, forced: reject "Action set by DMARC"; score=nan (set by dmarc)
+{"queue_name": "hold", "queue_id": "9FE774019D", "arrival_time": 1790999220, "message_size": 596, "forced_expire": false, "sender": "analyst@sender.test", "recipients": [{"address": "analyst@recipient.test"}]}
+{"queue_name": "hold", "queue_id": "5D22F40137", "arrival_time": 1790997586, "message_size": 596, "forced_expire": false, "sender": "analyst@sender.test", "recipients": [{"address": "analyst@recipient.test"}]}

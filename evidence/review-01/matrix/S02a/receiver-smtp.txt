@@ -1,0 +1,56 @@
+=== Trying 10.77.0.20:25...
+=== Connected to 10.77.0.20.
+<-  220 receiver.recipient.test ESMTP Postfix (Debian)
+ -> EHLO sender.sender.test
+<-  250-receiver.recipient.test
+<-  250-PIPELINING
+<-  250-SIZE 2097152
+<-  250-VRFY
+<-  250-ETRN
+<-  250-ENHANCEDSTATUSCODES
+<-  250-8BITMIME
+<-  250-DSN
+<-  250-SMTPUTF8
+<-  250 CHUNKING
+ -> MAIL FROM:<analyst@sender.test>
+<-  250 2.1.0 Ok
+ -> RCPT TO:<analyst@recipient.test>
+<-  250 2.1.5 Ok
+ -> DATA
+<-  354 End data with <CR><LF>.<CR><LF>
+ -> Received: from sender.sender.test (localhost [127.0.0.1])
+ -> 	by sender.sender.test (Postfix) with ESMTP id ECEDF99F
+ -> 	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:48:52 +0000 (UTC)
+ -> DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+ -> 	t=1790999333;
+ -> 	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ -> 	 to:to:cc:mime-version:mime-version:content-type:content-type;
+ -> 	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+ -> 	b=SZxc2S7Egq+a2haoLQ4BTQHMrp1q45fEtdD55+4pHMl7+wBg0rgzS9b+TZlQbCDphpbRLQ
+ -> 	H6kRhdcmquC2fVXH3Hierv6n5ATgOQddF4B6kZJu33zYopq3VZ5ZvhTRZ26EwqTtEhWygU
+ -> 	Yd/NEcKcYFtOj8dHSGYAAR2/QuwFMLFcv5xsgamq8d4ktpsK8/J7hsa1+fe2FuDGKf/G72
+ -> 	0LHjfiWv6wDM4HMLR29d72Me6vklvnJEtkOxkaFdwF62O9KSdRqB1PdWAHerPiULkj/YgL
+ -> 	AQMvdCfSv/CVPyQnPJEYT8OHYN1jo/NIHZcr8fHGUj+v9ahSQ8lubwonUagI4Q==
+ -> Authentication-Results: sender.sender.test;
+ -> 	dkim=none;
+ -> 	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=sender.test (policy=none);
+ -> 	spf=fail (sender.sender.test: domain of analyst@sender.test does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=analyst@sender.test
+ -> From: Synthetic Lab Analyst <analyst@sender.test>
+ -> To: Analyst <analyst@recipient.test>
+ -> Subject: Synthetic S02a Unauthorized IP with independent aligned DKIM
+ -> Message-ID: <S02a@sender.test>
+ -> X-Lab-Scenario: S02a
+ -> MIME-Version: 1.0
+ -> Content-Type: text/plain; charset=utf-8
+ -> X-Lab-Run: 7dcb46ef09bf41708a167dee9e9ec265
+ -> Date: Sat, 03 Oct 2026 03:48:52 +0000 (UTC)
+ -> X-Rspamd-Queue-Id: ECEDF99F
+ -> 
+ -> Harmless synthetic lab content. No real credentials or attachments.
+ -> 
+ -> 
+ -> .
+<-  250 2.0.0 Ok: queued as 7315840138
+ -> QUIT
+<-  221 2.0.0 Bye
+=== Connection closed with remote host.

@@ -1,0 +1,14 @@
+{
+  "id": "S12d",
+  "name": "Retired old selector cold cache",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": true,
+  "spf": "fail",
+  "dkim": "permerror",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered",
+  "key": "missing"
+}

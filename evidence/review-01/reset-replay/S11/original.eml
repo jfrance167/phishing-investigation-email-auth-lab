@@ -1,0 +1,11 @@
+From: Campus Security Team <analyst@lookalike.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S11 Authenticated lookalike/display impersonation
+Message-ID: <S11@sender.test>
+X-Lab-Scenario: S11
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 6c628f1ee19947f6860de6f60d5ff53b
+
+Harmless synthetic lab content. No real credentials or attachments.
+Urgent: review your fictional account at hxxps://portal[.]lookalike[.]test. Do not enter credentials.

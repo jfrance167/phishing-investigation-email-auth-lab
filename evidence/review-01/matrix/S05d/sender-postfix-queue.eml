@@ -1,0 +1,30 @@
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id D3F96943
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:46:00 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790999160;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=KIgpVReReIDwJPeC1CsH8Be76OVuf6qaPNWRuQbUACqNvLWuvLd+/Xv+JCCWNfJwF2wKS3
+	qrz8qnzsULmFDyJw+LTE0GYVwb3eJsnKjth3GgAde3xTHbJ82TeVWjOX4rSWC7ouju0Vn1
+	StFhI2nP6F3O7csacx2WGcAJSG7i/Zzt0IfQYSb23w3Y7flScnh2FaoGplJcCyYasp+WlQ
+	qjh4exiDapnSq62XDs5gFUV4HF0UFPnaCrEKV3LdYOv3fJv8SrIbagxB2Ef6Um6YfBl4TK
+	z03u9EPOP/18wcvsqCJrrht/0FxnqIUCaiq0lqQOkUtxvxEgJkyvL+P4mV2loQ==
+Authentication-Results: sender.sender.test;
+	dkim=none;
+	spf=fail (sender.sender.test: domain of analyst@sender.test does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=sender.test (policy=none)
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05d Missing DKIM key
+Message-ID: <S05d@sender.test>
+X-Lab-Scenario: S05d
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: f14888011ee84d6cae53e933f7bc8271
+Date: Sat, 03 Oct 2026 03:46:00 +0000 (UTC)
+X-Rspamd-Queue-Id: D3F96943
+
+Harmless synthetic lab content. No real credentials or attachments.
+

@@ -1,0 +1,104 @@
+{
+    "queue_id": "2A24B4019D",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "sender.test",
+            "addr": "analyst@sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>"
+        }
+    ],
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "recipient.test",
+            "addr": "analyst@recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "sender.test",
+            "addr": "analyst@sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S05d",
+    "run_claim": "f14888011ee84d6cae53e933f7bc8271",
+    "ip": "10.77.0.11",
+    "symbols": [
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "options": [
+                "sender.test : No valid SPF",
+                "none"
+            ],
+            "weight": 1,
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "score": 0.100000
+        },
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "options": [
+                "-all"
+            ],
+            "weight": 1,
+            "name": "R_SPF_FAIL",
+            "score": 1
+        },
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "weight": 0,
+            "name": "R_DKIM_PERMFAIL",
+            "score": 0
+        },
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "options": [
+                "sender.test:~"
+            ],
+            "weight": 0,
+            "name": "DKIM_TRACE",
+            "score": 0
+        }
+    ],
+    "collected_unix": 1790999162,
+    "source": "receiver-rspamd-milter"
+}

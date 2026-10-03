@@ -1,0 +1,14 @@
+{
+  "id": "S11",
+  "name": "Authenticated lookalike/display impersonation",
+  "from": "lookalike.test",
+  "envelope": "lookalike.test",
+  "ip": "10.77.0.10",
+  "signed": true,
+  "deceptive": true,
+  "spf": "pass",
+  "dkim": "pass",
+  "dmarc": "pass",
+  "policy": "none",
+  "disposition": "delivered"
+}

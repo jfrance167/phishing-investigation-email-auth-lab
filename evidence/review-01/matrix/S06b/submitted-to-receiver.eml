@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@mail.sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S06b SPF-only sibling s
+Message-ID: <S06b@sender.test>
+X-Lab-Scenario: S06b
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 2007f632b0fc4e57b1e1f014530aed82
+
+Harmless synthetic lab content. No real credentials or attachments.

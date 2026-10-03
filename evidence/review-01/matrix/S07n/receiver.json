@@ -1,0 +1,88 @@
+{
+    "run_claim": "473188b39d244beba07f1ddf8afa9bb7",
+    "source": "receiver-rspamd-milter",
+    "symbols": [
+        {
+            "group": "policies",
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "none"
+            ],
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "weight": 1,
+            "score": 0.100000
+        },
+        {
+            "group": "policies",
+            "name": "R_DKIM_NA",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0,
+            "score": 0
+        },
+        {
+            "group": "policies",
+            "name": "R_SPF_FAIL",
+            "options": [
+                "-all"
+            ],
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "weight": 1,
+            "score": 1
+        }
+    ],
+    "collected_unix": 1790999211,
+    "queue_id": "9A7184019D",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "sender.test",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "recipient.test",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "domain": "sender.test",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "ip": "10.77.0.11",
+    "scenario_claim": "S07n",
+    "action": "no action"
+}

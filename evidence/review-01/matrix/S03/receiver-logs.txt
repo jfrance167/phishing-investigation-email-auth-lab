@@ -1,0 +1,8 @@
+2026-10-03T03:44:56.862245+00:00 receiver postfix/smtpd[15474]: D27C14019D: client=unknown[10.77.0.10]
+2026-10-03T03:44:56.862895+00:00 receiver postfix/cleanup[15478]: D27C14019D: message-id=<S03@sender.test>
+2026-10-03T03:44:56.965649+00:00 receiver postfix/qmgr[12134]: D27C14019D: from=<analyst@sender.test>, size=594, nrcpt=1 (queue active)
+2026-10-03T03:44:56.967432+00:00 receiver postfix/smtp[15479]: D27C14019D: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=0.11, delays=0.1/0/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 4PTJWsJ5IYcPaJd3FXqWmh)
+2026-10-03T03:44:56.967500+00:00 receiver postfix/qmgr[12134]: D27C14019D: removed
+2026-10-03 03:44:56 #15864(rspamd_proxy) <99340d>; proxy; rspamd_message_parse: loaded message; id: <S03@sender.test>; queue-id: <D27C14019D>; size: 368; checksum: <69058989933f151685fee8364a7c9b39>
+2026-10-03 03:44:56 #15864(rspamd_proxy) <99340d>; proxy; rspamd_task_write_log: id: <S03@sender.test>, qid: <D27C14019D>, ip: 10.77.0.10, from: <analyst@sender.test>, (default: F (no action): [-0.10/1000.00] [R_SPF_ALLOW(-0.20){+ip4:10.77.0.10;},DMARC_POLICY_SOFTFAIL(0.10){lookalike.test : SPF not aligned (relaxed), No valid DKIM;none;},R_DKIM_NA(0.00){}]), len: 368, time: 53.978ms, dns req: 2, digest: <69058989933f151685fee8364a7c9b39>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>
+{"queue_name": "hold", "queue_id": "5D22F40137", "arrival_time": 1790997586, "message_size": 596, "forced_expire": false, "sender": "analyst@sender.test", "recipients": [{"address": "analyst@recipient.test"}]}

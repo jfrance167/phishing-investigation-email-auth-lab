@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@lookalike.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S03 Passing unaligned SPF
+Message-ID: <S03@sender.test>
+X-Lab-Scenario: S03
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: aba9c7a621b14823a22becd65d6123be
+
+Harmless synthetic lab content. No real credentials or attachments.

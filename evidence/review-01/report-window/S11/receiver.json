@@ -1,0 +1,117 @@
+{
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "name": "",
+            "raw": "<analyst@lookalike.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "domain": "lookalike.test",
+            "addr": "analyst@lookalike.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "domain": "recipient.test",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "name": "Campus Security Team",
+            "raw": "<analyst@lookalike.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "domain": "lookalike.test",
+            "addr": "analyst@lookalike.test"
+        }
+    ],
+    "ip": "10.77.0.10",
+    "scenario_claim": "S11",
+    "symbols": [
+        {
+            "options": [
+                "lookalike.test",
+                "none"
+            ],
+            "name": "DMARC_POLICY_ALLOW",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies",
+            "weight": 1,
+            "score": -0.500000
+        },
+        {
+            "options": [
+                "lookalike.test:s=lab1"
+            ],
+            "name": "R_DKIM_ALLOW",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies",
+            "weight": 1,
+            "score": -0.100000
+        },
+        {
+            "options": [
+                "+ip4:10.77.0.10"
+            ],
+            "name": "R_SPF_ALLOW",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies",
+            "weight": 1,
+            "score": -0.200000
+        },
+        {
+            "options": [
+                "strict"
+            ],
+            "name": "R_DKIM_ALIGNED",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies",
+            "weight": 1,
+            "score": -0.100000
+        },
+        {
+            "options": [
+                "lookalike.test:+"
+            ],
+            "name": "DKIM_TRACE",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies",
+            "weight": 0,
+            "score": 0
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "action": "no action",
+    "run_claim": "4d837f71c376448299ea8d58b4679471",
+    "collected_unix": 1790999991,
+    "queue_id": "3A8434019D"
+}

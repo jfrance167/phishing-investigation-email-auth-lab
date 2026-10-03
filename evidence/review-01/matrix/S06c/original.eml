@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@mail.sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S06c DKIM-only sibling r
+Message-ID: <S06c@sender.test>
+X-Lab-Scenario: S06c
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 893b653b38a346e8bda4bf90aef28e7e
+
+Harmless synthetic lab content. No real credentials or attachments.

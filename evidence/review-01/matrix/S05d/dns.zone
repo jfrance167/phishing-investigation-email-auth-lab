@@ -1,0 +1,25 @@
+$ORIGIN test.
+$TTL 30
+_dmarc.sender IN TXT "v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r"
+_dmarc.lookalike IN TXT "v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r"
+@ IN SOA ns.recipient.test. analyst.recipient.test. (2026100101 30 30 3600 30)
+@ IN NS ns.recipient.test.
+ns.recipient IN A 10.77.0.20
+receiver.recipient IN A 10.77.0.20
+sender IN A 10.77.0.10
+sender.sender IN A 10.77.0.10
+relay IN A 10.77.0.30
+recipient IN A 10.77.0.20
+recipient IN MX 10 receiver.recipient.test.
+sender IN TXT "v=spf1 ip4:10.77.0.10 -all"
+lookalike IN TXT "v=spf1 ip4:10.77.0.10 -all"
+bounce.sender IN TXT "v=spf1 ip4:10.77.0.10 -all"
+sender.test._report._dmarc.recipient IN TXT "v=DMARC1"
+lookalike.test._report._dmarc.recipient IN TXT "v=DMARC1"
+$ORIGIN sender.test.
+
+$ORIGIN lookalike.test.
+lab1._domainkey IN TXT ( "v=DKIM1; k=rsa; "
+"p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsN42Xz4oqnDGMdkPwyY9UB+klEmRX8nCbZtWUhZ1cO9nwutE91ZOhSQ2wRi1+jz3CKJDj/ukt2kfWfRRjSwYswGtIvW9FwR2qtrNGS8w6p3oKtNy+J4iJe1tPd08A54Rfpx6zwTnHWZ9rfTtEKkzO/obPj6WfkNFjEltkHekBL87TWoD2xPTKC+Rk5JRa+YG/kxBPnknDuS+LTjOM"
+"EdsEmiTcIvf0F05nAMhW0M3yCakkKZN/ap8R8QrOL6WhmOLPoF63bMYl0snkpeANXBe6JHKl0reGy8WdoacNDBnBfmHkhFzPo2LD7GTvn7KUA2+9ukNyLaOFggiBS0deX16hwIDAQAB"
+) ;

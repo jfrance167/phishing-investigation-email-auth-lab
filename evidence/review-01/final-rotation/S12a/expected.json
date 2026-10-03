@@ -1,0 +1,14 @@
+{
+  "id": "S12a",
+  "name": "Old selector overlap cache prime",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.10",
+  "signed": true,
+  "spf": "pass",
+  "dkim": "pass",
+  "dmarc": "pass",
+  "policy": "none",
+  "disposition": "delivered",
+  "keep_cache": true
+}

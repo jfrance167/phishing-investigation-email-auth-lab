@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S02 Unauthorized unsigned envelope spoof
+Message-ID: <S02@sender.test>
+X-Lab-Scenario: S02
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 133e31e48a574fbd902bd753454bd47c
+
+Harmless synthetic lab content. No real credentials or attachments.

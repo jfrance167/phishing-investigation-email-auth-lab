@@ -1,0 +1,14 @@
+{
+  "id": "S09f",
+  "name": "Forwarding unchanged",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.30",
+  "signed": true,
+  "forward": true,
+  "spf": "fail",
+  "dkim": "pass",
+  "dmarc": "pass",
+  "policy": "none",
+  "disposition": "delivered"
+}
