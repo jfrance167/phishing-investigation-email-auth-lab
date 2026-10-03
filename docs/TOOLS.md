@@ -19,6 +19,7 @@ except build_index, which regenerates its derived index. Scripts do not add an I
 | correlate_reports.py | `--window PATH --reports PATH --output FRESH.json` | Exact counts/IP/auth/disposition/timestamp assertion for exact-alignment control windows |
 | toolkit_adapter.py | `--toolkit reviewed/phishing_triage.py --sha256 HASH --bundle HASHED_CASE --output FRESH.json` | Offline claim parser + separate receiver evidence. Import executes reviewed module; never enrichs |
 | reset_replay.py | `--output FRESH`; fixed owned guests and intact bundles | Exported queues/config, guarded removal, semantic reset, nine-case replay assertions |
+| compare_replay.py | `--replay HASHED_REPLAY --output FRESH.json`; earlier measured passes | Compares all nine actual semantic outcomes with earlier queue-correlated runs, excluding signatures/times/queue IDs |
 | sync_clock.py | `--output FRESH`; owned guests after host suspension | Before/after clock evidence; host UTC only, no NTP; rerun gate |
 | evidence.py | `claims/receiver/manifest/verify PATH` | Bounded parser, source-explicit summary, hashes/file-set verification |
 | build_index.py | Completed existing evidence, no active writers | Derived passing-ID index; refuses changed completed bundles |

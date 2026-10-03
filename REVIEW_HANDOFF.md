@@ -55,6 +55,7 @@ access as required. All paths below resolve under that repository.
 | `python tools/lab.py ID --output FRESH_CASE_DIRECTORY` for matrix IDs | 26 passing IDs across `evidence/INDEX.json`; expected values saved before each run. Early failures/partial runs retained, not counted |
 | `python -m tools.rotation --output evidence/rotation-01` | Old/new selector overlap and warm/cold retirement: all four expected outcomes matched |
 | `python -m tools.reset_replay --output evidence/reset-replay-02` | Completed evidence verified before reset; nine normalized outcomes matched. First interrupted reset attempt retained separately |
+| `python -m tools.compare_replay --replay evidence/reset-replay-02 --output evidence/replay-comparison.json` | All nine actual outcomes match independently recorded earlier passes for source IP, SPF, DKIM, DMARC and disposition; signatures/timestamps/queue IDs intentionally differ |
 | `python -m tools.reports --output evidence/reports-replay-01 --begin 1790997552` | Actual aggregate MIME/XML delivered locally; nine replay messages |
 | `python -m tools.reports --output evidence/reports-controlled-final --begin 1790997683` | Two actual reports, three exclusive-window messages; window ends 1790997723 UTC |
 | `python -m tools.correlate_reports --window evidence/reset-replay-02 --reports evidence/reports-replay-01 --output evidence/replay-report-correlation.json` | Exact nine-message counts/IPs/results/dispositions/time enclosure passed |
