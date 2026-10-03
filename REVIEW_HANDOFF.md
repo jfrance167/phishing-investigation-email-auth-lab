@@ -134,3 +134,7 @@ run on GitHub. After explicit publication approval, inspect visibility/default b
 enable applicable code and secret scanning/push protection/Dependabot, configure reviews/checks without
 weakening protections, run hosted checks and address findings. No remote settings were changed here.
 The relevant Obsidian milestone is saved as a pending note outside this repo; the vault was not updated.
+
+## Portfolio review follow-up — October 3, 2026
+
+The security maintenance commit bounds evidence hashing/manifest input and directory traversal, and requires exact owned-VM identity plus an explicit fresh-login assertion before console recovery. The assertion is an operator confirmation, not automatic console-state verification. All 26 offline Python tests and the pure PowerShell ownership guard pass; all 116 historical evidence manifests verify unchanged. No VM recovery, live authentication scenario, firewall change or external service was run for this follow-up. Existing live results above remain historical. Hosted CI and publication remain blocked as described above. Security-sensitive recovery logic still requires Jake’s manual review.
