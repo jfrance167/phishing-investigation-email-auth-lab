@@ -4,7 +4,7 @@ An isolated training lab that explains what SPF, DKIM and DMARC establish, and w
 still needs to investigate. Real Postfix/Rspamd processing produces signed messages, DNS failures,
 queue holds, SMTP rejections and forwarding outcomes. All identities and messages are synthetic.
 
-**Local implementation and agent review complete.** There is no remote repository or publication. See [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md)
+**Local implementation and agent review complete.** GitHub publication authorized October 3, 2026; hosted checks are being verified. See [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md)
 for verified results and remaining manual/GitHub checks. The completed review is in [docs/REVIEW.md](docs/REVIEW.md). See [evidence/INDEX.json](evidence/INDEX.json)
 for 31 passing authentication scenarios; failed and partial attempts remain separate.
 

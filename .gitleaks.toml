@@ -1,0 +1,13 @@
+# Exact false positives verified against captured settings and official Rspamd 4.2.1.
+# No path-wide or rule-wide suppression. All default detection rules remain enabled.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Empty disabled VirtualBox teleporter setting and two published Rspamd defaults"
+regexTarget = "match"
+regexes = [
+  '''teleporterpassword=""(?:\r?\n|$)''',
+  '''\bencryption_key\s*=\s*"icy63itbhhni8bq15ntp5n5symuixf73s1kpjh6skaq4e7nx5fiy"''',
+  '''\bkey\s*=\s*"qxuogdh5eghytji1utkkte1dn3n81c3y5twe61uzoddzwqzuxxyb"''',
+]

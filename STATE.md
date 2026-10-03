@@ -1,6 +1,6 @@
 # Lab state
 
-Authorization: October 1 implementation through local testing/documentation; October 2–3 review and complete. No remote creation, publication, push or merge.
+Authorization: October 1 implementation through local testing/documentation; October 2–3 review and complete. October 3: Jake authorized GitHub publication and notification to the running review chat. No merge is authorized.
 
 Phase: **local implementation and agent review complete**. All 31 real authentication cases passed and their identities, nonce linkage, intended selectors and hashes were audited. Nine real replay outcomes match earlier measured passes. Final-source baseline/rotation pass; two actual aggregate reports exactly correlate three exclusive-window messages (1790999960–1791000006 UTC). Twenty-one offline tests pass; Bandit 1.9.4 zero findings. Full final three-guest isolation gate and all six local connectivity expectations pass.
 
@@ -12,4 +12,4 @@ Active core bugs: none known from the executed checks. Failed/partial attempts r
 
 Next local use: README and REVIEW_HANDOFF.md provide commands; use fresh outputs and inspect raw text/JSON only. Local review commit is on codex/phishing-email-auth-lab; use git rev-parse HEAD and git status --short for current identity. Relevant Obsidian review note is pending outside this repository; vault was not updated.
 
-External work remains unexecuted: GitHub CI/CodeQL, visibility/eligibility, branch protections, secret scanning/push protection and Dependabot require publication scope. No remote exists. Verified limits: ISO signed-checksum signature not checked; legacy DMARC/report behavior and separate same-day adapter; no full transitive CVE/XSD conformance audit; no ARC/SRS. No claim of production readiness or exhaustive vulnerability absence.
+Publication phase: public jfrance167/phishing-investigation-email-auth-lab; initial main plus preserved review branch, hosted checks and security baseline are being established. External checks previously remained unexecuted: GitHub CI/CodeQL, visibility/eligibility, branch protections, secret scanning/push protection and Dependabot require publication scope. No remote exists. Verified limits: ISO signed-checksum signature not checked; legacy DMARC/report behavior and separate same-day adapter; no full transitive CVE/XSD conformance audit; no ARC/SRS. No claim of production readiness or exhaustive vulnerability absence.
