@@ -4,7 +4,7 @@ An isolated training lab that explains what SPF, DKIM and DMARC establish, and w
 still needs to investigate. Real Postfix/Rspamd processing produces signed messages, DNS failures,
 queue holds, SMTP rejections and forwarding outcomes. All identities and messages are synthetic.
 
-**Local implementation and agent review complete.** GitHub upload requested October 3, 2026; public visibility and captured-evidence payload await approval. No upload or hosted checks have occurred. See [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md)
+**Local implementation and agent review complete.** Public GitHub upload, including the preserved evidence and history, was explicitly approved October 3, 2026. Publication and hosted validation are in progress. See [REVIEW_HANDOFF.md](REVIEW_HANDOFF.md)
 for verified results and remaining manual/GitHub checks. The completed review is in [docs/REVIEW.md](docs/REVIEW.md). See [evidence/INDEX.json](evidence/INDEX.json)
 for 31 passing authentication scenarios; failed and partial attempts remain separate.
 
@@ -112,7 +112,7 @@ python -m tools.build_index
 python -m tools.evidence verify evidence/review-01/reset-replay
 ```
 
-21 offline tests passed. Local tests cover queue cleanup provenance, failed restoration, selector identity, stale logs,
+26 offline tests passed. Local tests cover queue cleanup provenance, failed restoration, selector identity, stale logs,
 report header identity/time ranges, forgery claims, malformed/oversized inputs, evidence tampering, DNS newline
 regression, scenario command boundaries, relay transformation and report XML/gzip bounds.
 Integration evidence comes from the running guests, not mocked authentication verdicts.
