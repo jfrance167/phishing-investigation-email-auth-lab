@@ -1,0 +1,117 @@
+{
+    "queue_id": "9EB7340142",
+    "symbols": [
+        {
+            "score": -0.500000,
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "name": "DMARC_POLICY_ALLOW",
+            "options": [
+                "sender.test",
+                "none"
+            ],
+            "group": "policies",
+            "weight": 1
+        },
+        {
+            "score": -0.100000,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "R_DKIM_ALLOW",
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "group": "policies",
+            "weight": 1
+        },
+        {
+            "score": -0.200000,
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "name": "R_SPF_ALLOW",
+            "options": [
+                "+ip4:10.77.0.10"
+            ],
+            "group": "policies",
+            "weight": 1
+        },
+        {
+            "score": -0.100000,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "R_DKIM_ALIGNED",
+            "options": [
+                "strict"
+            ],
+            "group": "policies",
+            "weight": 1
+        },
+        {
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "DKIM_TRACE",
+            "options": [
+                "sender.test:+"
+            ],
+            "group": "policies",
+            "weight": 0
+        }
+    ],
+    "envelope_from": [
+        {
+            "domain": "sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "user": "analyst"
+        }
+    ],
+    "envelope_to": [
+        {
+            "domain": "recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test",
+            "user": "analyst"
+        }
+    ],
+    "header_from": [
+        {
+            "domain": "sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "user": "analyst"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S01",
+    "run_claim": "15068c9309d64561b821bb282a012566",
+    "ip": "10.77.0.10",
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790953527,
+    "helo": "sender.sender.test"
+}

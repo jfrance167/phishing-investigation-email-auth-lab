@@ -1,0 +1,88 @@
+{
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "ip": "10.77.0.11",
+    "collected_unix": 1790953208,
+    "scenario_claim": "S08c",
+    "run_claim": "e8166a6a178d4b688b8b00cb1d46060b",
+    "action": "no action",
+    "source": "receiver-rspamd-milter",
+    "helo": "sender.sender.test",
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "queue_id": "DD8C44013A",
+    "symbols": [
+        {
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "weight": 1,
+            "score": 0.100000,
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "none"
+            ]
+        },
+        {
+            "name": "R_DKIM_NA",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0,
+            "score": 0
+        },
+        {
+            "name": "R_SPF_FAIL",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "weight": 1,
+            "score": 1,
+            "options": [
+                "-all"
+            ]
+        }
+    ]
+}

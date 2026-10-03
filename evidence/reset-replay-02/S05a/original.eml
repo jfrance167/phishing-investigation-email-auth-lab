@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05a Changed body with aligned SPF remaining
+Message-ID: <S05a@sender.test>
+X-Lab-Scenario: S05a
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: ce5a552efffe4dee8735695d651a6956
+
+Harmless synthetic lab content. No real credentials or attachments.

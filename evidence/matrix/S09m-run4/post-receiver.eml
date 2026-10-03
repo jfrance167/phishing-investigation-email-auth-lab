@@ -1,0 +1,47 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Fri, 2 Oct 2026 15:01:09 +0000 (UTC)
+Received: from relay.sender.test (unknown [10.77.0.30])
+	by receiver.recipient.test (Postfix) with ESMTP id 596314013A
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:01:09 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=fail ("body hash did not verify") header.d=sender.test header.s=lab1 header.b="qFOA/YOh";
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.30 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=fail reason="No valid SPF" header.from=sender.test (policy=none)
+Received: from relay.test (localhost [127.0.0.1])
+	by relay.sender.test (Postfix) with ESMTP id A9752993
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:01:09 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.10])
+	by relay.sender.test (Postfix) with ESMTP id A0995987
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:01:09 +0000 (UTC)
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id D3E1194D
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:01:07 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790953268;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=qFOA/YOhuqoeTEHfdl8ssP+2Q+iRTCLhBXNmlJ8BeYMx7s2RGkAMzWO3RSSTQr9RmOqF9W
+	IeLoN91wXyN3+JpWjZsMNKe0MaOpcyAYLz5DIim0oyQCjY33dLN21NCLX6cP36hi1qBfzC
+	TCfLrLfWoZ+M+i30lX66vDch7wRSO07OEhfkHYC7FDEUW9GnKFgGsnnUM1LoxxGrvfHJ1a
+	R3T7jk5/5R2QjekWKmxj+VVrN5lEqWML6OEQMK2m56EG+Jwy+Y2jfKfCyyNPOkZNEtUgn7
+	oG4mpj0Tb9hVxg3rIji8kB7geVaIdt1L5Ol61aOJwiyi4TAnquJuTINL39XMVg==
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S09m Forwarding with footer
+Message-ID: <S09m@sender.test>
+X-Lab-Scenario: S09m
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 1bafa0b058a641c69b6192dcf153a89a
+Date: Fri, 02 Oct 2026 15:01:07 +0000 (UTC)
+X-Rspamd-Queue-Id: 596314013A
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+
+
+Harmless fictional mailing-list footer.
+

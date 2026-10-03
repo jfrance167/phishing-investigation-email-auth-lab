@@ -1,0 +1,104 @@
+{
+    "queue_id": "596314013A",
+    "helo": "relay.sender.test",
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S09m",
+    "ip": "10.77.0.30",
+    "source": "receiver-rspamd-milter",
+    "run_claim": "1bafa0b058a641c69b6192dcf153a89a",
+    "collected_unix": 1790953269,
+    "symbols": [
+        {
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "weight": 1,
+            "score": 0.100000,
+            "options": [
+                "sender.test : No valid SPF",
+                "none"
+            ],
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_SPF_FAIL",
+            "weight": 1,
+            "score": 1,
+            "options": [
+                "-all"
+            ],
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_DKIM_REJECT",
+            "weight": 1,
+            "score": 1,
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "DKIM_TRACE",
+            "weight": 0,
+            "score": 0,
+            "options": [
+                "sender.test:-"
+            ],
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        }
+    ]
+}

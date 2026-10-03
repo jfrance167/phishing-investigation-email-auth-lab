@@ -1,0 +1,38 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Fri, 2 Oct 2026 15:08:45 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.10])
+	by receiver.recipient.test (Postfix) with ESMTP id BFF2A40142
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:08:45 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=pass header.d=sender.test header.s=lab1 header.b=DtUQPncE;
+	dmarc=pass (policy=none) header.from=sender.test;
+	spf=pass (receiver.recipient.test: domain of analyst@sender.test designates 10.77.0.10 as permitted sender) smtp.mailfrom=analyst@sender.test
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id C3109943
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:08:44 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790953724;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=DtUQPncETuxzrhqcEHnGQTHtzbDm8bODwASHbjbYGPOebjg6bZBypQ0jBE8IS0fMqtDlqD
+	6x436ks72ZEGZxymwUyG+mwbQjz7svrGoREuFtXCOju5SZfPFz4m7ygAKnOPcdi3NzJkD8
+	Ci1/u/8pP2ndG9fAWWbgqxBgyIMUHqxPzVqfde7WX44yY16mPGAAYALzeNBVg/EwOJfFs/
+	oBCQFrwhCSGfp59QbKo/+7yIV3YsFeZK2DXMd0q+FhfT1hPFIligMZf4DCyCsX4MW65x2c
+	g8HbP8Bkmf1vb2ymNXm2HiINRKL677VqydszhRoAmymNqoD47XRmsgk23LmhhA==
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S01 Legitimate aligned
+Message-ID: <S01@sender.test>
+X-Lab-Scenario: S01
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 6fdcaf6e1a71466798a737e200ee768c
+Date: Fri, 02 Oct 2026 15:08:44 +0000 (UTC)
+X-Rspamd-Queue-Id: BFF2A40142
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+

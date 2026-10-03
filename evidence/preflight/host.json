@@ -1,0 +1,193 @@
+{
+  "collected_utc": "2026-10-02T01:10:43.6511945Z",
+  "os": {
+    "Caption": "Microsoft Windows 11 Home",
+    "Version": "10.0.26200",
+    "FreePhysicalMemory": 44281488,
+    "TotalVisibleMemorySize": 66803176
+  },
+  "cpu": {
+    "Name": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16,
+    "VirtualizationFirmwareEnabled": true,
+    "SecondLevelAddressTranslationExtensions": true
+  },
+  "hypervisor": {
+    "HypervisorPresent": false
+  },
+  "disk": {
+    "Name": "C",
+    "Used": 979953479680,
+    "Free": 19828080640
+  },
+  "forwarding": [
+    {
+      "InterfaceAlias": "Ethernet 5",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "VMware Network Adapter VMnet8",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "VMware Network Adapter VMnet1",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Local Area Connection* 12",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "OpenVPN Connect DCO Adapter",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Local Area Connection* 3",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Local Area Connection 2",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Ethernet 2",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Tailscale",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Ethernet",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "x-ovpn-tap",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Bluetooth Network Connection",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Wi-Fi",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Local Area Connection",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Loopback Pseudo-Interface 1",
+      "AddressFamily": 23,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Ethernet 5",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "VMware Network Adapter VMnet8",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "VMware Network Adapter VMnet1",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Local Area Connection* 12",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "OpenVPN Connect DCO Adapter",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Local Area Connection* 3",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Local Area Connection 2",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Ethernet 2",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Tailscale",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Ethernet",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "x-ovpn-tap",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Bluetooth Network Connection",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Wi-Fi",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Local Area Connection",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    },
+    {
+      "InterfaceAlias": "Loopback Pseudo-Interface 1",
+      "AddressFamily": 2,
+      "Forwarding": 0
+    }
+  ],
+  "vbox_version": "7.2.6r172322",
+  "running_vms": [],
+  "hostonly": [
+    "Name:            VirtualBox Host-Only Ethernet Adapter",
+    "GUID:            e1ca6b9c-145e-4e5e-9002-5306d9d3f6b9",
+    "DHCP:            Disabled",
+    "IPAddress:       192.168.56.1",
+    "NetworkMask:     255.255.255.0",
+    "IPV6Address:     fe80::f7dc:12d1:354a:cccf",
+    "IPV6NetworkMaskPrefixLength: 64",
+    "HardwareAddress: 0a:00:27:00:00:1c",
+    "MediumType:      Ethernet",
+    "Wireless:        No",
+    "Status:          Up",
+    "VBoxNetworkName: HostInterfaceNetworking-VirtualBox Host-Only Ethernet Adapter",
+    ""
+  ]
+}

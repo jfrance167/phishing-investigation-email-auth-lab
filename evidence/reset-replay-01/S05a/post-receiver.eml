@@ -1,0 +1,40 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Fri, 2 Oct 2026 15:11:49 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.10])
+	by receiver.recipient.test (Postfix) with ESMTP id B0D6A40138
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:11:49 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=fail ("body hash did not verify") header.d=sender.test header.s=lab1 header.b=DvKn4h4G;
+	spf=pass (receiver.recipient.test: domain of analyst@sender.test designates 10.77.0.10 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=pass (policy=none) header.from=sender.test
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id B4E2690E
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:11:48 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790953908;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=DvKn4h4GZSSIA5bxdh6F/OtGJHRgAMtvKLJBKzn/y7Zbx4OJN8jT8SDifar0AItnGV5Z+G
+	5g2d3BnUdhsDhMT+AvcF5LfTHeXIABgjapvrunrawXkXcJWL3v0XxousMqdfjrbjvH1kKq
+	GIvx6dpAfAI7v7ZS+hpYdFudMsS2iV51y5KTQ3YKMnFv4b7gH/6FHJdFWb8hP+CyV81BnH
+	qSK0XD58EmxdwuBxGRAbb7SBYZ25FcD+gTOYEV3grEPFD1UqVJnvDVAQk9hOK/KmxQGEPY
+	sofhD4RXA2qYveooDYzu4QQN8qsE7BcOkqyHZf6MgYNNe9kwOCUu15JbPWTcbg==
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05a Changed body with aligned SPF remaining
+Message-ID: <S05a@sender.test>
+X-Lab-Scenario: S05a
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: c1ecc0cc25a04b57a5d53a634eb5e896
+Date: Fri, 02 Oct 2026 15:11:48 +0000 (UTC)
+X-Rspamd-Queue-Id: B0D6A40138
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+
+Synthetic mailing-list footer added after signing.
+

@@ -1,0 +1,87 @@
+{
+    "action": "no action",
+    "queue_id": "1668C40114",
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790952299,
+    "envelope_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test"
+        }
+    ],
+    "ip": "10.77.0.11",
+    "helo": "sender.sender.test",
+    "envelope_to": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "addr": "analyst@recipient.test",
+            "domain": "recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test"
+        }
+    ],
+    "symbols": [
+        {
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "none"
+            ],
+            "weight": 1,
+            "score": 0.100000,
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_DKIM_NA",
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_SPF_FAIL",
+            "options": [
+                "-all"
+            ],
+            "weight": 1,
+            "score": 1,
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies"
+        }
+    ],
+    "scenario_claim": "S02"
+}

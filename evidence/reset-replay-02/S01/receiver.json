@@ -1,0 +1,117 @@
+{
+    "source": "receiver-rspamd-milter",
+    "run_claim": "f9fea16537504388913c0f083ac308e7",
+    "queue_id": "4A23B40137",
+    "action": "no action",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@recipient.test",
+            "domain": "recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test"
+        }
+    ],
+    "collected_unix": 1790997557,
+    "scenario_claim": "S01",
+    "ip": "10.77.0.10",
+    "symbols": [
+        {
+            "group": "policies",
+            "weight": 1,
+            "name": "DMARC_POLICY_ALLOW",
+            "options": [
+                "sender.test",
+                "none"
+            ],
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "score": -0.500000
+        },
+        {
+            "group": "policies",
+            "weight": 1,
+            "name": "R_DKIM_ALLOW",
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "score": -0.100000
+        },
+        {
+            "group": "policies",
+            "weight": 1,
+            "name": "R_SPF_ALLOW",
+            "options": [
+                "+ip4:10.77.0.10"
+            ],
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "score": -0.200000
+        },
+        {
+            "group": "policies",
+            "weight": 1,
+            "name": "R_DKIM_ALIGNED",
+            "options": [
+                "strict"
+            ],
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "score": -0.100000
+        },
+        {
+            "group": "policies",
+            "weight": 0,
+            "name": "DKIM_TRACE",
+            "options": [
+                "sender.test:+"
+            ],
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "score": 0
+        }
+    ]
+}

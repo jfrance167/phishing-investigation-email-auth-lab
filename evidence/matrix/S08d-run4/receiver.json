@@ -1,0 +1,87 @@
+{
+    "queue_id": "D8C8E4013A",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S08d",
+    "ip": "10.77.0.11",
+    "run_claim": "70c3ccede6c747a6aa23a79053f82746",
+    "symbols": [
+        {
+            "name": "R_DKIM_NA",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0,
+            "score": 0,
+            "group": "policies"
+        },
+        {
+            "options": [
+                "temporary DNS error"
+            ],
+            "name": "R_SPF_DNSFAIL",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "weight": 0,
+            "score": 0,
+            "group": "policies"
+        },
+        {
+            "options": [
+                "sender.test : query timed out"
+            ],
+            "name": "DMARC_DNSFAIL",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "weight": 0,
+            "score": 0,
+            "group": "policies"
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790953219
+}

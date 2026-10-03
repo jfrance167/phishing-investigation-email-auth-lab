@@ -1,0 +1,14 @@
+{
+  "id": "S09m",
+  "name": "Forwarding with footer",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.30",
+  "signed": true,
+  "forward": true,
+  "spf": "fail",
+  "dkim": "fail",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered"
+}

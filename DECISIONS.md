@@ -1,0 +1,13 @@
+# Decisions
+
+- Use installed VirtualBox, avoiding host hypervisor installation/reboot. Start sender (2 vCPU/1536 MiB/6 GiB dynamic disk) and receiver (2 vCPU/2048 MiB/8 GiB); relay later (1 vCPU/1024 MiB/6 GiB). Keep at least 8 GiB host disk free; do not delete unrelated files to gain space.
+- Use a dedicated VirtualBox internal experiment network, 10.77.0.0/24. Sender .10, unauthorized sender alias .11, receiver .20, relay .30. Temporary provisioning NAT must be removed before experiments. Management may use the existing host-only adapter with guest firewall restricted to host .1; verify host forwarding is disabled and do not change that adapter's configuration.
+- Select Debian 13 stable installer from the official current listing and verify SHA-256 over HTTPS. This detects corruption but is weaker than independently verifying Debian's signed checksum file; record that limit.
+- Select Rspamd 4.2.1 for its current security fixes, Mailpit 1.31.3; do not silently substitute older distro Rspamd. Availability of signed packages remains to be checked. Record exact Debian dependency versions and licenses from installed metadata.
+- Reuse the triage toolkit only through an offline adapter. Parsed headers are claims. Receiver logs/queue correlation and controlled ingress establish provenance; an authserv-id alone cannot establish trust. Preserve original bytes before ingress stripping.
+- Capture raw messages and inspect text/JSON only on the host. Do not render untrusted MIME/HTML in the host browser. Mailpit SMTP and API bind guest loopback; Postfix is the only delivery path.
+- Rspamd 4.2.1 DMARC source still handles pct. Record implementation behavior separately from RFC 9989, which removed pct. Do not claim full RFC 9989/9990 conformance.
+- Add a private .test suffix to a copy of the bundled suffix file and explicit child DMARC policies; record this lab-specific interpretation. Configure SPF max_dns_requests=10: selected default is 30, not the exercise's desired limit. This request budget is not a full RFC term-count conformance proof.
+- Register quarantine with no_threshold so DMARC can request a real milter hold. Count a pass only after Postfix hold-queue or SMTP/log evidence, never just a policy symbol.
+- Use a separately preserved two-line Rspamd report adapter for same-day UTC windows; upstream command remains unchanged. One edit selects actual collection end time, the other gives the copied command its own name. Counts and timestamp enclosure are independently correlated.
+- Reset configuration/caches and individually exported synthetic queues; retain captures, keys and Redis data. An unmarked early staging entry remains deferred rather than being silently deleted. No full queue/database wipe or VM destruction.

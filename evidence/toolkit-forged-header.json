@@ -1,0 +1,103 @@
+{
+  "toolkit_sha256": "c498af88f7b85c1befbff3f085302b8fbec5e6d5f5e04e1d012154cfcac9dc47",
+  "toolkit_header_parse": {
+    "from": "Synthetic Lab Analyst <analyst@sender.test>",
+    "reply_to": "",
+    "return_path": "",
+    "to": "Analyst <analyst@recipient.test>",
+    "subject": "Synthetic S10 Forged own AR, conflicting AR and Received",
+    "date": "",
+    "message_id": "<S10@sender.test>"
+  },
+  "toolkit_authentication_claim_summary": {
+    "spf": "pass",
+    "dkim": "fail",
+    "dmarc": "fail"
+  },
+  "submitted_authentication_claims": [
+    {
+      "header": "receiver.recipient.test; spf=pass; dkim=pass; dmarc=pass",
+      "trust": "unverified-submitted-claim",
+      "parsed": [
+        [
+          "spf",
+          "pass"
+        ],
+        [
+          "dkim",
+          "pass"
+        ],
+        [
+          "dmarc",
+          "pass"
+        ]
+      ]
+    },
+    {
+      "header": "conflicting.test; spf=fail; dkim=fail; dmarc=fail",
+      "trust": "unverified-submitted-claim",
+      "parsed": [
+        [
+          "spf",
+          "fail"
+        ],
+        [
+          "dkim",
+          "fail"
+        ],
+        [
+          "dmarc",
+          "fail"
+        ]
+      ]
+    }
+  ],
+  "receiver_observation": {
+    "queue_id": "E80DA4013A",
+    "ip": "10.77.0.11",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+      {
+        "name": "",
+        "raw": "<analyst@sender.test>",
+        "user": "analyst",
+        "flags": {
+          "valid": true,
+          "braced": true
+        },
+        "domain": "sender.test",
+        "addr": "analyst@sender.test"
+      }
+    ],
+    "envelope_to": [
+      {
+        "name": "",
+        "raw": "<analyst@recipient.test>",
+        "user": "analyst",
+        "flags": {
+          "valid": true,
+          "braced": true
+        },
+        "domain": "recipient.test",
+        "addr": "analyst@recipient.test"
+      }
+    ],
+    "scenario_claim": "S10",
+    "recommended_action": "no action",
+    "spf": "fail",
+    "dkim": "none",
+    "dmarc": "fail",
+    "symbols": {
+      "DMARC_POLICY_SOFTFAIL": [
+        "sender.test : No valid SPF, No valid DKIM",
+        "none"
+      ],
+      "R_DKIM_NA": [],
+      "R_SPF_FAIL": [
+        "-all"
+      ]
+    },
+    "provenance_requirement": "Validate pinned-SSH receiver collection and queue-correlated SMTP/log/disposition evidence; this JSON cannot establish its own authenticity."
+  },
+  "trust_note": "Toolkit header summaries are unverified claims; receiver provenance requires pinned collection, run/queue correlation and logs. Import requires prior source review."
+}

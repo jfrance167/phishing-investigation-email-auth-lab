@@ -1,0 +1,6 @@
+2026-10-02T14:49:27.706885+00:00 receiver postfix/smtpd[2627]: AC8B940114: client=unknown[10.77.0.11]
+2026-10-02T14:49:27.707635+00:00 receiver postfix/cleanup[2630]: AC8B940114: message-id=<S07x@sender.test>
+2026-10-02T14:49:27.852994+00:00 receiver postfix/cleanup[2630]: AC8B940114: milter-reject: END-OF-MESSAGE from unknown[10.77.0.11]: 5.7.1 Spam message rejected; from=<analyst@sender.test> to=<analyst@recipient.test> proto=ESMTP helo=<sender.sender.test>
+2026-10-02T14:49:27.853091+00:00 receiver postfix/cleanup[2630]: AC8B940114: removed (canceled)
+2026-10-02 14:49:27 #3763(rspamd_proxy) <b50bb4>; proxy; rspamd_message_parse: loaded message; id: <S07x@sender.test>; queue-id: <AC8B940114>; size: 321; checksum: <02b3cc9748af430461379dde5054b3a5>
+2026-10-02 14:49:27 #3763(rspamd_proxy) <b50bb4>; proxy; rspamd_task_write_log: id: <S07x@sender.test>, qid: <AC8B940114>, ip: 10.77.0.11, from: <analyst@sender.test>, (default: T (reject): [1000.00/1000.00] [DMARC_POLICY_REJECT(2.00){sender.test : No valid SPF, No valid DKIM;reject;},R_SPF_FAIL(1.00){-all;},R_DKIM_NA(0.00){}]), len: 321, time: 47.352ms, dns req: 2, digest: <02b3cc9748af430461379dde5054b3a5>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>, forced: reject "Action set by DMARC"; score=nan (set by dmarc)

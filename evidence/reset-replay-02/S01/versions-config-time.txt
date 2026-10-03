@@ -1,0 +1,3810 @@
+adduser	3.152
+alsa-topology-conf	1.2.5.1-3
+alsa-ucm-conf	1.2.14-1
+anacron	2.3-43
+apparmor	4.1.0-1
+apt	3.0.3
+apt-utils	3.0.3
+base-files	13.8+deb13u7
+base-passwd	3.6.7
+bash	5.2.37-2+b10
+bind9	1:9.20.29-1~deb13u1
+bind9-dnsutils	1:9.20.29-1~deb13u1
+bind9-host	1:9.20.29-1~deb13u1
+bind9-libs:amd64	1:9.20.29-1~deb13u1
+bind9-utils	1:9.20.29-1~deb13u1
+binutils-common:amd64	2.44-3
+bluetooth	5.82-1.1
+bluez	5.82-1.1
+bsdutils	1:2.41.5-0+deb13u1
+busybox	1:1.37.0-6+b9
+ca-certificates	20250419
+console-setup	1.242~deb13u1
+console-setup-linux	1.242~deb13u1
+coreutils	9.7-3
+cpio	2.15+dfsg-2
+cron	3.0pl1-197
+cron-daemon-common	3.0pl1-197
+curl	8.14.1-2+deb13u5
+dash	0.5.12-12
+dbus	1.16.2-2
+dbus-bin	1.16.2-2
+dbus-daemon	1.16.2-2
+dbus-session-bus-common	1.16.2-2
+dbus-system-bus-common	1.16.2-2
+dbus-user-session	1.16.2-2
+debconf	1.5.91
+debconf-i18n	1.5.91
+debian-archive-keyring	2025.1
+debianutils	5.23.2
+dhcpcd-base	1:10.1.0-11+deb13u4
+dictionaries-common	1.30.10
+diffutils	1:3.10-4
+dmidecode	3.6-2
+dmsetup	2:1.02.205-2
+dns-root-data	2025080400~deb13u1
+dpkg	1.22.22
+dracut-install	106-6
+e2fsprogs	1.47.2-3+b12
+eject	2.41.5-0+deb13u1
+emacsen-common	3.0.8
+fdisk	2.41.5-0+deb13u1
+findutils	4.10.0-3
+gcc-14-base:amd64	14.2.0-19
+gettext-base	0.23.1-2
+gpg	2.4.7-21+deb13u1+b5
+gpgconf	2.4.7-21+deb13u1+b5
+grep	3.11-4
+grub-common	2.12-9+deb13u2
+grub-pc	2.12-9+deb13u2
+grub-pc-bin	2.12-9+deb13u2
+grub2-common	2.12-9+deb13u2
+gzip	1.13-1+deb13u1
+hostname	3.25
+iamerican	3.4.06-1
+ibritish	3.4.06-1
+ienglish-common	3.4.06-1
+ifupdown	0.8.44+deb13u1
+init	1.69~deb13u1
+init-system-helpers	1.69~deb13u1
+initramfs-tools	0.148.4
+initramfs-tools-bin	0.148.4
+initramfs-tools-core	0.148.4
+installation-report	2.97
+intel-microcode	3.20251111.1~deb13u1
+iproute2	6.15.0-1
+iputils-ping	3:20240905-3
+isa-support:amd64	27
+ispell	3.4.06-1
+iucode-tool	2.3.1-3
+iw	6.9-1
+kbd	2.7.1-2
+keyboard-configuration	1.242~deb13u1
+klibc-utils	2.0.14-1
+kmod	34.2-2
+laptop-detect	0.16+nmu1
+less	668-1
+libacl1:amd64	2.3.2-2+b1
+libapparmor1:amd64	4.1.0-1
+libapt-pkg7.0:amd64	3.0.3
+libarchive13t64:amd64	3.7.4-4+deb13u1
+libasound2-data	1.2.14-1+deb13u1
+libasound2t64:amd64	1.2.14-1+deb13u1
+libassuan9:amd64	3.0.2-2
+libatomic1:amd64	14.2.0-19
+libattr1:amd64	1:2.5.2-3
+libaudit-common	1:4.0.2-2+deb13u1
+libaudit1:amd64	1:4.0.2-2+deb13u1
+libbinutils:amd64	2.44-3
+libblkid1:amd64	2.41.5-0+deb13u1
+libbpf1:amd64	1:1.5.0-3
+libbrotli1:amd64	1.1.0-2+b7
+libbsd0:amd64	0.12.2-2
+libbz2-1.0:amd64	1.0.8-6
+libc-bin	2.41-12+deb13u4
+libc-l10n	2.41-12+deb13u4
+libc6:amd64	2.41-12+deb13u4
+libcap-ng0:amd64	0.8.5-4+b1
+libcap2:amd64	1:2.75-10+deb13u1+b3
+libcap2-bin	1:2.75-10+deb13u1+b3
+libcbor0.10:amd64	0.10.2-2
+libcom-err2:amd64	1.47.2-3+b12
+libcrypt1:amd64	1:4.4.38-1
+libcurl4t64:amd64	8.14.1-2+deb13u5
+libdb5.3t64:amd64	5.3.28+dfsg2-9
+libdbus-1-3:amd64	1.16.2-2
+libdebconfclient0:amd64	0.280
+libdevmapper1.02.1:amd64	2:1.02.205-2
+libdw1t64:amd64	0.192-4
+libedit2:amd64	3.1-20250104-1
+libefiboot1t64:amd64	38-3.1+b1
+libefivar1t64:amd64	38-3.1+b1
+libelf1t64:amd64	0.192-4
+libestr0:amd64	0.1.11-2
+libexpat1:amd64	2.8.3-1~deb13u1
+libext2fs2t64:amd64	1.47.2-3+b12
+libfastjson4:amd64	1.2304.0-2
+libfdisk1:amd64	2.41.5-0+deb13u1
+libffi8:amd64	3.4.8-2
+libfido2-1:amd64	1.15.0-1+b1
+libfreetype6:amd64	2.13.3+dfsg-1+deb13u1
+libfstrm0:amd64	0.6.1-1+b3
+libfuse3-4:amd64	3.17.2-3
+libgcc-s1:amd64	14.2.0-19
+libgcrypt20:amd64	1.11.0-7+deb13u1
+libgdbm-compat4t64:amd64	1.24-2
+libgdbm6t64:amd64	1.24-2
+libglib2.0-0t64:amd64	2.84.4-3~deb13u5
+libglib2.0-data	2.84.4-3~deb13u5
+libgmp10:amd64	2:6.3.0+dfsg-3
+libgnutls30t64:amd64	3.8.9-3+deb13u4
+libgpg-error0:amd64	1.51-4
+libgssapi-krb5-2:amd64	1.21.3-5+deb13u1
+libhogweed6t64:amd64	3.10.1-1
+libhyperscan5	5.4.2-3
+libicu76:amd64	76.1-4
+libidn2-0:amd64	2.3.8-2
+libiw30t64:amd64	30~pre9-18+b1
+libjansson4:amd64	2.14-2+b3
+libjemalloc2:amd64	5.3.0-3
+libjson-c5:amd64	0.18+ds-1
+libk5crypto3:amd64	1.21.3-5+deb13u1
+libkeyutils1:amd64	1.6.3-6
+libklibc:amd64	2.0.14-1
+libkmod2:amd64	34.2-2
+libkrb5-3:amd64	1.21.3-5+deb13u1
+libkrb5support0:amd64	1.21.3-5+deb13u1
+libksba8:amd64	1.6.7-2+b1
+liblastlog2-2:amd64	2.41.5-0+deb13u1
+libldap2:amd64	2.6.10+dfsg-1
+liblmdb0:amd64	0.9.31-1+b2
+liblocale-gettext-perl	1.07-7+b1
+liblognorm5:amd64	2.0.6-5
+liblz4-1:amd64	1.10.0-4
+liblzf1:amd64	3.6-4+b3
+liblzma5:amd64	5.8.1-1+deb13u1
+libmaxminddb0:amd64	1.12.2-1
+libmd0:amd64	1.1.0-2+b1
+libmnl0:amd64	1.0.5-3
+libmount1:amd64	2.41.5-0+deb13u1
+libncursesw6:amd64	6.5+20250216-2
+libnettle8t64:amd64	3.10.1-1
+libnewt0.52:amd64	0.52.25-1
+libnftables1:amd64	1.1.3-1
+libnftnl11:amd64	1.2.9-1
+libnghttp2-14:amd64	1.64.0-1.1+deb13u1
+libnghttp3-9:amd64	1.8.0-1
+libnl-3-200:amd64	3.7.0-2
+libnl-genl-3-200:amd64	3.7.0-2
+libnl-route-3-200:amd64	3.7.0-2
+libnpth0t64:amd64	1.8-3
+libnsl2:amd64	1.3.0-3+b3
+libp11-kit0:amd64	0.25.5-3
+libpam-modules:amd64	1.7.0-5
+libpam-modules-bin	1.7.0-5
+libpam-runtime	1.7.0-5
+libpam-systemd:amd64	257.13-1~deb13u1
+libpam0g:amd64	1.7.0-5
+libpci3:amd64	1:3.13.0-2
+libpcre2-8-0:amd64	10.46-1~deb13u2
+libpcsclite1:amd64	2.3.3-1
+libperl5.40:amd64	5.40.1-6+deb13u1
+libpng16-16t64:amd64	1.6.48-1+deb13u6
+libpopt0:amd64	1.19+dfsg-2
+libproc2-0:amd64	2:4.0.4-9
+libprotobuf-c1:amd64	1.5.1-1
+libpsl5t64:amd64	0.21.2-1.1+b1
+libpython3-stdlib:amd64	3.13.5-1
+libpython3.13-minimal:amd64	3.13.5-2+deb13u5
+libpython3.13-stdlib:amd64	3.13.5-2+deb13u5
+libreadline8t64:amd64	8.2-6
+librtmp1:amd64	2.4+20151223.gitfa8646d.1-2+b5
+libsasl2-2:amd64	2.1.28+dfsg1-9
+libsasl2-modules-db:amd64	2.1.28+dfsg1-9
+libseccomp2:amd64	2.6.0-2
+libselinux1:amd64	3.8.1-1
+libsemanage-common	3.8.1-1
+libsemanage2:amd64	3.8.1-1
+libsepol2:amd64	3.8.1-1
+libsframe1:amd64	2.44-3
+libslang2:amd64	2.3.3-5+b2
+libsmartcols1:amd64	2.41.5-0+deb13u1
+libsodium23:amd64	1.0.18-1+deb13u1
+libsqlite3-0:amd64	3.46.1-7+deb13u2
+libss2:amd64	1.47.2-3+b12
+libssh2-1t64:amd64	1.11.1-1+deb13u2
+libssl3t64:amd64	3.5.7-1~deb13u3
+libstdc++6:amd64	14.2.0-19
+libsystemd-shared:amd64	257.13-1~deb13u1
+libsystemd0:amd64	257.13-1~deb13u1
+libtasn1-6:amd64	4.20.0-2+deb13u1
+libtext-charwidth-perl:amd64	0.04-11+b4
+libtext-iconv-perl:amd64	1.7-8+b4
+libtext-wrapi18n-perl	0.06-10
+libtinfo6:amd64	6.5+20250216-2
+libtirpc-common	1.3.6+ds-1
+libtirpc3t64:amd64	1.3.6+ds-1
+libtlsrpt0:amd64	0.5.0rc1-2
+libudev1:amd64	257.13-1~deb13u1
+libunistring5:amd64	1.3-2
+liburcu8t64:amd64	0.15.2-2
+libuuid1:amd64	2.41.5-0+deb13u1
+libuv1t64:amd64	1.50.0-2
+libwrap0:amd64	7.6.q-36
+libwtmpdb0:amd64	0.73.0-3+deb13u1
+libx11-6:amd64	2:1.8.12-1
+libx11-data	2:1.8.12-1
+libxau6:amd64	1:1.0.11-1
+libxcb1:amd64	1.17.0-2+b1
+libxdmcp6:amd64	1:1.1.5-1
+libxext6:amd64	2:1.3.4-1+b3
+libxml2:amd64	2.12.7+dfsg+really2.9.14-2.1+deb13u3
+libxmuu1:amd64	2:1.1.3-3+b4
+libxtables12:amd64	1.8.11-2
+libxxhash0:amd64	0.8.3-2
+libzstd1:amd64	1.5.7+dfsg-1
+linux-base	4.12.1
+linux-image-6.12.107+deb13-amd64	6.12.107-1
+linux-image-amd64	6.12.107-1
+linux-sysctl-defaults	4.12.1
+locales	2.41-12+deb13u4
+login	1:4.16.0-2+really2.41.5-0+deb13u1
+login.defs	1:4.17.4-2
+logrotate	3.22.0-1
+logsave	1.47.2-3+b12
+mawk	1.3.4.20250131-1
+media-types	13.0.0
+mount	2.41.5-0+deb13u1
+nano	8.4-1+deb13u1
+ncurses-base	6.5+20250216-2
+ncurses-bin	6.5+20250216-2
+ncurses-term	6.5+20250216-2
+netbase	6.5
+nftables	1.1.3-1
+openssh-client	1:10.0p1-7+deb13u4
+openssh-server	1:10.0p1-7+deb13u4
+openssh-sftp-server	1:10.0p1-7+deb13u4
+openssl	3.5.7-1~deb13u3
+openssl-provider-legacy	3.5.7-1~deb13u3
+os-prober	1.83
+passwd	1:4.17.4-2
+pci.ids	0.0~2025.06.09-1
+pciutils	1:3.13.0-2
+perl	5.40.1-6+deb13u1
+perl-base	5.40.1-6+deb13u1
+perl-modules-5.40	5.40.1-6+deb13u1
+postfix	3.10.13-0+deb13u1
+powertop	2.15-4
+procps	2:4.0.4-9
+python3	3.13.5-1
+python3-minimal	3.13.5-1
+python3.13	3.13.5-2+deb13u5
+python3.13-minimal	3.13.5-2+deb13u5
+readline-common	8.2-6
+redis-server	5:8.0.2-3+deb13u2
+redis-tools	5:8.0.2-3+deb13u2
+rspamd	4.2.1-1~b7a16ae~trixie
+rsyslog	8.2504.0-1+deb13u2
+runit-helper	2.16.4
+sed	4.9-2+deb13u1
+sensible-utils	0.0.25
+shared-mime-info	2.4-5+b2
+sqv	1.3.0-3+b2
+sse3-support	27
+swaks	20240103.0-2
+systemd	257.13-1~deb13u1
+systemd-sysv	257.13-1~deb13u1
+sysvinit-utils	3.14-4
+tar	1.35+dfsg-3.1
+task-english	3.81
+task-laptop	3.81
+tasksel	3.81
+tasksel-data	3.81
+tzdata	2026c-0+deb13u1
+ucf	3.0052
+udev	257.13-1~deb13u1
+util-linux	2.41.5-0+deb13u1
+util-linux-locales	2.41.5-0+deb13u1
+vim-common	2:9.1.1230-2
+vim-tiny	2:9.1.1230-2
+wamerican	2020.12.07-4
+whiptail	0.52.25-1
+wireless-regdb	2026.05.30-1~deb13u1
+wireless-tools	30~pre9-18+b1
+wpasupplicant	2:2.10-24
+xauth	1:1.1.2-1.1
+xdg-user-dirs	0.18-2
+xkb-data	2.42-1
+zlib1g:amd64	1:1.3.dfsg+really1.3.1-1+b1
+zstd	1.5.7+dfsg-1
+Sat Oct  3 03:19:19 AM UTC 2026
+lua = "/etc/rspamd/rspamd.local.lua";
+metric {
+    name = "default";
+}
+actions {
+    reject = 1000;
+    add_header = 999;
+    greylist = null;
+    quarantine {
+        flags [
+            "no_threshold",
+        ]
+    }
+}
+group {
+    headers {
+        description = "Various headers checks";
+        max_score = 8.0;
+        symbols {
+            FORGED_SENDER {
+                weight = 0.300000;
+                description = "Sender is forged (different From: header and smtp MAIL FROM: addresses)";
+            }
+            R_MIXED_CHARSET {
+                weight = 5.0;
+                description = "Mixed characters in a message";
+                one_shot = true;
+            }
+            R_MIXED_CHARSET_URL {
+                weight = 7.0;
+                description = "Mixed characters in a URL inside message";
+                one_shot = true;
+            }
+            FORGED_RECIPIENTS {
+                weight = 2.0;
+                description = "Recipients are not the same as RCPT TO: mail command";
+            }
+            FORGED_RECIPIENTS_MAILLIST {
+                weight = 0.0;
+                description = "Recipients are not the same as RCPT TO: mail command, but a message from a maillist";
+            }
+            FORGED_SENDER_MAILLIST {
+                weight = 0.0;
+                description = "Sender is not the same as MAIL FROM: envelope, but a message is from a maillist";
+            }
+            ONCE_RECEIVED {
+                weight = 0.100000;
+                description = "One received header in a message";
+            }
+            ONCE_RECEIVED_STRICT {
+                weight = 4.0;
+                description = "One received header with 'bad' patterns inside";
+            }
+            DIRECT_TO_MX {
+                weight = 0.0;
+                description = "Message has been directly delivered from MUA to local MX";
+            }
+            MAILLIST {
+                weight = -0.200000;
+                description = "Message seems to be from maillist";
+            }
+            BOUNCE {
+                weight = -0.100000;
+                description = "(Non) Delivery Status Notification";
+            }
+        }
+    }
+}
+group {
+    subject {
+        description = "Subject filters";
+        max_score = 6.0;
+        symbols {}
+    }
+}
+group {
+    mua {
+        description = "MUA forgeries";
+        symbols {
+            FORGED_MUA_MAILLIST {
+                weight = 0.0;
+                description = "Avoid false positives for FORGED_MUA_* in maillist";
+            }
+        }
+    }
+}
+group {
+    rbl {
+        description = "IP DNS lists";
+        symbols {
+            DNSWL_BLOCKED {
+                weight = 0.0;
+                description = "https://www.dnswl.org: Resolver blocked due to excessive queries";
+                groups [
+                    "dnswl",
+                    "blocked",
+                ]
+            }
+            RCVD_IN_DNSWL {
+                weight = 0.0;
+                description = "Unrecognised result from https://www.dnswl.org";
+                groups [
+                    "dnswl",
+                ]
+            }
+            RCVD_IN_DNSWL_NONE {
+                weight = 0.0;
+                description = "Sender listed at https://www.dnswl.org, no trust";
+                groups [
+                    "dnswl",
+                ]
+            }
+            RCVD_IN_DNSWL_LOW {
+                weight = -0.100000;
+                description = "Sender listed at https://www.dnswl.org, low trust";
+                groups [
+                    "dnswl",
+                ]
+            }
+            RCVD_IN_DNSWL_MED {
+                weight = -0.200000;
+                description = "Sender listed at https://www.dnswl.org, medium trust";
+                groups [
+                    "dnswl",
+                ]
+            }
+            RCVD_IN_DNSWL_HI {
+                weight = -0.500000;
+                description = "Sender listed at https://www.dnswl.org, high trust";
+                groups [
+                    "dnswl",
+                ]
+            }
+            DWL_DNSWL_BLOCKED {
+                weight = 0.0;
+                description = "https://www.dnswl.org: Resolver blocked due to excessive queries (DWL)";
+                groups [
+                    "dnswl",
+                    "blocked",
+                ]
+            }
+            DWL_DNSWL {
+                weight = 0.0;
+                description = "Unrecognised result from https://www.dnswl.org (DWL)";
+                groups [
+                    "dnswl",
+                ]
+            }
+            DWL_DNSWL_NONE {
+                weight = 0.0;
+                description = "Message has a valid dkim signature originated from domain listed at https://www.dnswl.org, no trust";
+                groups [
+                    "dnswl",
+                ]
+            }
+            DWL_DNSWL_LOW {
+                weight = -1.0;
+                description = "Message has a valid dkim signature originated from domain listed at https://www.dnswl.org, low trust";
+                groups [
+                    "dnswl",
+                ]
+            }
+            DWL_DNSWL_MED {
+                weight = -2.0;
+                description = "Message has a valid dkim signature originated from domain listed at https://www.dnswl.org, medium trust";
+                groups [
+                    "dnswl",
+                ]
+            }
+            DWL_DNSWL_HI {
+                weight = -3.500000;
+                description = "Message has a valid dkim signature originated from domain listed at https://www.dnswl.org, high trust";
+                groups [
+                    "dnswl",
+                ]
+            }
+            RBL_SPAMHAUS {
+                weight = 0.0;
+                description = "Unrecognised result from Spamhaus ZEN";
+                groups [
+                    "spamhaus",
+                ]
+            }
+            RBL_SPAMHAUS_SBL {
+                weight = 4.0;
+                description = "From address is listed in Spamhaus SBL";
+                groups [
+                    "spamhaus",
+                ]
+            }
+            RBL_SPAMHAUS_CSS {
+                weight = 2.0;
+                description = "From address is listed in Spamhaus CSS";
+                groups [
+                    "spamhaus",
+                ]
+            }
+            RBL_SPAMHAUS_XBL {
+                weight = 4.0;
+                description = "From address is listed in Spamhaus XBL";
+                groups [
+                    "spamhaus",
+                ]
+            }
+            RBL_SPAMHAUS_PBL {
+                weight = 2.0;
+                description = "From address is listed in Spamhaus PBL";
+                groups [
+                    "spamhaus",
+                ]
+            }
+            RBL_SPAMHAUS_DROP {
+                weight = 7.0;
+                description = "From address is listed in Spamhaus DROP";
+                groups [
+                    "spamhaus",
+                ]
+            }
+            RBL_SPAMHAUS_BLOCKED_OPENRESOLVER {
+                weight = 0.0;
+                description = "You are querying Spamhaus from an open resolver, please see https://www.spamhaus.org/returnc/pub/";
+                groups [
+                    "spamhaus",
+                    "blocked",
+                ]
+            }
+            RBL_SPAMHAUS_BLOCKED {
+                weight = 0.0;
+                description = "You are exceeding the query limit, please see https://www.spamhaus.org/returnc/vol/";
+                groups [
+                    "spamhaus",
+                    "blocked",
+                ]
+            }
+            RECEIVED_SPAMHAUS_SBL {
+                weight = 3.0;
+                description = "Received address is listed in Spamhaus SBL";
+                groups [
+                    "spamhaus",
+                ]
+                one_shot = true;
+            }
+            RECEIVED_SPAMHAUS_CSS {
+                weight = 1.0;
+                description = "Received address is listed in Spamhaus CSS";
+                groups [
+                    "spamhaus",
+                ]
+                one_shot = true;
+            }
+            RECEIVED_SPAMHAUS_XBL {
+                weight = 1.0;
+                description = "Received address is listed in Spamhaus XBL";
+                groups [
+                    "spamhaus",
+                ]
+                one_shot = true;
+            }
+            RECEIVED_SPAMHAUS_PBL {
+                weight = 0.0;
+                description = "Received address is listed in Spamhaus PBL";
+                groups [
+                    "spamhaus",
+                ]
+                one_shot = true;
+            }
+            RECEIVED_SPAMHAUS_DROP {
+                weight = 6.0;
+                description = "Received address is listed in Spamhaus DROP";
+                groups [
+                    "spamhaus",
+                ]
+                one_shot = true;
+            }
+            RECEIVED_SPAMHAUS_BLOCKED_OPENRESOLVER {
+                weight = 0.0;
+                description = "You are querying Spamhaus from an open resolver, please see https://www.spamhaus.org/returnc/pub/";
+                groups [
+                    "spamhaus",
+                    "blocked",
+                ]
+            }
+            RECEIVED_SPAMHAUS_BLOCKED {
+                weight = 0.0;
+                description = "You are exceeding the query limit, please see https://www.spamhaus.org/returnc/vol/";
+                groups [
+                    "spamhaus",
+                    "blocked",
+                ]
+            }
+            RBL_SENDERSCORE_UNKNOWN {
+                weight = 0.0;
+                description = "Unrecognised result from SenderScore RPBL";
+            }
+            RBL_SENDERSCORE_BOT {
+                weight = 2.0;
+                description = "From address is listed in SenderScore RPBL - botnet";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_NA {
+                weight = 0.0;
+                description = "From address is listed in SenderScore RPBL - noauth";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_NA_BOT {
+                weight = 1.0;
+                description = "From address is listed in SenderScore RPBL - noauth+botnet";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_PRST {
+                weight = 2.0;
+                description = "From address is listed in SenderScore RPBL - pristine";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_PRST_BOT {
+                weight = 3.0;
+                description = "From address is listed in SenderScore RPBL - pristine+botnet";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_PRST_NA {
+                weight = 2.0;
+                description = "From address is listed in SenderScore RPBL - pristine+noauth";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_PRST_NA_BOT {
+                weight = 3.0;
+                description = "From address is listed in SenderScore RPBL - pristine+noauth+botnet";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SUS_ATT {
+                weight = 1.0;
+                description = "From address is listed in SenderScore RPBL - suspect_attachments";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SUS_ATT_NA {
+                weight = 1.0;
+                description = "From address is listed in SenderScore RPBL - suspect_attachments+noauth";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SUS_ATT_NA_BOT {
+                weight = 1.500000;
+                description = "From address is listed in SenderScore RPBL - suspect_attachments+noauth+botnet";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SUS_ATT_PRST_NA {
+                weight = 3.0;
+                description = "From address is listed in SenderScore RPBL - suspect_attachments+pristine+noauth";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SUS_ATT_PRST_NA_BOT {
+                weight = 3.500000;
+                description = "From address is listed in SenderScore RPBL - suspect_attachments+pristine+noauth+botnet";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SCORE {
+                weight = 2.0;
+                description = "From address is listed in SenderScore RPBL - sender_score";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SCORE_NA {
+                weight = 2.0;
+                description = "From address is listed in SenderScore RPBL - sender_score+noauth";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SCORE_PRST {
+                weight = 4.0;
+                description = "From address is listed in SenderScore RPBL - sender_score+pristine";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SCORE_PRST_NA {
+                weight = 4.0;
+                description = "From address is listed in SenderScore RPBL - sender_score+pristine+noauth";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_SCORE_SUS_ATT_NA {
+                weight = 3.0;
+                description = "From address is listed in SenderScore RPBL - sender_score+suspect_attachments+noauth";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_BLOCKED {
+                weight = 0.0;
+                description = "Excessive number of queries to SenderScore RPBL, more info: https://knowledge.validity.com/hc/en-us/articles/20961730681243";
+                groups [
+                    "senderscore",
+                    "blocked",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_UNKNOWN {
+                weight = 0.0;
+                description = "Unrecognized result from SenderScore Reputation list.";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_0 {
+                weight = 4.0;
+                description = "SenderScore Reputation: Very Bad (0-9).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_1 {
+                weight = 3.500000;
+                description = "SenderScore Reputation: Bad (10-19).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_2 {
+                weight = 3.0;
+                description = "SenderScore Reputation: Bad (20-29).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_3 {
+                weight = 2.500000;
+                description = "SenderScore Reputation: Bad (30-39).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_4 {
+                weight = 2.0;
+                description = "SenderScore Reputation: Bad (40-49).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_5 {
+                weight = 1.500000;
+                description = "SenderScore Reputation: Bad (50-59).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_6 {
+                weight = 1.0;
+                description = "SenderScore Reputation: Bad (60-69).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_7 {
+                weight = 0.500000;
+                description = "SenderScore Reputation: Bad (70-79).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_8 {
+                weight = 0.0;
+                description = "SenderScore Reputation: Neutral (80-89).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_9 {
+                weight = -1.0;
+                description = "SenderScore Reputation: Good (90-100).";
+                groups [
+                    "senderscore",
+                ]
+            }
+            RBL_SENDERSCORE_REPUT_BLOCKED {
+                weight = 0.0;
+                description = "Excessive number of queries to SenderScore RPBL, more info: https://knowledge.validity.com/hc/en-us/articles/20961730681243";
+                groups [
+                    "senderscore",
+                    "blocked",
+                ]
+            }
+            MAILSPIKE {
+                weight = 0.0;
+                description = "Unrecognised result from Mailspike";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RWL_MAILSPIKE_NEUTRAL {
+                weight = 0.0;
+                description = "Neutral result from Mailspike";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RBL_MAILSPIKE_WORST {
+                weight = 2.0;
+                description = "From address is listed in Mailspike RBL - worst possible reputation";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RBL_MAILSPIKE_VERYBAD {
+                weight = 1.500000;
+                description = "From address is listed in Mailspike RBL - very bad reputation";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RBL_MAILSPIKE_BAD {
+                weight = 1.0;
+                description = "From address is listed in Mailspike RBL - bad reputation";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RWL_MAILSPIKE_POSSIBLE {
+                weight = 0.0;
+                description = "From address is listed in Mailspike RWL - possibly legit";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RWL_MAILSPIKE_GOOD {
+                weight = -0.100000;
+                description = "From address is listed in Mailspike RWL - good reputation";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RWL_MAILSPIKE_VERYGOOD {
+                weight = -0.200000;
+                description = "From address is listed in Mailspike RWL - very good reputation";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RWL_MAILSPIKE_EXCELLENT {
+                weight = -0.400000;
+                description = "From address is listed in Mailspike RWL - excellent reputation";
+                groups [
+                    "mailspike",
+                ]
+            }
+            RBL_SEM {
+                weight = 1.0;
+                description = "From address is listed in Spameatingmonkey RBL";
+                groups [
+                    "sem",
+                ]
+            }
+            RBL_SEM_IPV6 {
+                weight = 1.0;
+                description = "From address is listed in Spameatingmonkey RBL (IPv6)";
+                groups [
+                    "sem",
+                ]
+            }
+            RBL_VIRUSFREE_BOTNET {
+                weight = 2.0;
+                description = "From address is listed in virusfree.cz BL";
+            }
+            RBL_BLOCKLISTDE {
+                weight = 4.0;
+                description = "From address is listed in Blocklist (https://www.blocklist.de/)";
+                groups [
+                    "blocklistde",
+                ]
+            }
+            RECEIVED_BLOCKLISTDE {
+                weight = 3.0;
+                description = "Received address is listed in Blocklist (https://www.blocklist.de/)";
+                groups [
+                    "blocklistde",
+                ]
+                one_shot = true;
+            }
+        }
+    }
+}
+group {
+    senderscore {
+        max_score = 4.0;
+    }
+}
+group {
+    statistics {
+        description = "Statistical symbols";
+        symbols {
+            BAYES_SPAM {
+                weight = 5.100000;
+                description = "Message probably spam, probability: ";
+            }
+            BAYES_HAM {
+                weight = -3.0;
+                description = "Message probably ham, probability: ";
+            }
+        }
+    }
+}
+group {
+    fuzzy {
+        description = "Fuzzy hashes group";
+        symbols {
+            FUZZY_UNKNOWN {
+                weight = 5.0;
+                description = "Generic fuzzy hash match, bl.rspamd.com";
+            }
+            FUZZY_DENIED {
+                weight = 12.0;
+                description = "Denied fuzzy hash, bl.rspamd.com";
+            }
+            FUZZY_PROB {
+                weight = 5.0;
+                description = "Probable fuzzy hash, bl.rspamd.com";
+            }
+            FUZZY_WHITE {
+                weight = -2.100000;
+                description = "Whitelisted fuzzy hash, bl.rspamd.com";
+            }
+        }
+    }
+}
+group {
+    policies {
+        description = "SPF, DKIM, DMARC, ARC";
+        symbols {
+            R_SPF_FAIL {
+                weight = 1.0;
+                description = "SPF verification failed";
+                groups [
+                    "spf",
+                ]
+            }
+            R_SPF_SOFTFAIL {
+                weight = 0.0;
+                description = "SPF verification soft-failed";
+                groups [
+                    "spf",
+                ]
+            }
+            R_SPF_NEUTRAL {
+                weight = 0.0;
+                description = "SPF policy is neutral";
+                groups [
+                    "spf",
+                ]
+            }
+            R_SPF_ALLOW {
+                weight = -0.200000;
+                description = "SPF verification allows sending";
+                groups [
+                    "spf",
+                ]
+            }
+            R_SPF_DNSFAIL {
+                weight = 0.0;
+                description = "SPF DNS failure";
+                groups [
+                    "spf",
+                ]
+            }
+            R_SPF_NA {
+                weight = 0.0;
+                description = "Missing SPF record";
+                one_shot = true;
+                groups [
+                    "spf",
+                ]
+            }
+            R_SPF_PERMFAIL {
+                weight = 0.0;
+                description = "SPF record is malformed or persistent DNS error";
+                groups [
+                    "spf",
+                ]
+            }
+            R_SPF_PLUSALL {
+                weight = 4.0;
+                description = "SPF record allows to send from any IP";
+                groups [
+                    "spf",
+                ]
+            }
+            R_DKIM_REJECT {
+                weight = 1.0;
+                description = "DKIM verification failed";
+                one_shot = true;
+                groups [
+                    "dkim",
+                ]
+            }
+            R_DKIM_TEMPFAIL {
+                weight = 0.0;
+                description = "DKIM verification soft-failed";
+                groups [
+                    "dkim",
+                ]
+            }
+            R_DKIM_PERMFAIL {
+                weight = 0.0;
+                description = "DKIM verification hard-failed (invalid)";
+                groups [
+                    "dkim",
+                ]
+            }
+            R_DKIM_ALLOW {
+                weight = -0.100000;
+                description = "DKIM verification succeed";
+                one_shot = true;
+                groups [
+                    "dkim",
+                ]
+            }
+            R_DKIM_ALIGNED {
+                weight = -0.100000;
+                description = "DKIM signing domain is aligned with the From domain";
+                one_shot = true;
+                groups [
+                    "dkim",
+                ]
+            }
+            R_DKIM_NA {
+                weight = 0.0;
+                description = "Missing DKIM signature";
+                one_shot = true;
+                groups [
+                    "dkim",
+                ]
+            }
+            DMARC_POLICY_ALLOW {
+                weight = -0.500000;
+                description = "DMARC permit policy";
+                groups [
+                    "dmarc",
+                ]
+            }
+            DMARC_POLICY_ALLOW_WITH_FAILURES {
+                weight = -0.500000;
+                description = "DMARC permit policy with DKIM/SPF failure";
+                groups [
+                    "dmarc",
+                ]
+            }
+            DMARC_POLICY_REJECT {
+                weight = 2.0;
+                description = "DMARC reject policy";
+                groups [
+                    "dmarc",
+                ]
+            }
+            DMARC_POLICY_QUARANTINE {
+                weight = 1.500000;
+                description = "DMARC quarantine policy";
+                groups [
+                    "dmarc",
+                ]
+            }
+            DMARC_POLICY_SOFTFAIL {
+                weight = 0.100000;
+                description = "DMARC failed";
+                groups [
+                    "dmarc",
+                ]
+            }
+            DMARC_NA {
+                weight = 0.0;
+                description = "No DMARC record";
+                groups [
+                    "dmarc",
+                ]
+            }
+            ARC_ALLOW {
+                weight = -1.0;
+                description = "ARC checks success";
+                groups [
+                    "arc",
+                ]
+            }
+            ARC_REJECT {
+                weight = 1.0;
+                description = "ARC checks failed";
+                groups [
+                    "arc",
+                ]
+            }
+            ARC_INVALID {
+                weight = 0.500000;
+                description = "ARC structure invalid";
+                groups [
+                    "arc",
+                ]
+            }
+            ARC_DNSFAIL {
+                weight = 0.0;
+                description = "ARC DNS error";
+                groups [
+                    "arc",
+                ]
+            }
+            ARC_NA {
+                weight = 0.0;
+                description = "ARC signature absent";
+                groups [
+                    "arc",
+                ]
+            }
+        }
+    }
+}
+group {
+    mx {}
+}
+group {
+    whitelist {
+        description = "White lists group";
+        max_score = 10.0;
+        symbols {
+            WHITELIST_SPF {
+                weight = -1.0;
+                description = "Mail comes from the whitelisted domain and has a valid SPF policy";
+                groups [
+                    "spf",
+                ]
+            }
+            BLACKLIST_SPF {
+                weight = 1.0;
+                description = "Mail comes from the whitelisted domain and has no valid SPF policy";
+                groups [
+                    "spf",
+                ]
+            }
+            WHITELIST_DKIM {
+                weight = -1.0;
+                description = "Mail comes from the whitelisted domain and has a valid DKIM signature";
+                groups [
+                    "dkim",
+                ]
+            }
+            BLACKLIST_DKIM {
+                weight = 2.0;
+                description = "Mail comes from the whitelisted domain and has non-valid DKIM signature";
+                groups [
+                    "dkim",
+                ]
+            }
+            WHITELIST_SPF_DKIM {
+                weight = -3.0;
+                description = "Mail comes from the whitelisted domain and has valid SPF and DKIM policies";
+                groups [
+                    "spf",
+                    "dkim",
+                ]
+            }
+            BLACKLIST_SPF_DKIM {
+                weight = 3.0;
+                description = "Mail comes from the whitelisted domain and has no valid SPF policy or a bad DKIM signature";
+                groups [
+                    "spf",
+                    "dkim",
+                ]
+            }
+            WHITELIST_DMARC {
+                weight = -7.0;
+                description = "Mail comes from the whitelisted domain and has valid DMARC and DKIM policies";
+                groups [
+                    "dmarc",
+                    "spf",
+                    "dkim",
+                ]
+            }
+            BLACKLIST_DMARC {
+                weight = 6.0;
+                description = "Mail comes from the whitelisted domain and has failed DMARC and DKIM policies";
+                groups [
+                    "dmarc",
+                    "spf",
+                    "dkim",
+                ]
+            }
+        }
+    }
+}
+group {
+    surbl {
+        description = "URL DNS lists";
+        max_score = 12.500000;
+        symbols {
+            SURBL_BLOCKED {
+                weight = 0.0;
+                description = "SURBL: query blocked by policy/overusage";
+                one_shot = true;
+                groups [
+                    "surblorg",
+                    "blocked",
+                ]
+            }
+            PH_SURBL_MULTI {
+                weight = 7.500000;
+                description = "A domain in the message is listed in SURBL as phishing";
+                one_shot = true;
+                groups [
+                    "surblorg",
+                    "phishing",
+                ]
+            }
+            MW_SURBL_MULTI {
+                weight = 7.500000;
+                description = "A domain in the message is listed in SURBL as malware";
+                one_shot = true;
+                groups [
+                    "surblorg",
+                ]
+            }
+            ABUSE_SURBL {
+                weight = 5.0;
+                description = "A domain in the message is listed in SURBL as abused";
+                one_shot = true;
+                groups [
+                    "surblorg",
+                ]
+            }
+            CRACKED_SURBL {
+                weight = 5.0;
+                description = "A domain in the message is listed in SURBL as cracked";
+                one_shot = true;
+                groups [
+                    "surblorg",
+                ]
+            }
+            CT_SURBL {
+                weight = 0.0;
+                description = "A domain in the message is listed in SURBL as a clicktracker";
+                one_shot = true;
+                groups [
+                    "surblorg",
+                ]
+            }
+            DM_SURBL {
+                weight = 0.0;
+                description = "A domain in the message is listed in SURBL as belonging to a disposable email service";
+                one_shot = true;
+                groups [
+                    "surblorg",
+                ]
+            }
+            RSPAMD_URIBL {
+                weight = 4.500000;
+                description = "Rspamd uribl, bl.rspamd.com";
+                one_shot = true;
+                groups [
+                    "rspamdbl",
+                ]
+            }
+            RSPAMD_EMAILBL {
+                weight = 2.500000;
+                description = "Rspamd emailbl, bl.rspamd.com";
+                one_shot = true;
+                groups [
+                    "rspamdbl",
+                ]
+            }
+            MSBL_EBL {
+                weight = 7.500000;
+                description = "MSBL emailbl (https://www.msbl.org/)";
+                one_shot = true;
+                groups [
+                    "ebl",
+                ]
+            }
+            MSBL_EBL_GREY {
+                weight = 0.500000;
+                description = "MSBL emailbl grey list (https://www.msbl.org/)";
+                one_shot = true;
+                groups [
+                    "ebl",
+                ]
+            }
+            SEM_URIBL_UNKNOWN {
+                weight = 0.0;
+                description = "Unrecognised result from Spameatingmonkey URIBL";
+                one_shot = true;
+                groups [
+                    "sem",
+                ]
+            }
+            SEM_URIBL {
+                weight = 3.500000;
+                description = "A domain in the message is listed in Spameatingmonkey URIBL";
+                one_shot = true;
+                groups [
+                    "sem",
+                ]
+            }
+            SEM_URIBL_FRESH15_UNKNOWN {
+                weight = 0.0;
+                description = "Unrecognised result from Spameatingmonkey Fresh15 URIBL";
+                one_shot = true;
+                groups [
+                    "sem",
+                ]
+            }
+            SEM_URIBL_FRESH15 {
+                weight = 3.0;
+                description = "A domain in the message is listed in Spameatingmonkey Fresh15 URIBL (registered in the past 15 days, .AERO,.BIZ,.COM,.INFO,.NAME,.NET,.PRO,.SK,.TEL,.US only)";
+                one_shot = true;
+                groups [
+                    "sem",
+                ]
+            }
+            DBL {
+                weight = 0.0;
+                description = "Unrecognised result from Spamhaus DBL";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_SPAM {
+                weight = 6.500000;
+                description = "A domain in the message is listed in Spamhaus DBL as spam";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_PHISH {
+                weight = 7.500000;
+                description = "A domain in the message is listed in Spamhaus DBL as phishing";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_MALWARE {
+                weight = 7.500000;
+                description = "A domain in the message is listed in Spamhaus DBL as malware";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_BOTNET {
+                weight = 7.500000;
+                description = "A domain in the message is listed in Spamhaus DBL as botnet C&C";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_ABUSE {
+                weight = 5.0;
+                description = "A domain in the message is listed in Spamhaus DBL as abused legit spam";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_ABUSE_REDIR {
+                weight = 5.0;
+                description = "A domain in the message is listed in Spamhaus DBL as spammed redirector domain";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_ABUSE_PHISH {
+                weight = 6.500000;
+                description = "A domain in the message is listed in Spamhaus DBL as abused legit phish";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_ABUSE_MALWARE {
+                weight = 6.500000;
+                description = "A domain in the message is listed in Spamhaus DBL as abused legit malware";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_ABUSE_BOTNET {
+                weight = 6.500000;
+                description = "A domain in the message is listed in Spamhaus DBL as abused legit botnet C&C";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_PROHIBIT {
+                weight = 0.0;
+                description = "DBL uribl IP queries prohibited!";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            DBL_BLOCKED_OPENRESOLVER {
+                weight = 0.0;
+                description = "You are querying Spamhaus from an open resolver, please see https://www.spamhaus.org/returnc/pub/";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                    "blocked",
+                ]
+            }
+            DBL_BLOCKED {
+                weight = 0.0;
+                description = "You are exceeding the query limit, please see https://www.spamhaus.org/returnc/vol/";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                    "blocked",
+                ]
+            }
+            URIBL_MULTI {
+                weight = 0.0;
+                description = "Unrecognised result from URIBL.com";
+                one_shot = true;
+                groups [
+                    "uribl",
+                ]
+            }
+            URIBL_BLOCKED {
+                weight = 0.0;
+                description = "URIBL.com: query refused, likely due to policy/overusage";
+                one_shot = true;
+                groups [
+                    "uribl",
+                    "blocked",
+                ]
+            }
+            URIBL_BLACK {
+                weight = 7.500000;
+                description = "A domain in the message is listed in URIBL.com black";
+                one_shot = true;
+                groups [
+                    "uribl",
+                ]
+            }
+            URIBL_RED {
+                weight = 0.500000;
+                description = "A domain in the message is listed in URIBL.com red";
+                one_shot = true;
+                groups [
+                    "uribl",
+                ]
+            }
+            URIBL_GREY {
+                weight = 2.500000;
+                description = "A domain in the message is listed in URIBL.com grey";
+                one_shot = true;
+                groups [
+                    "uribl",
+                ]
+            }
+            SPAMHAUS_ZEN_URIBL {
+                ignore = true;
+                weight = 0.0;
+                description = "Unrecognised result from Spamhaus ZEN URIBL";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            URIBL_SBL {
+                ignore = true;
+                weight = 6.500000;
+                description = "A domain in the message body resolves to an IP listed in Spamhaus SBL";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            URIBL_SBL_CSS {
+                ignore = true;
+                weight = 5.0;
+                description = "A domain in the message body resolves to an IP listed in Spamhaus CSS";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            URIBL_XBL {
+                ignore = true;
+                weight = 3.0;
+                description = "A domain in the message body resolves to an IP listed in Spamhaus XBL";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            URIBL_PBL {
+                ignore = true;
+                weight = 0.010000;
+                description = "A domain in the message body resolves to an IP listed in Spamhaus PBL";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+            URIBL_DROP {
+                ignore = true;
+                weight = 5.0;
+                description = "A domain in the message body resolves to an IP listed in Spamhaus DROP";
+                one_shot = true;
+                groups [
+                    "spamhaus",
+                ]
+            }
+        }
+    }
+}
+group {
+    phishing {
+        description = "Phishing in emails";
+        max_score = 10.0;
+        symbols {
+            PHISHING {
+                weight = 4.0;
+                description = "Phished URL";
+                one_shot = true;
+            }
+            PHISHED_EXCLUDED {
+                weight = 0.0;
+                description = "Phished URL found in exclusions list";
+            }
+            PHISHED_OPENPHISH {
+                weight = 7.0;
+                description = "Phished URL found in openphish.com";
+            }
+            PHISHED_PHISHTANK {
+                weight = 7.0;
+                description = "Phished URL found in phishtank.com";
+            }
+            PHISHED_GENERIC_SERVICE {
+                weight = 0.0;
+                description = "Phished URL found in generic service";
+            }
+            HACKED_WP_PHISHING {
+                weight = 4.500000;
+                description = "Phish message sent by hacked Wordpress instance";
+            }
+            REDIRECTOR_FALSE {
+                weight = 0.0;
+                description = "Phishing exclusion symbol for known redirectors";
+            }
+            URL_REDIRECTOR_NESTED {
+                weight = 1.0;
+                description = "URL redirector nested limit has been reached";
+                one_shot = true;
+            }
+            PHISHED_WHITELISTED {
+                weight = 0.0;
+                description = "Phishing exclusion symbol for known exceptions";
+            }
+        }
+    }
+}
+group {
+    url {
+        description = "Suspicious URL checks";
+        max_score = 9.0;
+        symbols {
+            URL_USER_PASSWORD {
+                weight = 2.0;
+                description = "URL contains user field";
+                one_shot = false;
+            }
+            URL_USER_LONG {
+                weight = 3.0;
+                description = "URL user field is long (>128 chars)";
+                one_shot = false;
+            }
+            URL_USER_VERY_LONG {
+                weight = 5.0;
+                description = "URL user field is very long (>256 chars)";
+                one_shot = false;
+            }
+            URL_NUMERIC_IP {
+                weight = 1.500000;
+                description = "URL uses numeric IP address";
+                one_shot = false;
+            }
+            URL_NUMERIC_IP_USER {
+                weight = 4.0;
+                description = "URL uses numeric IP with user field";
+                one_shot = false;
+            }
+            URL_NUMERIC_PRIVATE_IP {
+                weight = 0.500000;
+                description = "URL uses private IP range";
+                one_shot = false;
+            }
+            URL_NO_TLD {
+                weight = 2.0;
+                description = "URL has no TLD";
+                one_shot = false;
+            }
+            URL_SUSPICIOUS_TLD {
+                weight = 3.0;
+                description = "URL uses suspicious TLD";
+                one_shot = false;
+            }
+            URL_BAD_UNICODE {
+                weight = 3.0;
+                description = "URL contains invalid Unicode";
+                one_shot = false;
+            }
+            URL_HOMOGRAPH_ATTACK {
+                weight = 5.0;
+                description = "URL uses homograph attack (mixed scripts)";
+                one_shot = false;
+            }
+            URL_RTL_OVERRIDE {
+                weight = 6.0;
+                description = "URL uses RTL override character";
+                one_shot = false;
+            }
+            URL_ZERO_WIDTH_SPACES {
+                weight = 7.0;
+                description = "URL contains zero-width spaces";
+                one_shot = false;
+            }
+            URL_MULTIPLE_AT_SIGNS {
+                weight = 3.0;
+                description = "URL has multiple @ signs";
+                one_shot = true;
+            }
+            URL_BACKSLASH_PATH {
+                weight = 2.0;
+                description = "URL uses backslashes";
+                one_shot = true;
+            }
+            URL_EXCESSIVE_DOTS {
+                weight = 2.0;
+                description = "URL has excessive dots in hostname";
+                one_shot = false;
+            }
+            URL_VERY_LONG {
+                weight = 1.500000;
+                description = "URL is very long";
+                one_shot = false;
+            }
+            URL_QUERY_MULTIPLE_URLS {
+                weight = 2.0;
+                description = "URL query embeds more than one URL";
+                one_shot = true;
+            }
+        }
+    }
+}
+group {
+    hfilter {
+        description = "SMTP envelope filter";
+        symbols {
+            HFILTER_HELO_BAREIP {
+                weight = 3.0;
+                description = "Helo host is bare ip";
+            }
+            HFILTER_HELO_BADIP {
+                weight = 4.500000;
+                description = "Helo host is very bad ip";
+            }
+            HFILTER_HELO_1 {
+                weight = 0.500000;
+                description = "Helo host checks (very low)";
+            }
+            HFILTER_HELO_2 {
+                weight = 1.0;
+                description = "Helo host checks (low)";
+            }
+            HFILTER_HELO_3 {
+                weight = 2.0;
+                description = "Helo host checks (medium)";
+            }
+            HFILTER_HELO_4 {
+                weight = 2.500000;
+                description = "Helo host checks (hard)";
+            }
+            HFILTER_HELO_5 {
+                weight = 3.0;
+                description = "Helo host checks (very hard)";
+            }
+            HFILTER_HOSTNAME_1 {
+                weight = 0.500000;
+                description = "Hostname checks (very low)";
+            }
+            HFILTER_HOSTNAME_2 {
+                weight = 1.0;
+                description = "Hostname checks (low)";
+            }
+            HFILTER_HOSTNAME_3 {
+                weight = 2.0;
+                description = "Hostname checks (medium)";
+            }
+            HFILTER_HOSTNAME_4 {
+                weight = 2.500000;
+                description = "Hostname checks (hard)";
+            }
+            HFILTER_HOSTNAME_5 {
+                weight = 3.0;
+                description = "Hostname checks (very hard)";
+            }
+            HFILTER_HELO_NORESOLVE_MX {
+                weight = 0.200000;
+                description = "MX found in Helo and no resolve";
+            }
+            HFILTER_HELO_NORES_A_OR_MX {
+                weight = 0.300000;
+                description = "Helo no resolve to A or MX";
+            }
+            HFILTER_HELO_IP_A {
+                weight = 1.0;
+                description = "Helo A IP != hostname IP";
+            }
+            HFILTER_HELO_NOT_FQDN {
+                weight = 2.0;
+                description = "Helo not FQDN";
+            }
+            HFILTER_FROMHOST_NORESOLVE_MX {
+                weight = 0.500000;
+                description = "MX found in FROM host and no resolve";
+            }
+            HFILTER_FROMHOST_NORES_A_OR_MX {
+                weight = 1.500000;
+                description = "FROM host no resolve to A or MX";
+            }
+            HFILTER_FROMHOST_NOT_FQDN {
+                weight = 3.0;
+                description = "FROM host not FQDN";
+            }
+            HFILTER_FROM_BOUNCE {
+                weight = 0.0;
+                description = "Bounce message";
+            }
+            HFILTER_HOSTNAME_UNKNOWN {
+                weight = 2.500000;
+                description = "Unknown client hostname (PTR or FCrDNS verification failed)";
+            }
+            HFILTER_RCPT_BOUNCEMOREONE {
+                weight = 1.500000;
+                description = "Message from bounce and over 1 recipient";
+            }
+            HFILTER_URL_ONLY {
+                weight = 2.200000;
+                description = "URL only in body";
+            }
+            HFILTER_URL_ONELINE {
+                weight = 2.500000;
+                description = "One line URL and text in body";
+            }
+            RDNS_NONE {
+                weight = 2.0;
+                description = "Cannot resolve reverse DNS for sender's IP";
+            }
+            RDNS_DNSFAIL {
+                weight = 0.0;
+                description = "PTR verification DNS error";
+            }
+        }
+    }
+}
+group {
+    mime_types {
+        description = "Mime attachments rules";
+        max_score = 10.0;
+        symbols {
+            MIME_GOOD {
+                weight = -0.100000;
+                description = "Known content-type";
+                one_shot = true;
+            }
+            MIME_BAD {
+                weight = 1.0;
+                description = "Known bad content-type";
+                one_shot = true;
+            }
+            MIME_UNKNOWN {
+                weight = 0.100000;
+                description = "Missing or unknown content-type";
+                one_shot = true;
+            }
+            MIME_BAD_ATTACHMENT {
+                weight = 4.0;
+                description = "Invalid attachment mime type";
+                one_shot = true;
+            }
+            MIME_ENCRYPTED_ARCHIVE {
+                weight = 2.0;
+                description = "Encrypted archive in a message";
+                one_shot = true;
+            }
+            MIME_OBFUSCATED_ARCHIVE {
+                weight = 2.0;
+                description = "Archive has files with clear obfuscation signs";
+                one_shot = true;
+            }
+            MIME_EXE_IN_GEN_SPLIT_RAR {
+                weight = 5.0;
+                description = "EXE file in RAR archive with generic split extension (e.g. .001)";
+                one_shot = true;
+            }
+            MIME_ARCHIVE_IN_ARCHIVE {
+                weight = 5.0;
+                description = "Archive within another archive";
+                one_shot = true;
+            }
+            MIME_DOUBLE_BAD_EXTENSION {
+                weight = 3.0;
+                description = "Bad extension cloaking";
+                one_shot = true;
+            }
+            MIME_BAD_EXTENSION {
+                weight = 2.0;
+                description = "Bad extension";
+                one_shot = true;
+            }
+            MIME_BAD_UNICODE {
+                weight = 2.0;
+                description = "Filename with known obscured unicode characters";
+                one_shot = true;
+            }
+        }
+    }
+}
+group {
+    excessqp {
+        max_score = 2.400000;
+    }
+}
+group {
+    excessb64 {
+        max_score = 3.0;
+    }
+}
+group {
+    neural {}
+}
+group {
+    antivirus {}
+}
+group {
+    external_services {}
+}
+group {
+    content {
+        description = "Content rules";
+        symbols {
+            PDF_ENCRYPTED {
+                weight = 0.300000;
+                description = "There is an encrypted PDF in the message";
+                one_shot = true;
+            }
+            PDF_JAVASCRIPT {
+                weight = 0.100000;
+                description = "There is an PDF with JavaScript in the message";
+                one_shot = true;
+            }
+            PDF_SUSPICIOUS {
+                weight = 4.500000;
+                description = "There is an PDF with suspicious properties in the message";
+                one_shot = true;
+            }
+            PDF_LONG_TRAILER {
+                weight = 0.200000;
+                description = "There is an PDF with a long trailer in the message";
+                one_shot = true;
+            }
+            PDF_MANY_OBJECTS {
+                weight = 0;
+                description = "There is a PDF with too many objects in the message";
+                one_shot = true;
+            }
+            PDF_TIMEOUT {
+                weight = 0;
+                description = "There is a PDF in the message that caused timeout in processing";
+                one_shot = true;
+            }
+            DOCX_CONTENT {
+                weight = 0;
+                description = "There is a DOCX document in the message";
+                one_shot = true;
+            }
+            DOCX_EXTERNAL_LINKS {
+                weight = 0;
+                description = "There is a DOCX document with external links in the message";
+                one_shot = true;
+            }
+            DOCX_SUSPICIOUS {
+                weight = 0;
+                description = "There is a DOCX document that could not be fully processed";
+                one_shot = true;
+            }
+            XLSX_CONTENT {
+                weight = 0;
+                description = "There is an XLSX workbook in the message";
+                one_shot = true;
+            }
+            XLSX_EXTERNAL_LINKS {
+                weight = 0;
+                description = "There is an XLSX workbook with external links in the message";
+                one_shot = true;
+            }
+            XLSX_SUSPICIOUS {
+                weight = 0;
+                description = "There is an XLSX workbook that could not be fully processed";
+                one_shot = true;
+            }
+            PPTX_CONTENT {
+                weight = 0;
+                description = "There is a PPTX presentation in the message";
+                one_shot = true;
+            }
+            PPTX_EXTERNAL_LINKS {
+                weight = 0;
+                description = "There is a PPTX presentation with external links in the message";
+                one_shot = true;
+            }
+            PPTX_SUSPICIOUS {
+                weight = 0;
+                description = "There is a PPTX presentation that could not be fully processed";
+                one_shot = true;
+            }
+            OOXML_MACROS {
+                weight = 0;
+                description = "An Office document carries VBA or Excel 4.0 macros";
+                one_shot = true;
+            }
+            OOXML_OLE_OBJECT {
+                weight = 0;
+                description = "An Office document embeds OLE objects or packaged files";
+                one_shot = true;
+            }
+            OOXML_REMOTE_TEMPLATE {
+                weight = 0;
+                description = "An Office document loads its template from an external location";
+                one_shot = true;
+            }
+            OOXML_EXTERNAL_DATA {
+                weight = 0;
+                description = "An Office document references external data, images or objects";
+                one_shot = true;
+            }
+            SVG_CONTENT {
+                weight = 0;
+                description = "There is an SVG image in the message";
+                one_shot = true;
+            }
+            SVG_SUSPICIOUS {
+                weight = 0;
+                description = "There is an SVG image that could not be fully processed";
+                one_shot = true;
+            }
+            SVG_SCRIPT {
+                weight = 0.100000;
+                description = "There is an SVG image with scripts or event handlers";
+                one_shot = true;
+            }
+            SVG_FOREIGN_OBJECT {
+                weight = 0.100000;
+                description = "There is an SVG image embedding HTML content";
+                one_shot = true;
+            }
+            SVG_DATA_URI {
+                weight = 0.100000;
+                description = "There is an SVG image carrying non-image data: URIs";
+                one_shot = true;
+            }
+            SVG_EXTERNAL_LINKS {
+                weight = 0;
+                description = "There is an SVG image with hyperlinks";
+                one_shot = true;
+            }
+            SVG_EXTERNAL_RESOURCES {
+                weight = 0;
+                description = "There is an SVG image loading remote resources";
+                one_shot = true;
+            }
+            SVG_FORM {
+                weight = 0.100000;
+                description = "There is an SVG image with an HTML form or password input";
+                one_shot = true;
+            }
+            SVG_REDIRECT {
+                weight = 0.100000;
+                description = "There is an SVG image that redirects or embeds another document";
+                one_shot = true;
+            }
+        }
+    }
+}
+composites {
+    SHORT_PART_BAD_HEADERS {
+        expression = "MISSING_ESSENTIAL_HEADERS & SINGLE_SHORT_PART";
+        group = "blankspam";
+        policy = "leave";
+        score = 7.0;
+    }
+    FORGED_RECIPIENTS_MAILLIST {
+        expression = "FORGED_RECIPIENTS & -MAILLIST";
+    }
+    FORGED_SENDER_MAILLIST {
+        expression = "FORGED_SENDER & -MAILLIST";
+    }
+    FORGED_SENDER_FORWARDING {
+        expression = "FORGED_SENDER & g:forwarding";
+        description = "Forged sender, but message is forwarded";
+        policy = "remove_weight";
+    }
+    SPF_FAIL_FORWARDING {
+        expression = "g:forwarding & (R_SPF_SOFTFAIL | R_SPF_FAIL)";
+        policy = "remove_weight";
+    }
+    DMARC_POLICY_ALLOW_WITH_FAILURES {
+        expression = "DMARC_POLICY_ALLOW & (R_SPF_SOFTFAIL | R_SPF_FAIL | R_DKIM_REJECT)";
+        policy = "remove_weight";
+    }
+    FORGED_RECIPIENTS_FORWARDING {
+        expression = "FORGED_RECIPIENTS & g:forwarding";
+        policy = "remove_weight";
+    }
+    FORGED_SENDER_VERP_SRS {
+        expression = "FORGED_SENDER & (ENVFROM_PRVS | ENVFROM_VERP)";
+    }
+    FORGED_MUA_MAILLIST {
+        expression = "g:mua & -MAILLIST";
+    }
+    AUTH_NA {
+        expression = "R_DKIM_NA & R_SPF_NA & DMARC_NA & ARC_NA";
+        score = 1.0;
+        policy = "remove_weight";
+        description = "Authenticating message via SPF/DKIM/DMARC/ARC not available";
+    }
+    AUTH_NA_OR_FAIL {
+        expression = "!(R_DKIM_NA & R_SPF_NA & DMARC_NA & ARC_NA) & (R_DKIM_NA | R_DKIM_TEMPFAIL | R_DKIM_PERMFAIL) & (R_SPF_NA | R_SPF_DNSFAIL) & DMARC_NA & (ARC_NA | ARC_DNSFAIL)";
+        score = 1.0;
+        policy = "remove_weight";
+        description = "No authenticating method SPF/DKIM/DMARC/ARC was successful";
+    }
+    BOUNCE_NO_AUTH {
+        expression = "(AUTH_NA | AUTH_NA_OR_FAIL) & (BOUNCE | SUBJ_BOUNCE_WORDS)";
+        score = 1.0;
+    }
+    DKIM_MIXED {
+        expression = "-R_DKIM_ALLOW & (R_DKIM_TEMPFAIL | R_DKIM_PERMFAIL | R_DKIM_REJECT)";
+        policy = "remove_weight";
+    }
+    APPLE_MAILER_COMMON {
+        description = "Message was sent by 'Apple Mail' and has common symbols in place";
+        expression = "APPLE_MAILER & MV_CASE";
+    }
+    APPLE_IOS_MAILER_COMMON {
+        description = "Message was sent by 'Apple iOS Mail' and has common symbols in place";
+        expression = "APPLE_IOS_MAILER & (MV_CASE | MIME_MA_MISSING_TEXT)";
+    }
+    HACKED_WP_PHISHING {
+        expression = "(HAS_X_POS | HAS_PHPMAILER_SIG) & HAS_WP_URI & (PHISHING | CRACKED_SURBL | PH_SURBL_MULTI | DBL_PHISH | DBL_ABUSE_PHISH | URIBL_BLACK | PHISHED_OPENPHISH | PHISHED_PHISHTANK)";
+        description = "Phish message sent by hacked Wordpress instance";
+        policy = "leave";
+        group = "compromised_hosts";
+    }
+    COMPROMISED_ACCT_BULK {
+        expression = "(HAS_XOIP | RCVD_FROM_SMTP_AUTH) & DCC_BULK";
+        description = "Likely to be from a compromised account";
+        score = 3.0;
+        policy = "leave";
+        group = "compromised_hosts";
+    }
+    UNDISC_RCPTS_BULK {
+        expression = "DCC_BULK & (MISSING_TO | R_UNDISC_RCPT)";
+        description = "Missing or undisclosed recipients with a bulk signature";
+        score = 3.0;
+        policy = "leave";
+    }
+    RCVD_UNAUTH_PBL {
+        expression = "RECEIVED_SPAMHAUS_PBL & !RCVD_VIA_SMTP_AUTH";
+        description = "Relayed through Spamhaus PBL IP without sufficient authentication (possibly indicating an open relay)";
+        score = 2.0;
+        policy = "leave";
+    }
+    RCVD_DKIM_ARC_DNSWL_MED {
+        expression = "(R_DKIM_ALLOW | ARC_ALLOW) & RCVD_IN_DNSWL_MED";
+        description = "Sufficiently DKIM/ARC signed and received from IP with medium trust at DNSWL";
+        score = -0.500000;
+        policy = "leave";
+    }
+    RCVD_DKIM_ARC_DNSWL_HI {
+        expression = "(R_DKIM_ALLOW | ARC_ALLOW) & RCVD_IN_DNSWL_HI";
+        description = "Sufficiently DKIM/ARC signed and received from IP with high trust at DNSWL";
+        score = -1.0;
+        policy = "leave";
+    }
+    AUTOGEN_PHP_SPAMMY {
+        expression = "(HAS_X_POS | HAS_PHPMAILER_SIG | HAS_X_PHP_SCRIPT) & (SUBJECT_ENDS_QUESTION | SUBJECT_ENDS_EXCLAIM | MANY_INVISIBLE_PARTS)";
+        description = "Message was generated by PHP script and contains some spam indicators";
+        score = 1.0;
+        policy = "leave";
+    }
+    PHISH_EMOTION {
+        expression = "(PHISHING | DBL_PHISH | PHISHED_OPENPHISH | PHISHED_PHISHTANK) & (SUBJECT_ENDS_QUESTION | SUBJECT_ENDS_EXCLAIM)";
+        description = "Phish message with subject trying to address users emotion";
+        score = 1.0;
+        policy = "leave";
+    }
+    HAS_ANON_DOMAIN {
+        expression = "HAS_GUC_PROXY_URI | URIBL_RED | DBL_ABUSE_REDIR | HAS_ONION_URI";
+        description = "Contains one or more domains trying to disguise owner/destination";
+        score = 0.100000;
+        policy = "leave";
+    }
+    BAD_REP_POLICIES {
+        description = "Contains valid policies but are also marked by fuzzy/bayes/SURBL/RBL";
+        expression = "(~g-:policies) & (-g+:fuzzy | -g+:statistics | -g+:surbl | -g+:rbl)";
+        score = 0.100000;
+    }
+    VIOLATED_DIRECT_SPF {
+        description = "Has no Received (or no trusted received relays) and SPF policy fails or soft fails";
+        expression = "(R_SPF_FAIL | R_SPF_SOFTFAIL) & (RCVD_COUNT_ZERO | RCVD_NO_TLS_LAST)";
+        policy = "leave";
+        score = 3.500000;
+    }
+    IP_SCORE_FREEMAIL {
+        description = "Negate IP_SCORE when message comes from FreeMail";
+        expression = "FREEMAIL_FROM & SENDER_REP_SPAM";
+        score = 0.0;
+        policy = "remove_weight";
+    }
+    BROKEN_HEADERS_MAILLIST {
+        description = "Negate BROKEN_HEADERS when message comes via some mailing list";
+        expression = "BROKEN_HEADERS & -MAILLIST";
+        score = 0.0;
+        policy = "remove_weight";
+    }
+    LEAKED_PASSWORD_SCAM {
+        description = "Contains BTC wallet address and scam patterns";
+        expression = "BITCOIN_ADDR & (LEAKED_PASSWORD_SCAM_RE | R_MIXED_CHARSET | R_EMPTY_IMAGE)";
+        policy = "leave";
+        score = 7.0;
+        group = "scams";
+    }
+    FREEMAIL_AFF {
+        expression = "(FREEMAIL_FROM | FREEMAIL_ENVFROM | FREEMAIL_REPLYTO | FREEMAIL_MDN) & (TO_DN_RECIPIENTS | R_UNDISC_RCPT | CD_MM_BODY) & (INTRODUCTION | FROM_NAME_HAS_TITLE | FREEMAIL_REPLYTO_NEQ_FROM_DOM | SUBJECT_HAS_CURRENCY)";
+        score = 4.0;
+        policy = "leave";
+        description = "Message exhibits strong characteristics of advance fee fraud (AFF a/k/a '419' spam) involving freemail addresses";
+        group = "scams";
+    }
+    FREEMAIL_REPLYTO_NEQ_FROM {
+        expression = "FREEMAIL_REPLYTO & !REPLYTO_EQ_FROM & !REPLYTO_ADDR_EQ_FROM & !FREEMAIL_REPLYTO_NEQ_FROM_DOM";
+        score = 2.0;
+        policy = "leave";
+        description = "Reply-To is a Freemail address and it not match From header or SMTP From, also From is not another Freemail";
+    }
+    SUSPICIOUS_MDN {
+        expression = "(FREEMAIL_MDN | DISPOSABLE_MDN) & !(FREEMAIL_FROM | FREEMAIL_ENVFROM)";
+        score = 2.0;
+        policy = "leave";
+        description = "Message delivery notification should go to freemail or disposable e-mail, but message was not sent from a freemail address";
+        group = "scams";
+    }
+    REDIRECTOR_URL_ONLY {
+        expression = "HFILTER_URL_ONLY & REDIRECTOR_URL";
+        score = 1.0;
+        policy = "leave";
+        description = "Message only contains a redirector URL";
+    }
+    SUSPICIOUS_AUTH_ORIGIN {
+        expression = "(HAS_XOIP | RCVD_FROM_SMTP_AUTH) & (!RECEIVED_SPAMHAUS_PBL | RECEIVED_SPAMHAUS_XBL | RECEIVED_SPAMHAUS_SBL | RECEIVED_BLOCKLISTDE)";
+        score = 0.0;
+        policy = "leave";
+        description = "Message authenticated, but from a suspicios origin (potentially an injector)";
+    }
+    ABUSE_FROM_INJECTOR {
+        expression = "SUSPICIOUS_AUTH_ORIGIN & (RCVD_HELO_USER | FAKE_REPLY | HAS_IPFS_GATEWAY_URL | HTML_SHORT_LINK_IMG_1)";
+        score = 2.0;
+        policy = "leave";
+        description = "Message is sent from a suspicios origin and showing signs of abuse, likely spam injected in compromised account";
+        group = "compromised_hosts";
+    }
+    SUSPICIOUS_URL_IN_SUSPICIOUS_MESSAGE {
+        expression = "(REDIRECTOR_URL | HAS_ANON_DOMAIN | HAS_IPFS_GATEWAY_URL) & (-g+:fuzzy | -g+:statistics | -g+:surbl | -g+:rbl)";
+        score = 1.0;
+        policy = "leave";
+        description = "Message contains redirector, anonymous or IPFS gateway URL and is marked by fuzzy/bayes/SURBL/RBL";
+    }
+    MIME_BAD_EXT_IN_OBFUSCATED_ARCHIVE {
+        expression = "MIME_BAD_EXTENSION and MIME_OBFUSCATED_ARCHIVE";
+        score = 8.0;
+        policy = "leave";
+        description = "Attachment with bad extension and archive that has filename with clear obfuscation signs";
+    }
+    MIME_BAD_EXT_WITH_BAD_UNICODE {
+        expression = "MIME_BAD_EXTENSION and MIME_BAD_UNICODE";
+        score = 8.0;
+        policy = "leave";
+        description = "Attachment with bad extension and filename that has known obscured unicode characters";
+    }
+}
+classifier {
+    bayes {
+        tokenizer {
+            name = "osb";
+        }
+        cache {}
+        new_schema = true;
+        store_tokens = false;
+        signatures = false;
+        min_tokens = 11;
+        backend = "redis";
+        min_learns = 200;
+        statfile {
+            symbol = "BAYES_HAM";
+            spam = false;
+        }
+        statfile {
+            symbol = "BAYES_SPAM";
+            spam = true;
+        }
+        learn_condition = "return require('lua_bayes_learn').can_learn";
+    }
+}
+aliases {
+    max_recursion_depth = 10;
+    expand_multiple = true;
+    track_chain = false;
+    apply_to_mime = true;
+    apply_to_smtp = true;
+    enable_gmail_rules = true;
+    enable_plus_aliases = true;
+    symbol_local_inbound = "LOCAL_INBOUND";
+    symbol_local_outbound = "LOCAL_OUTBOUND";
+    symbol_internal_mail = "INTERNAL_MAIL";
+    symbol_alias_resolved = "ALIAS_RESOLVED";
+    symbol_tagged_from = "TAGGED_FROM";
+    symbol_tagged_rcpt = "TAGGED_RCPT";
+    score_local_inbound = 0.0;
+    score_local_outbound = 0.0;
+    score_internal_mail = 0.0;
+    score_alias_resolved = 0.0;
+    score_tagged_from = 0.0;
+    score_tagged_rcpt = 0.0;
+}
+antivirus {
+    enabled = false;
+}
+arc {
+    allow_envfrom_empty = true;
+    allow_hdrfrom_mismatch = true;
+    allow_hdrfrom_multiple = false;
+    allow_username_mismatch = false;
+    selector = "arc";
+    sign_authenticated = false;
+    sign_inbound = true;
+    sign_local = false;
+    sign_symbol = "ARC_SIGNED";
+    try_fallback = true;
+    use_domain = "recipient";
+    use_esld = true;
+    use_redis = false;
+    key_prefix = "ARC_KEYS";
+}
+asn {
+    provider_type = "rspamd";
+    provider_info {
+        ip4 = "asn.rspamd.com";
+        ip6 = "asn6.rspamd.com";
+    }
+    enabled = false;
+}
+aws_s3 {
+    s3_region = 'us-east-1';
+    s3_host = 's3.amazonaws.com';
+    enabled = false;
+}
+bayes_expiry {}
+bimi {
+    helper_timeout = 5.0;
+    helper_sync = true;
+    vmc_only = true;
+    redis_prefix = 'rs_bimi';
+    redis_min_expiry = 86400.0;
+    enabled = false;
+}
+chartable {
+    threshold = 0.300000;
+    symbol = "R_MIXED_CHARSET";
+}
+clickhouse {
+    limit = 1000;
+    timeout = 5;
+    ipmask = 19;
+    ipmask6 = 48;
+    full_urls = false;
+}
+contextal {
+    enabled = false;
+}
+dcc {
+    enabled = false;
+    socket = "/var/dcc/dccifd";
+    timeout = 2.0;
+}
+dkim {
+    dkim_cache_size = 2000;
+    dkim_cache_expire = 86400.0;
+    time_jitter = 21600.0;
+    trusted_only = false;
+    skip_multi = false;
+    check_local = true;
+    check_authed = true;
+}
+dkim_signing {
+    allow_envfrom_empty = true;
+    allow_hdrfrom_mismatch = false;
+    allow_hdrfrom_multiple = false;
+    allow_username_mismatch = false;
+    selector = "dkim";
+    sign_authenticated = true;
+    sign_local = true;
+    symbol = "DKIM_SIGNED";
+    try_fallback = true;
+    use_domain = "header";
+    use_esld = true;
+    use_redis = false;
+    key_prefix = "DKIM_KEYS";
+    enabled = false;
+}
+dmarc {
+    check_local = true;
+    check_authed = true;
+    actions {
+        reject = "reject";
+        quarantine = "quarantine";
+        softfail = "no action";
+    }
+    reporting {
+        enabled = true;
+        email = "reports@recipient.test";
+        domain = "recipient.test";
+        org_name = "Disposable email lab";
+        smtp = "127.0.0.1";
+        smtp_port = 25;
+        helo = "receiver.recipient.test";
+        bcc_addrs [
+            "reports@recipient.test",
+        ]
+    }
+}
+elastic {
+    enabled = false;
+    use_https = false;
+    periodic_interval = 5.0;
+    timeout = 5.0;
+    no_ssl_verify = false;
+    use_gzip = true;
+    use_keepalive = true;
+    version {
+        autodetect_enabled = true;
+        autodetect_max_fail = 30;
+        override {
+            name = "opensearch";
+            version = "2.17";
+        }
+    }
+    limits {
+        max_rows = 500;
+        max_interval = 60;
+        max_fail = 10;
+    }
+    index_template {
+        managed = true;
+        name = "rspamd";
+        priority = 0;
+        pattern = "%Y.%m.%d";
+        shards_count = 3;
+        replicas_count = 1;
+        refresh_interval = 5;
+        dynamic_keyword_ignore_above = 256;
+        headers_count_ignore_above = 5;
+        headers_text_ignore_above = 2048;
+        symbols_nested = false;
+        urls_nested = false;
+        empty_value = "unknown";
+    }
+    index_policy {
+        enabled = true;
+        managed = true;
+        name = "rspamd";
+        hot {
+            index_priority = 100;
+        }
+        warm {
+            enabled = true;
+            after = "2d";
+            index_priority = 50;
+            migrate = true;
+            read_only = true;
+            change_replicas = false;
+            replicas_count = 1;
+            shrink = false;
+            shards_count = 1;
+            max_gb_per_shard = 0;
+            force_merge = false;
+            segments_count = 1;
+        }
+        cold {
+            enabled = true;
+            after = "14d";
+            index_priority = 0;
+            migrate = true;
+            read_only = true;
+            change_replicas = false;
+            replicas_count = 1;
+        }
+        delete {
+            enabled = true;
+            after = "30d";
+        }
+    }
+    collect_headers [
+        "From",
+        "To",
+        "Subject",
+        "Date",
+        "User-Agent",
+    ]
+    extra_collect_headers []
+    collect_urls {
+        enabled = true;
+        max_urls = 0;
+        separate_cta = true;
+        full_urls = false;
+        full_cta_urls = false;
+        get_url_params {
+            content = true;
+            images = false;
+            emails = false;
+            sort = true;
+            protocols [
+                "http",
+                "https",
+                "ftp",
+            ]
+        }
+    }
+    geoip {
+        enabled = true;
+        managed = true;
+        pipeline_name = "rspamd-geoip";
+    }
+}
+external_relay {
+    enabled = false;
+}
+external_services {
+    oletools {
+        patterns {}
+        mime_parts_filter_regex {
+            DOC2 = "application/msword";
+            DOC3 = "application/vnd.ms-word.*";
+            XLS = "application/vnd.ms-excel.*";
+            PPT = "application/vnd.ms-powerpoint.*";
+            GEN2 = "application/vnd.openxmlformats-officedocument.*";
+        }
+        mime_parts_filter_ext {
+            doc = "doc";
+            dot = "dot";
+            docx = "docx";
+            dotx = "dotx";
+            docm = "docm";
+            dotm = "dotm";
+            xls = "xls";
+            xlt = "xlt";
+            xla = "xla";
+            xlsx = "xlsx";
+            xltx = "xltx";
+            xlsm = "xlsm";
+            xltm = "xltm";
+            xlam = "xlam";
+            xlsb = "xlsb";
+            ppt = "ppt";
+            pot = "pot";
+            pps = "pps";
+            ppa = "ppa";
+            pptx = "pptx";
+            potx = "potx";
+            ppsx = "ppsx";
+            ppam = "ppam";
+            pptm = "pptm";
+            potm = "potm";
+            ppsm = "ppsm";
+        }
+        whitelist = "/etc/rspamd/antivirus.wl";
+    }
+    dcc {
+        max_size = 20000000;
+        patterns {}
+        whitelist = "/etc/rspamd/antivirus.wl";
+    }
+    enabled = false;
+}
+force_actions {}
+forged_recipients {
+    symbol_sender = "FORGED_SENDER";
+    symbol_rcpt = "FORGED_RECIPIENTS";
+    equivalent_domains [
+        "https://maps.rspamd.com/rspamd/equivalent_domains.inc.zst",
+        "/etc/rspamd/local.d/maps.d/equivalent_domains.inc",
+        "fallback+file:///etc/rspamd/maps.d/equivalent_domains.inc",
+    ]
+}
+fuzzy_check {
+    min_bytes = 1000;
+    timeout = 2.0;
+    retransmits = 1;
+    rule {
+        rspamd.com {
+            algorithm = "mumhash";
+            servers = "service=fuzzy+rspamd.com";
+            encryption_key = "icy63itbhhni8bq15ntp5n5symuixf73s1kpjh6skaq4e7nx5fiy";
+            symbol = "FUZZY_UNKNOWN";
+            mime_types [
+                "*",
+            ]
+            hits_limit = 20.0;
+            read_only = true;
+            skip_unknown = true;
+            short_text_direct_hash = true;
+            min_length = 64;
+            fuzzy_map {
+                FUZZY_DENIED {
+                    hits_limit = 20.0;
+                    flag = 1;
+                }
+                FUZZY_PROB {
+                    hits_limit = 10.0;
+                    flag = 2;
+                }
+                FUZZY_WHITE {
+                    hits_limit = 2.0;
+                    flag = 3;
+                }
+            }
+        }
+    }
+    enabled = false;
+}
+gpt {
+    type = "openai";
+    model = "gpt-5-mini";
+    model_parameters {
+        gpt-5-mini {
+            max_completion_tokens = 1000;
+        }
+        gpt-5-nano {
+            max_completion_tokens = 1000;
+        }
+        gpt-4o-mini {
+            max_tokens = 1000;
+            temperature = 0.0;
+        }
+    }
+    timeout = 10.0;
+    enabled = false;
+    search_context {
+        enabled = false;
+    }
+}
+greylist {
+    whitelist_domains_url [
+        "/etc/rspamd/local.d/greylist-whitelist-domains.inc",
+        "/etc/rspamd/local.d/maps.d/greylist-whitelist-domains.inc",
+    ]
+    expire = 86400.0;
+    timeout = 300.0;
+    key_prefix = "rg";
+    max_data_len = 10000;
+    message = "Try again later";
+    action = "soft reject";
+    ipv4_mask = 19;
+    ipv6_mask = 64;
+    enabled = false;
+}
+hfilter {
+    helo_enabled = true;
+    hostname_enabled = true;
+    url_enabled = true;
+    from_enabled = true;
+    rcpt_enabled = true;
+    mid_enabled = false;
+}
+history_redis {
+    key_prefix = "rs_history{{HOSTNAME}}{{COMPRESS}}";
+    nrows = 200;
+    compress = true;
+    subject_privacy = false;
+}
+http_headers {
+    enabled = false;
+}
+known_senders {
+    enabled = false;
+    domains = "https://maps.rspamd.com/freemail/free.txt.zst";
+    max_senders = 100000;
+    max_ttl = 2592000.0;
+    use_bloom = false;
+}
+maillist {
+    symbol = "MAILLIST";
+}
+metadata_exporter {
+    rules {}
+}
+metric_exporter {}
+mid {
+    source {
+        url [
+            "https://maps.rspamd.com/rspamd/mid.inc.zst",
+            "/etc/rspamd/local.d/maps.d/mid.inc",
+            "/etc/rspamd/local.d/mid.inc",
+            "fallback+file:///etc/rspamd/maps.d/mid.inc",
+        ]
+    }
+}
+milter_headers {
+    use [
+        "authentication-results",
+        "x-rspamd-queue-id",
+    ]
+    skip_local = false;
+    skip_authenticated = false;
+    routines {
+        authentication-results {
+            authserv_id = "receiver.recipient.test";
+            remove = 0;
+        }
+    }
+}
+mime_types {
+    file [
+        "https://maps.rspamd.com/rspamd/mime_types.inc.zst",
+        "/etc/rspamd/local.d/maps.d/mime_types.inc.local",
+        "/var/lib/rspamd/mime_types.inc.local",
+        "fallback+file:///etc/rspamd/maps.d/mime_types.inc",
+    ]
+    extension_map {
+        html = "text/html";
+        txt [
+            "message/disposition-notification",
+            "text/plain",
+            "text/rfc822-headers",
+        ]
+        pdf [
+            "application/octet-stream",
+            "application/pdf",
+            "application/x-pdf",
+        ]
+    }
+}
+multimap {
+    redirector {
+        type = "url";
+        filter = "tld";
+        map = "https://maps.rspamd.com/rspamd/redirectors.inc.zst";
+        symbol = "REDIRECTOR_URL";
+        description = "The presence of a redirector in the mail";
+        score = 0.0;
+        one_shot = true;
+    }
+    freemail_envfrom {
+        type = "from";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/free.txt.zst";
+        symbol = "FREEMAIL_ENVFROM";
+        description = "Envelope From is a Freemail address";
+        score = 0.0;
+    }
+    freemail_envrcpt {
+        type = "rcpt";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/free.txt.zst";
+        symbol = "FREEMAIL_ENVRCPT";
+        description = "Envelope Recipient is a Freemail address";
+        score = 0.0;
+        one_shot = true;
+    }
+    freemail_from {
+        type = "header";
+        header = "from";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/free.txt.zst";
+        symbol = "FREEMAIL_FROM";
+        description = "From is a Freemail address";
+        score = 0.0;
+    }
+    freemail_to {
+        type = "header";
+        header = "To";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/free.txt.zst";
+        symbol = "FREEMAIL_TO";
+        description = "To is a Freemail address";
+        score = 0.0;
+        one_shot = true;
+    }
+    freemail_cc {
+        type = "header";
+        header = "Cc";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/free.txt.zst";
+        symbol = "FREEMAIL_CC";
+        description = "To is a Freemail address";
+        score = 0.0;
+        one_shot = true;
+    }
+    freemail_replyto {
+        type = "header";
+        header = "Reply-To";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/free.txt.zst";
+        symbol = "FREEMAIL_REPLYTO";
+        description = "Reply-To is a Freemail address";
+        score = 0.0;
+    }
+    freemail_mdn {
+        type = "header";
+        header = "Disposition-Notification-To";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/free.txt.zst";
+        symbol = "FREEMAIL_MDN";
+        description = "Disposition-Notification-To is a Freemail address";
+        score = 0.0;
+    }
+    disposable_envfrom {
+        type = "from";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/disposable.txt.zst";
+        symbol = "DISPOSABLE_ENVFROM";
+        description = "Envelope From is a Disposable e-mail address";
+        score = 0.0;
+    }
+    disposable_envrcpt {
+        type = "rcpt";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/disposable.txt.zst";
+        symbol = "DISPOSABLE_ENVRCPT";
+        description = "Envelope Recipient is a Disposable e-mail address";
+        score = 0.0;
+        one_shot = true;
+    }
+    disposable_from {
+        type = "header";
+        header = "from";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/disposable.txt.zst";
+        symbol = "DISPOSABLE_FROM";
+        description = "From a Disposable e-mail address";
+        score = 0.0;
+    }
+    disposable_to {
+        type = "header";
+        header = "To";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/disposable.txt.zst";
+        symbol = "DISPOSABLE_TO";
+        description = "To a disposable e-mail address";
+        score = 0.0;
+        one_shot = true;
+    }
+    disposable_cc {
+        type = "header";
+        header = "Cc";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/disposable.txt.zst";
+        symbol = "DISPOSABLE_CC";
+        description = "To a disposable e-mail address";
+        score = 0.0;
+        one_shot = true;
+    }
+    disposable_replyto {
+        type = "header";
+        header = "Reply-To";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/disposable.txt.zst";
+        symbol = "DISPOSABLE_REPLYTO";
+        description = "Reply-To a disposable e-mail address";
+        score = 0.0;
+    }
+    disposable_mdn {
+        type = "header";
+        header = "Disposition-Notification-To";
+        filter = "email:domain";
+        map = "https://maps.rspamd.com/freemail/disposable.txt.zst";
+        symbol = "DISPOSABLE_MDN";
+        description = "Disposition-Notification-To is a disposable e-mail address";
+        score = 0.500000;
+    }
+}
+mx_check {
+    enabled = false;
+    connect_timeout = 2.0;
+    read_timeout = 5.0;
+    port = 25;
+    verify_greeting = false;
+    send_quit = false;
+    expire = 86400;
+    expire_dns = 1800;
+    expire_novalid = 14400;
+    expire_timeout = 7200;
+    reject_null_mx = false;
+    reject_null_mx_message = "Domain published RFC 7505 Null MX";
+    reject_authorized = false;
+    reject_local = false;
+    greylist_invalid = true;
+    greylist_none = true;
+    greylist_broken = true;
+    greylist_refused = true;
+    greylist_null = true;
+    greylist_timeout_connect = true;
+    greylist_timeout_read = true;
+    greylist_authorized = false;
+    greylist_local = false;
+    check_authorized = false;
+    check_local = false;
+    check_from = true;
+    check_mime_from = true;
+    check_reply_to = true;
+    probe_ipv4 = true;
+    probe_ipv6 = false;
+    prefer_ipv6 = true;
+    max_mx_a_records = 3;
+    symbol_prefix_from = "";
+    symbol_prefix_mime_from = "MIME_FROM_";
+    symbol_prefix_reply_to = "REPLYTO_";
+    symbol_bad_mx = "MX_INVALID";
+    symbol_good_mx = "MX_GOOD";
+    symbol_white_mx = "MX_WHITE";
+    symbol_mx_refused = "MX_REFUSED";
+    symbol_mx_timeout_connect = "MX_TIMEOUT_CONNECT";
+    symbol_mx_timeout_read = "MX_TIMEOUT_READ";
+    symbol_mx_error = "MX_ERROR";
+    symbol_mx_none = "MX_NONE";
+    symbol_mx_null = "MX_NULL";
+    symbol_mx_broken = "MX_BROKEN";
+    symbol_mx_a_good = "MX_A_GOOD";
+    symbol_mx_a_refused = "MX_A_REFUSED";
+    symbol_mx_a_timeout_connect = "MX_A_TIMEOUT_CONNECT";
+    symbol_mx_a_timeout_read = "MX_A_TIMEOUT_READ";
+    symbol_mx_a_error = "MX_A_ERROR";
+    symbol_mx_a_invalid = "MX_A_INVALID";
+    symbol_mx_dns_fail = "MX_DNS_FAIL";
+    symbol_mx_local_only = "MX_LOCAL_ONLY";
+    symbol_mx_local_mix = "MX_LOCAL_MIX";
+    symbol_mx_bogon_only = "MX_BOGON_ONLY";
+    symbol_mx_bogon_mix = "MX_BOGON_MIX";
+    symbol_mx_skip = "MX_SKIP";
+    symbol_mx_bad = "MX_BAD";
+    symbol_mx_ip_bad = "MX_IP_BAD";
+    symbol_mx_inflight = "MX_INFLIGHT";
+    symbol_mx_redis_error = "MX_REDIS_ERROR";
+    key_prefix = "rmx";
+}
+neural {
+    train {
+        max_trains = 1000;
+        max_usages = 20;
+        max_iterations = 25;
+    }
+    timeout = 20;
+}
+once_received {
+    good_host = "mail";
+    bad_host [
+        "static",
+        "dynamic",
+    ]
+    symbol_strict = "ONCE_RECEIVED_STRICT";
+    symbol = "ONCE_RECEIVED";
+    symbol_mx = "DIRECT_TO_MX";
+}
+p0f {
+    enabled = false;
+    socket = '/var/run/p0f.sock';
+    timeout = 5.0;
+    symbol = 'P0F';
+    patterns {
+        WINDOWS = '^Windows.*';
+    }
+    expire = 7200;
+    prefix = 'p0f';
+}
+phishing {
+    symbol = "PHISHING";
+    openphish_enabled = false;
+    openphish_premium = false;
+    openphish_map = "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt";
+    phishtank_enabled = true;
+    phishing_feed_exclusion_symbol = "PHISHED_EXCLUDED";
+    phishing_feed_exclusion_enabled = false;
+    phishing_feed_exclusion_map = "/etc/rspamd/local.d/maps.d/phishing_feed_exclusion.inc";
+    exceptions {
+        REDIRECTOR_FALSE [
+            "https://maps.rspamd.com/rspamd/redirectors.inc.zst",
+            "/etc/rspamd/local.d/maps.d/redirectors.inc",
+            "/etc/rspamd/local.d/redirectors.inc",
+            "fallback+file:///etc/rspamd/maps.d/redirectors.inc",
+        ]
+        PHISHED_WHITELISTED [
+            "glob;https://maps.rspamd.com/rspamd/phishing_whitelist.inc.zst",
+            "glob;/etc/rspamd/local.d/maps.d/phishing_whitelist.inc",
+            "glob;/etc/rspamd/local.d/phishing_whitelist.inc",
+        ]
+    }
+    enabled = false;
+}
+ratelimit {
+    whitelisted_rcpts = "postmaster,mailer-daemon";
+    enabled = false;
+}
+rbl {
+    default_exclude_users = true;
+    default_unknown = true;
+    url_whitelist [
+        "https://maps.rspamd.com/rspamd/surbl-whitelist.inc.zst",
+        "/etc/rspamd/local.d/maps.d/surbl-whitelist.inc.local",
+        "/var/lib/rspamd/surbl-whitelist.inc.local",
+        "fallback+file:///etc/rspamd/maps.d/surbl-whitelist.inc",
+    ]
+    disabled_rbl_suffixes_map = "https://maps.rspamd.com/rspamd/disabled_rbls.inc.zst";
+    attached_maps [
+        {
+            selector_alias = "surbl_hashbl_map";
+            description = "SURBL hashbl map";
+            url = "regexp;http://sa-update.surbl.org/rspamd/surbl-hashbl-map.inc";
+        }
+    ]
+    rbls {
+        spamhaus {
+            symbol = "SPAMHAUS";
+            rbl = "zen.spamhaus.org";
+            checks [
+                "from",
+                "received",
+            ]
+            symbols_prefixes {
+                received = "RECEIVED";
+                from = "RBL";
+            }
+            returncodes {
+                SPAMHAUS_SBL = "127.0.0.2";
+                SPAMHAUS_CSS = "127.0.0.3";
+                SPAMHAUS_XBL [
+                    "127.0.0.4",
+                    "127.0.0.5",
+                    "127.0.0.6",
+                    "127.0.0.7",
+                ]
+                SPAMHAUS_PBL [
+                    "127.0.0.10",
+                    "127.0.0.11",
+                ]
+                SPAMHAUS_DROP = "127.0.0.9";
+                SPAMHAUS_BLOCKED_OPENRESOLVER = "127.255.255.254";
+                SPAMHAUS_BLOCKED = "127.255.255.255";
+            }
+        }
+        mailspike {
+            symbol = "MAILSPIKE";
+            rbl = "rep.mailspike.net";
+            checks [
+                "from",
+            ]
+            is_whitelist = true;
+            whitelist_exception [
+                "MAILSPIKE",
+                "RWL_MAILSPIKE_GOOD",
+                "RWL_MAILSPIKE_NEUTRAL",
+                "RWL_MAILSPIKE_POSSIBLE",
+                "RBL_MAILSPIKE_WORST",
+                "RBL_MAILSPIKE_VERYBAD",
+                "RBL_MAILSPIKE_BAD",
+            ]
+            returncodes {
+                RBL_MAILSPIKE_WORST = "127.0.0.10";
+                RBL_MAILSPIKE_VERYBAD = "127.0.0.11";
+                RBL_MAILSPIKE_BAD = "127.0.0.12";
+                RWL_MAILSPIKE_NEUTRAL [
+                    "127.0.0.16",
+                    "127.0.0.15",
+                    "127.0.0.14",
+                    "127.0.0.13",
+                ]
+                RWL_MAILSPIKE_POSSIBLE = "127.0.0.17";
+                RWL_MAILSPIKE_GOOD = "127.0.0.18";
+                RWL_MAILSPIKE_VERYGOOD = "127.0.0.19";
+                RWL_MAILSPIKE_EXCELLENT = "127.0.0.20";
+            }
+        }
+        senderscore {
+            enabled = false;
+            symbol = "RBL_SENDERSCORE_UNKNOWN";
+            checks [
+                "from",
+            ]
+            rbl = "bl.score.senderscore.com";
+            returncodes {
+                RBL_SENDERSCORE_BOT = "127.0.0.1";
+                RBL_SENDERSCORE_NA = "127.0.0.2";
+                RBL_SENDERSCORE_NA_BOT = "127.0.0.3";
+                RBL_SENDERSCORE_PRST = "127.0.0.4";
+                RBL_SENDERSCORE_PRST_BOT = "127.0.0.5";
+                RBL_SENDERSCORE_PRST_NA = "127.0.0.6";
+                RBL_SENDERSCORE_PRST_NA_BOT = "127.0.0.7";
+                RBL_SENDERSCORE_SUS_ATT = "127.0.0.8";
+                RBL_SENDERSCORE_SUS_ATT_NA = "127.0.0.10";
+                RBL_SENDERSCORE_SUS_ATT_NA_BOT = "127.0.0.11";
+                RBL_SENDERSCORE_SUS_ATT_PRST_NA = "127.0.0.14";
+                RBL_SENDERSCORE_SUS_ATT_PRST_NA_BOT = "127.0.0.15";
+                RBL_SENDERSCORE_SCORE = "127.0.0.16";
+                RBL_SENDERSCORE_SCORE_NA = "127.0.0.18";
+                RBL_SENDERSCORE_SCORE_PRST = "127.0.0.20";
+                RBL_SENDERSCORE_SCORE_PRST_NA = "127.0.0.22";
+                RBL_SENDERSCORE_SCORE_SUS_ATT_NA = "127.0.0.26";
+                RBL_SENDERSCORE_BLOCKED = "127.255.255.255";
+            }
+        }
+        senderscore_reputation {
+            enabled = false;
+            symbol = "RBL_SENDERSCORE_REPUT_UNKNOWN";
+            checks [
+                "from",
+            ]
+            rbl = "score.senderscore.com";
+            returncodes_matcher = "luapattern";
+            returncodes {
+                RBL_SENDERSCORE_REPUT_0 = "127%.0%.4%.%d";
+                RBL_SENDERSCORE_REPUT_1 = "127%.0%.4%.1%d";
+                RBL_SENDERSCORE_REPUT_2 = "127%.0%.4%.2%d";
+                RBL_SENDERSCORE_REPUT_3 = "127%.0%.4%.3%d";
+                RBL_SENDERSCORE_REPUT_4 = "127%.0%.4%.4%d";
+                RBL_SENDERSCORE_REPUT_5 = "127%.0%.4%.5%d";
+                RBL_SENDERSCORE_REPUT_6 = "127%.0%.4%.6%d";
+                RBL_SENDERSCORE_REPUT_7 = "127%.0%.4%.7%d";
+                RBL_SENDERSCORE_REPUT_8 = "127%.0%.4%.8%d";
+                RBL_SENDERSCORE_REPUT_9 [
+                    "127%.0%.4%.9%d",
+                    "127%.0%.4%.100",
+                ]
+                RBL_SENDERSCORE_REPUT_BLOCKED = "127%.255%.255%.255";
+            }
+        }
+        sem {
+            symbol = "RBL_SEM";
+            rbl = "bl.spameatingmonkey.net";
+            checks [
+                "from",
+            ]
+            ipv6 = false;
+        }
+        semIPv6 {
+            symbol = "RBL_SEM_IPV6";
+            rbl = "bl.ipv6.spameatingmonkey.net";
+            checks [
+                "from",
+            ]
+            ipv4 = false;
+            ipv6 = true;
+        }
+        dnswl {
+            symbol = "RCVD_IN_DNSWL";
+            rbl = "list.dnswl.org";
+            checks [
+                "from",
+                "received",
+            ]
+            ipv6 = true;
+            is_whitelist = true;
+            returncodes_matcher = "luapattern";
+            whitelist_exception = "RCVD_IN_DNSWL";
+            whitelist_exception = "RCVD_IN_DNSWL_NONE";
+            whitelist_exception = "RCVD_IN_DNSWL_LOW";
+            whitelist_exception = "DNSWL_BLOCKED";
+            returncodes {
+                RCVD_IN_DNSWL_NONE [
+                    "127%.0%.%d%.0",
+                    "127%.0%.[02-9]%d%.0",
+                    "127%.0%.1[1-9]%.0",
+                    "127%.0%.[12]%d%d%.0",
+                ]
+                RCVD_IN_DNSWL_LOW [
+                    "127%.0%.%d%.1",
+                    "127%.0%.[02-9]%d%.1",
+                    "127%.0%.1[1-9]%.1",
+                    "127%.0%.[12]%d%d%.1",
+                ]
+                RCVD_IN_DNSWL_MED [
+                    "127%.0%.%d%.2",
+                    "127%.0%.[02-9]%d%.2",
+                    "127%.0%.1[1-9]%.2",
+                    "127%.0%.[12]%d%d%.2",
+                ]
+                RCVD_IN_DNSWL_HI [
+                    "127%.0%.%d%.3",
+                    "127%.0%.[02-9]%d%.3",
+                    "127%.0%.1[1-9]%.3",
+                    "127%.0%.[12]%d%d%.3",
+                ]
+                DNSWL_BLOCKED [
+                    "127%.0%.0%.255",
+                    "127%.0%.10%.%d+",
+                ]
+            }
+        }
+        virusfree {
+            symbol = "RBL_VIRUSFREE_UNKNOWN";
+            rbl = "bip.virusfree.cz";
+            checks [
+                "from",
+            ]
+            ipv6 = true;
+            returncodes {
+                RBL_VIRUSFREE_BOTNET = "127.0.0.2";
+            }
+        }
+        blocklistde {
+            symbol = "BLOCKLISTDE";
+            rbl = "bl.blocklist.de";
+            checks [
+                "from",
+                "received",
+            ]
+            symbols_prefixes {
+                received = "RECEIVED";
+                from = "RBL";
+            }
+        }
+        dnswl_dwl {
+            symbol = "DWL_DNSWL";
+            rbl = "dwl.dnswl.org";
+            checks [
+                "dkim",
+            ]
+            ignore_whitelist = true;
+            unknown = false;
+            returncodes_matcher = "luapattern";
+            returncodes {
+                DWL_DNSWL_NONE [
+                    "127%.0%.%d%.0",
+                    "127%.0%.[02-9]%d%.0",
+                    "127%.0%.1[1-9]%.0",
+                    "127%.0%.[12]%d%d%.0",
+                ]
+                DWL_DNSWL_LOW [
+                    "127%.0%.%d%.1",
+                    "127%.0%.[02-9]%d%.1",
+                    "127%.0%.1[1-9]%.1",
+                    "127%.0%.[12]%d%d%.1",
+                ]
+                DWL_DNSWL_MED [
+                    "127%.0%.%d%.2",
+                    "127%.0%.[02-9]%d%.2",
+                    "127%.0%.1[1-9]%.2",
+                    "127%.0%.[12]%d%d%.2",
+                ]
+                DWL_DNSWL_HI [
+                    "127%.0%.%d%.3",
+                    "127%.0%.[02-9]%d%.3",
+                    "127%.0%.1[1-9]%.3",
+                    "127%.0%.[12]%d%d%.3",
+                ]
+                DWL_DNSWL_BLOCKED [
+                    "127%.0%.0%.255",
+                    "127%.0%.10%.%d+",
+                ]
+            }
+        }
+        RSPAMD_EMAILBL {
+            rbl = "email.rspamd.com";
+            checks [
+                "emails",
+                "replyto",
+            ]
+            hash = "blake2";
+            hash_len = 32;
+            hash_format = "base32";
+            ignore_whitelist = true;
+            ignore_url_whitelist = true;
+            ignore_defaults = true;
+            exclude_users = false;
+            emails_delimiter = ".";
+            emails_domainonly = false;
+            selector {
+                from_smtp = "from('smtp'):addr.lower_utf8";
+                from_mime = "from('mime'):addr.lower_utf8";
+            }
+            returncodes {
+                RSPAMD_EMAILBL = "127.0.0.2";
+            }
+        }
+        MSBL_EBL {
+            rbl = "ebl.msbl.org";
+            checks [
+                "emails",
+                "replyto",
+            ]
+            hash = "sha1";
+            ignore_whitelist = true;
+            ignore_url_whitelist = true;
+            ignore_defaults = true;
+            exclude_users = false;
+            emails_domainonly = false;
+            selector {
+                from_smtp = "from('smtp'):addr.lower_utf8";
+                from_mime = "from('mime'):addr.lower_utf8";
+            }
+            returncodes {
+                MSBL_EBL [
+                    "127.0.0.2",
+                    "127.0.0.3",
+                ]
+                MSBL_EBL_GREY [
+                    "127.0.1.2",
+                    "127.0.1.3",
+                ]
+            }
+        }
+        SURBL_MULTI {
+            rbl = "multi.surbl.org";
+            checks [
+                "emails",
+                "dkim",
+                "helo",
+                "rdns",
+                "replyto",
+                "urls",
+                "content_urls",
+            ]
+            ignore_defaults = true;
+            exclude_users = false;
+            url_full_hostname = true;
+            emails_domainonly = true;
+            selector {
+                from_smtp = "from('smtp'):domain";
+                from_mime = "from('mime'):domain";
+                mid = "header(Message-Id).regexp('@([^.]+.[^>]+)').last";
+            }
+            returnbits {
+                CRACKED_SURBL = 128;
+                ABUSE_SURBL = 64;
+                CT_SURBL = 32;
+                MW_SURBL_MULTI = 16;
+                PH_SURBL_MULTI = 8;
+                DM_SURBL = 4;
+                SURBL_BLOCKED = 1;
+            }
+        }
+        SURBL_HASHBL {
+            rbl = "hashbl.surbl.org";
+            selector = "specific_urls_filter_map('surbl_hashbl_map', {limit = 10}).apply_methods('get_host', 'get_path').join_tables('/')";
+            hash = "md5";
+            hash_len = 32;
+            random_monitored = true;
+            ignore_defaults = true;
+            returncodes_matcher = "luapattern";
+            returncodes {
+                SURBL_HASHBL_PHISH = "127.0.0.8";
+                SURBL_HASHBL_MALWARE = "127.0.0.16";
+                SURBL_HASHBL_ABUSE = "127.0.0.64";
+                SURBL_HASHBL_CRACKED = "127.0.0.128";
+                SURBL_HASHBL_EMAIL = "127.0.1.%d+";
+            }
+        }
+        URIBL_MULTI {
+            rbl = "multi.uribl.com";
+            checks [
+                "emails",
+                "dkim",
+                "helo",
+                "rdns",
+                "replyto",
+                "urls",
+                "content_urls",
+            ]
+            ignore_defaults = true;
+            exclude_users = false;
+            emails_domainonly = true;
+            selector {
+                from_smtp = "from('smtp'):domain";
+                from_mime = "from('mime'):domain";
+                mid = "header(Message-Id).regexp('@([^.]+.[^>]+)').last";
+            }
+            returnbits {
+                URIBL_BLOCKED = 1;
+                URIBL_BLACK = 2;
+                URIBL_GREY = 4;
+                URIBL_RED = 8;
+            }
+        }
+        RSPAMD_URIBL {
+            rbl = "uribl.rspamd.com";
+            checks [
+                "emails",
+                "dkim",
+                "urls",
+                "content_urls",
+            ]
+            hash = "blake2";
+            hash_len = 32;
+            hash_format = "base32";
+            ignore_defaults = true;
+            exclude_users = false;
+            emails_domainonly = true;
+            selector {
+                from_smtp = "from('smtp'):domain.lower_utf8";
+                from_mime = "from('mime'):domain.lower_utf8";
+                mid = "header(Message-Id).regexp('@([^.]+.[^>]+)').last.lower_utf8";
+            }
+            returncodes {
+                RSPAMD_URIBL [
+                    "127.0.0.2",
+                ]
+            }
+        }
+        DBL {
+            rbl = "dbl.spamhaus.org";
+            checks [
+                "emails",
+                "dkim",
+                "helo",
+                "rdns",
+                "replyto",
+                "urls",
+                "content_urls",
+            ]
+            no_ip = true;
+            ignore_defaults = true;
+            exclude_users = false;
+            emails_domainonly = true;
+            selector {
+                from_smtp = "from('smtp'):domain";
+                from_mime = "from('mime'):domain";
+                mid = "header(Message-Id).regexp('@([^.]+.[^>]+)').last";
+            }
+            returncodes {
+                DBL_SPAM = "127.0.1.2";
+                DBL_PHISH = "127.0.1.4";
+                DBL_MALWARE = "127.0.1.5";
+                DBL_BOTNET = "127.0.1.6";
+                DBL_ABUSE = "127.0.1.102";
+                DBL_ABUSE_REDIR = "127.0.1.103";
+                DBL_ABUSE_PHISH = "127.0.1.104";
+                DBL_ABUSE_MALWARE = "127.0.1.105";
+                DBL_ABUSE_BOTNET = "127.0.1.106";
+                DBL_PROHIBIT = "127.0.1.255";
+                DBL_BLOCKED_OPENRESOLVER = "127.255.255.254";
+                DBL_BLOCKED = "127.255.255.255";
+            }
+        }
+        SPAMHAUS_ZEN_URIBL {
+            enabled = false;
+            rbl = "zen.spamhaus.org";
+            checks [
+                "emails",
+            ]
+            resolve_ip = true;
+            returncodes {
+                URIBL_SBL = "127.0.0.2";
+                URIBL_SBL_CSS = "127.0.0.3";
+                URIBL_XBL [
+                    "127.0.0.4",
+                    "127.0.0.5",
+                    "127.0.0.6",
+                    "127.0.0.7",
+                ]
+                URIBL_PBL [
+                    "127.0.0.10",
+                    "127.0.0.11",
+                ]
+                URIBL_DROP = "127.0.0.9";
+            }
+        }
+        SEM_URIBL_UNKNOWN {
+            rbl = "uribl.spameatingmonkey.net";
+            checks [
+                "emails",
+                "dkim",
+                "urls",
+                "content_urls",
+            ]
+            no_ip = true;
+            ignore_defaults = true;
+            emails_domainonly = true;
+            selector {
+                from_smtp = "from('smtp'):domain";
+                from_mime = "from('mime'):domain";
+                mid = "header(Message-Id).regexp('@([^.]+.[^>]+)').last";
+            }
+            returnbits {
+                SEM_URIBL = 2;
+            }
+        }
+        SEM_URIBL_FRESH15_UNKNOWN {
+            rbl = "fresh15.spameatingmonkey.net";
+            checks [
+                "emails",
+                "dkim",
+                "urls",
+                "content_urls",
+            ]
+            no_ip = true;
+            ignore_defaults = true;
+            exclude_users = true;
+            emails_domainonly = true;
+            selector {
+                from_smtp = "from('smtp'):domain";
+                from_mime = "from('mime'):domain";
+                mid = "header(Message-Id).regexp('@([^.]+.[^>]+)').last";
+            }
+            returnbits {
+                SEM_URIBL_FRESH15 = 2;
+            }
+        }
+    }
+    enabled = false;
+}
+redis {
+    servers = "127.0.0.1";
+}
+regexp {
+    max_size = 1000000;
+}
+replies {
+    expire = 86400;
+    key_prefix = "rr";
+    message = "Message is reply to one we originated";
+    symbol = "REPLY";
+}
+reputation {
+    enabled = false;
+}
+rspamd_update {
+    rules = "sign+https://updates.rspamd.com/rspamd-4.ucl";
+    key = "qxuogdh5eghytji1utkkte1dn3n81c3y5twe61uzoddzwqzuxxyb";
+    enabled = false;
+}
+spamassassin {}
+spamtrap {
+    learn_fuzzy = false;
+    learn_spam = false;
+    enabled = false;
+}
+spf {
+    spf_cache_size = 2000;
+    spf_cache_expire = 86400.0;
+    check_local = true;
+    check_authed = true;
+    max_dns_requests = 10;
+}
+trie {}
+url_redirector {
+    expire = 86400.0;
+    timeout = 8.0;
+    http_timeout = 4.0;
+    redis_timeout = 2.0;
+    nested_limit = 2;
+    key_prefix = "rdr:";
+    check_ssl = false;
+    max_urls = 5;
+    max_size = 10000;
+    redirectors_only = true;
+    top_urls_key = "rdr:top_urls";
+    top_urls_count = 200;
+    save_intermediate_redirs {
+        redirectors = false;
+        non_redirectors = true;
+    }
+    enabled = false;
+}
+url_suspect {
+    enabled = true;
+    max_urls = 10000;
+    process_flags [
+        "has_user",
+        "numeric",
+        "obscured",
+        "zw_spaces",
+        "no_tld",
+    ]
+    checks {
+        user_password {
+            enabled = true;
+            length_thresholds {
+                suspicious = 64;
+                long = 128;
+                very_long = 256;
+            }
+        }
+        numeric_ip {
+            enabled = true;
+            allow_private_ranges = true;
+        }
+        tld {
+            enabled = true;
+            suspicious_tlds_map [
+                "/etc/rspamd/local.d/maps.d/suspicious_tlds.inc.local",
+                "/etc/rspamd/local.d/maps.d/suspicious_tlds.inc",
+                "fallback+file:///etc/rspamd/maps.d/suspicious_tlds.inc",
+            ]
+        }
+        unicode {
+            enabled = true;
+            check_validity = true;
+            check_homographs = true;
+            check_rtl_override = true;
+            check_zero_width = true;
+        }
+        structure {
+            enabled = true;
+            check_multiple_at = true;
+            max_at_signs = 2;
+            check_backslash = true;
+            check_excessive_dots = true;
+            max_host_dots = 6;
+            check_length = true;
+            max_url_length = 2048;
+        }
+    }
+}
+whitelist {
+    rules {
+        WHITELIST_SPF {
+            valid_spf = true;
+            domains [
+                "/etc/rspamd/local.d/maps.d/spf_whitelist.inc.local",
+                "/var/lib/rspamd/spf_whitelist.inc.local",
+                "fallback+file:///etc/rspamd/maps.d/spf_whitelist.inc",
+            ]
+            score = -1.0;
+            inverse_symbol = "BLACKLIST_SPF";
+        }
+        WHITELIST_DKIM {
+            valid_dkim = true;
+            domains [
+                "/etc/rspamd/local.d/maps.d/dkim_whitelist.inc.local",
+                "/var/lib/rspamd/dkim_whitelist.inc.local",
+                "fallback+file:///etc/rspamd/maps.d/dkim_whitelist.inc",
+            ]
+            score = -1.0;
+            inverse_symbol = "BLACKLIST_DKIM";
+        }
+        WHITELIST_SPF_DKIM {
+            valid_spf = true;
+            valid_dkim = true;
+            domains [
+                "https://maps.rspamd.com/rspamd/spf_dkim_whitelist.inc.zst",
+                "/etc/rspamd/local.d/maps.d/spf_dkim_whitelist.inc.local",
+                "/var/lib/rspamd/spf_dkim_whitelist.inc.local",
+                "fallback+file:///etc/rspamd/maps.d/spf_dkim_whitelist.inc",
+            ]
+            score = -3.0;
+            inverse_symbol = "BLACKLIST_SPF_DKIM";
+        }
+        WHITELIST_DMARC {
+            valid_dmarc = true;
+            domains [
+                "https://maps.rspamd.com/rspamd/dmarc_whitelist_new.inc.zst",
+                "/etc/rspamd/local.d/maps.d/dmarc_whitelist.inc.local",
+                "/var/lib/rspamd/dmarc_whitelist.inc.local",
+                "fallback+file:///etc/rspamd/maps.d/dmarc_whitelist.inc",
+            ]
+            score = -7.0;
+            inverse_symbol = "BLACKLIST_DMARC";
+        }
+    }
+}
+settings {
+    peal {
+        priority = "high";
+        ip = "0.0.0.0/0";
+        apply {
+            symbols_enabled [
+                "SPF_CHECK",
+                "DKIM_CHECK",
+                "DMARC_CHECK",
+                "DKIM_SIGNED",
+                "MILTER_HEADERS",
+                "PEAL_EVIDENCE",
+            ]
+        }
+    }
+}
+filters = "dkim";
+modules {
+    path = "/etc/rspamd/peal-modules";
+}
+options {
+    pidfile = "/run/rspamd/rspamd.pid";
+    filters = "chartable,dkim,regexp,fuzzy_check";
+    one_shot = false;
+    cache_file = "/var/lib/rspamd/symbols.cache";
+    map_watch_interval = 300.0;
+    map_file_watch_multiplier = 0.100000;
+    dynamic_conf = "/var/lib/rspamd/rspamd_dynamic";
+    history_file = "/var/lib/rspamd/rspamd.history";
+    check_all_filters = false;
+    dns_max_requests = 64;
+    max_lua_urls = 1024;
+    max_urls = 10240;
+    max_recipients = 1024;
+    dns {
+        timeout = 1.0;
+        sockets = 16;
+        retransmits = 1;
+        nameserver [
+            "10.77.0.20:53",
+        ]
+    }
+    tempdir = "/tmp";
+    url_tld = "/opt/peal/lab-tld.dat";
+    classify_headers [
+        "User-Agent",
+        "X-Mailer",
+        "Content-Type",
+        "X-MimeOLE",
+    ]
+    control_socket = "/var/lib/rspamd/rspamd.sock mode=0600";
+    history_rows = 200;
+    explicit_modules [
+        "settings",
+        "bayes_expiry",
+    ]
+    allow_raw_input = true;
+    words_decay = 600;
+    rrd = "/var/lib/rspamd/rspamd.rrd";
+    stats_file = "/var/lib/rspamd/stats.ucl";
+    local_addrs [
+        "192.168.0.0/16",
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "fd00::/8",
+        "169.254.0.0/16",
+        "fe80::/10",
+    ]
+    hs_cache_dir = "/var/lib/rspamd";
+    task_timeout = 8.0;
+    soft_reject_on_timeout = false;
+    enable_mime_utf = false;
+    maps {
+        connect_timeout = 1.0;
+        ssl_timeout = 1.0;
+        write_timeout = 1.0;
+        read_timeout = 4.0;
+        connection_ttl = 300.0;
+        idle_timeout = 65.0;
+        max_reuse = 256;
+    }
+}
+lang_detection {}
+logging {
+    type = "file";
+    filename = "/var/log/rspamd/rspamd.log";
+    level = "info";
+    log_format = <<EOD
+id: <$mid>,$if_qid{ qid: <$>,}$if_ip{ ip: $,}$if_user{ user: $,}$if_smtp_from{ from: <$>,}
+(default: $is_spam ($action): [$scores] [$symbols_scores_params]),
+len: $len, time: $time_real, dns req: $dns_req,
+digest: <$digest>$if_smtp_rcpts{, rcpts: <$>}$if_mime_rcpts{, mime_rcpts: <$>}$if_filename{, file: $}$if_forced_action{, forced: $}$if_settings_id{, settings_id: $}
+EOD;
+    log_re_cache = true;
+    color = false;
+    log_usec = false;
+    debug_modules []
+}
+worker {
+    normal {
+        bind_socket = "127.0.0.1:11333";
+        mime = true;
+        allow_file_and_shm_inputs = true;
+    }
+}
+worker {
+    controller {
+        bind_socket = "127.0.0.1:11334";
+        count = 1;
+        password = "q1";
+        secure_ip = "127.0.0.1";
+        secure_ip = "::1";
+        static_dir = "/usr/share/rspamd/www";
+        allow_file_and_shm_inputs = true;
+    }
+}
+worker {
+    rspamd_proxy {
+        bind_socket = "127.0.0.1:11332";
+        milter = true;
+        timeout = 60.0;
+        upstream {
+            local {
+                default = true;
+                hosts = "localhost";
+                token_bucket {
+                    max_tokens = 10000;
+                    scale = 1024;
+                    min_tokens = 1;
+                    base_cost = 10;
+                }
+                self_scan = true;
+            }
+        }
+        count = 1;
+        max_retries = 5;
+        discard_on_reject = false;
+        quarantine_on_reject = false;
+        spam_header = "X-Spam";
+        reject_message = "Spam message rejected";
+        allow_file_and_shm_inputs = true;
+    }
+}
+worker {
+    fuzzy {
+        bind_socket = "localhost:11335";
+        count = -1;
+        backend = "redis";
+        expire = 7776000.0;
+        allow_update [
+            "localhost",
+        ]
+    }
+}
+worker {
+    hs_helper {}
+}
+alias_database = hash:/etc/aliases
+alias_maps = hash:/etc/aliases
+biff = no
+compatibility_level = 3.9
+cyrus_sasl_config_path = /etc/postfix/sasl
+header_checks = regexp:/etc/postfix/peal-header-checks
+inet_interfaces = 127.0.0.1,10.77.0.20
+inet_protocols = ipv4
+mailbox_command =
+mailbox_size_limit = 0
+message_size_limit = 2097152
+milter_default_action = tempfail
+milter_protocol = 6
+mydestination =
+myhostname = receiver.recipient.test
+mynetworks = 127.0.0.0/8
+mynetworks_style = host
+myorigin = /etc/mailname
+non_smtpd_milters = inet:127.0.0.1:11332
+recipient_delimiter = +
+relay_domains = recipient.test
+relay_recipient_maps =
+relayhost =
+smtp_tls_security_level = none
+smtpd_banner = $myhostname ESMTP $mail_name (Debian)
+smtpd_milters = inet:127.0.0.1:11332
+smtpd_recipient_restrictions = reject_unauth_destination
+smtpd_relay_restrictions = reject_unauth_destination
+smtpd_sasl_auth_enable = no
+smtpd_tls_security_level = none
+transport_maps = hash:/etc/postfix/peal-transport

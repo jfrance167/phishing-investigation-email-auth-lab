@@ -1,0 +1,54 @@
+Return-Path: <reports@recipient.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <reports@recipient.test>; Fri, 2 Oct 2026 15:05:59 +0000 (UTC)
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+	by receiver.recipient.test (Postfix) with SMTP id 6668140139;
+	Fri, 02 Oct 2026 15:05:59 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=none;
+	spf=none (receiver.recipient.test: domain of reports@recipient.test has no SPF policy when checking 127.0.0.1) smtp.mailfrom=reports@recipient.test
+From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Subject: Report Domain: sender.test
+	Submitter: recipient.test
+	Report-ID: sender.test.1790812800.1790899200
+Date: Fri, 02 Oct 2026 15:05:59 GMT
+MIME-Version: 1.0
+Message-ID: <6e4ebd6cf21e9131@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_63eba6ba-e6bf-45ea-afd1-9679788e17e0"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+X-Rspamd-Queue-Id: 6668140139
+
+This is a multipart message in MIME format.
+
+------=_NextPart_63eba6ba-e6bf-45ea-afd1-9679788e17e0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: sender.test
+Submitter: recipient.test
+Report ID: sender.test.1790812800.1790899200
+
+------=_NextPart_63eba6ba-e6bf-45ea-afd1-9679788e17e0
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!sender.test!1790812800!1790899200.xml.gz"
+
+H4sIAAAAAAAAA81UyW7jMAy99yuM3GvZvSQBVHUORb+gczZki06E2pIgyZ2Zvx/alJdMC3QDi
+jmFeiQfl8eY3/3uu+wZfNDW3O7KvNhlYBqrtDnd7n4+PlwfdtmduOItgKpl8ySusox7cNbHqo
+colYxyxBC1/lQZ2YO418HZIOsOMuil7rJO1pwtboqePIKYwg8PjXYaTMwjhMgZeSkyVdNKBDA
+K/BSSl/tjcShvDkVB5vF4UxScrcGUjP1B5aU5pboI1XDSRqz5nBEy+7GI2FKObyJjl2xLte0i
+uLOdbv5Ubqg7Hc6wNGJxJLMdAekIowCpnnQvPGdkJDC4dsLGX4KcMNYAZy69wwyEGXFNFOXY+
+WhMfb7sCbfaWK9ITvtr5rKDb6DSDvPz/T7H3SLNilJUYweDFTgjIxWlEvAsuwG3pJZ1qukadM
+QDS41ukSVqnNnJENC9jD9N1yZ43QB7rRaKQWNwrfCOdKvxqFPCGSQuvWq97S8F2Domjn9yuRz
+iufIQhi7OZBftvaXqdL5jdhoiPeZzWoVepvsyaWLCm7nofQwjxd8tffmN0rf4f39FeoL/F+k/
+JxLN8FGR2PLF/Qsg4Y4jpAUAAA==
+------=_NextPart_63eba6ba-e6bf-45ea-afd1-9679788e17e0--

@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S07q Failed DMARC quarantine
+Message-ID: <S07q@sender.test>
+X-Lab-Scenario: S07q
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 1ec3181b00354a239dc2c4ff511557ec
+
+Harmless synthetic lab content. No real credentials or attachments.

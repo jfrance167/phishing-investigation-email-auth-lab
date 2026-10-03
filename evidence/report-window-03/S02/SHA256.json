@@ -1,0 +1,18 @@
+{
+  "dns-answers.txt": "d09aa3db9dd02478942ee71cef9ba21d0bef925fc3fad414eaeafdc576f6668e",
+  "dns.zone": "134783f20ade4aea6ba3a58d50787dd0ebc4245e1dcf6476c8d21c9fcc3ef2ea",
+  "expected.json": "3bad2570b5e2fe78027fe7d337dd43c17950c6633f2001428028a3a5060b1dc3",
+  "gate/receiver-gate.json": "074447d31f14cab1035759ff00fc6f752472d1edda39e8b7fd17d90e2bf445c2",
+  "gate/receiver-vbox.txt": "de5839d615c49f441ec8e30caef2849f6e3420d068420b58239bfbde22bdd45a",
+  "gate/sender-gate.json": "e2a290e816d95ae5f26c37069deb766a8e45cabc7b2f37c05eeb502ce0a02257",
+  "gate/sender-vbox.txt": "a8f63c1ce2fae67242bca0fb63b43950db040635107d13a790372427623c6a25",
+  "observed.json": "98b740c6d9f87d6d4e4bcb5d1634cd22ef951bdbe9c8328dd764333fcfc11a83",
+  "original.eml": "4f9a89d3dd4505f7f7298886db15286d8174b2332a385968c5a480a397ed237d",
+  "post-receiver.eml": "e1e67310a6245ff71d2c568484374472391bd23e9ba7b2ef375cda9a8ab6a4d4",
+  "receiver-logs.txt": "3c3f3dc62a0924aa167240ecb0d330298406011229775492c3fb750fa2208cb0",
+  "receiver-smtp.txt": "f19bc1938ae52ac1127a2040d4fac719b4f29f0023c8de055a5479dbc61fd195",
+  "receiver.json": "dc0614560e50316365266e0116260f7f43e128519d2d4f2af9e6f99f4a0a7237",
+  "run.json": "fb4852a1959b4c61f73ecf43f9037bfb0503d72206467e68dfb4e3c2e814f27f",
+  "submitted-to-receiver.eml": "4f9a89d3dd4505f7f7298886db15286d8174b2332a385968c5a480a397ed237d",
+  "versions-config-time.txt": "8af8cf5ae72641f14c22ef369dcaf1c509be596ab03f140675dd487bf7146825"
+}

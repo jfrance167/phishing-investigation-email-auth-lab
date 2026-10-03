@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "messages": 3,
+  "reports": 2,
+  "window": "evidence\\report-window-03",
+  "report_bundle": "evidence\\reports-controlled-final",
+  "limits": "Requires exclusive lab window. Report disposition remains separately checked against queue/SMTP evidence."
+}

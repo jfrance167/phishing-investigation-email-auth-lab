@@ -1,0 +1,37 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Fri, 2 Oct 2026 14:48:28 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id 9C75840114
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 14:48:28 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none ("invalid DKIM record") header.d=sender.test header.s=lab1 header.b=I+GS3KAM;
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.11 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=fail reason="No valid SPF" header.from=sender.test (policy=none)
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id 9AD78903
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 14:48:27 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790952507;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=I+GS3KAMtE5VwZ/ADzYGEn4OUqMnTPDMMzG794fZ5756s7ekx5R+e+wNzOLypZu/qg/4ba
+	gURmJhinDrfZf3Tx58UPEoZApKki/m5UbWMBPCV3SlKfHj47uSvqGNtaqGjks53bATenKW
+	JXSP9nPLPnd3pyrksd4JFdd+0Tkn/mkDDx7xp2S5V2MVz/H/w8Oh/JVn7V9dp7G8eSTGHW
+	VrjijOH4Zahq7ZSLvGJMrcRW2CzpTyJfJCS/6MsjzGEx6FGyPDynv0NJaCh7mPp6+6JePY
+	vlCJ96vBUAiEE+o+JpDqMYB5GOCDO8qPS5KAe2Ipp1WfX/be04ZSNi7R3yImiQ==
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05d Missing DKIM key
+Message-ID: <S05d@sender.test>
+X-Lab-Scenario: S05d
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Date: Fri, 02 Oct 2026 14:48:27 +0000 (UTC)
+X-Rspamd-Queue-Id: 9C75840114
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+

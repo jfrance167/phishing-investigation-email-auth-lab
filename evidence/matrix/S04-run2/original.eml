@@ -1,0 +1,9 @@
+From: Synthetic Lab Analyst <analyst@lookalike.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S04 Valid unaligned DKIM
+Message-ID: <S04@sender.test>
+X-Lab-Scenario: S04
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Harmless synthetic lab content. No real credentials or attachments.

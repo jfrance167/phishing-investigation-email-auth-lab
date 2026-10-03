@@ -1,0 +1,19 @@
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id 7ECDE4013B
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 14:57:19 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.11 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=sender.test (policy=quarantine)
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S07q Failed DMARC quarantine
+Message-ID: <S07q@sender.test>
+X-Lab-Scenario: S07q
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 394ea4e59bc540118148e91a4e713f83
+X-Rspamd-Queue-Id: 7ECDE4013B
+
+Harmless synthetic lab content. No real credentials or attachments.
+

@@ -1,0 +1,54 @@
+Return-Path: <reports@recipient.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <reports@recipient.test>; Sat, 3 Oct 2026 03:22:04 +0000 (UTC)
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+	by receiver.recipient.test (Postfix) with SMTP id BF98A4019D;
+	Sat, 03 Oct 2026 03:22:03 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=none;
+	spf=none (receiver.recipient.test: domain of reports@recipient.test has no SPF policy when checking 127.0.0.1) smtp.mailfrom=reports@recipient.test
+From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Subject: Report Domain: lookalike.test
+	Submitter: recipient.test
+	Report-ID: lookalike.test.1790997683.1790997723
+Date: Sat, 03 Oct 2026 03:22:03 GMT
+MIME-Version: 1.0
+Message-ID: <6000f852ce347d2e@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_d6855ce2-8f39-4a52-bbac-f5d51faed3e7"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+X-Rspamd-Queue-Id: BF98A4019D
+
+This is a multipart message in MIME format.
+
+------=_NextPart_d6855ce2-8f39-4a52-bbac-f5d51faed3e7
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: lookalike.test
+Submitter: recipient.test
+Report ID: lookalike.test.1790997683.1790997723
+
+------=_NextPart_d6855ce2-8f39-4a52-bbac-f5d51faed3e7
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!lookalike.test!1790997683!1790997723.xml.gz"
+
+H4sIAAAAAAAAA61TwW7bMAy99yuM3Gc5KzA3gKL2UPQLtrMhW3RCRJYESe7avx9tyXbS7tBDT
+6YeyUc+kuaPb4MuXsEHtOa425fVrgDTWYXmdNz9+f3y42FXPIo73gOoVnYXcVcU3IOzPjYDRK
+lklBNGqPWnxsgBxDMGZ4NsNRQwSNSFli1nqztFzx6RmMKThw4dgollhBA5S94UmauhEtrai9R
+4gTmq3NeH6nCofz3cL2b9856zLT7lU4vQeGlOuTRBLZzQiC2fs4QsfjBKXFNO70TGbtnWatez
+4M5q7N4bN7YawxnWRiypMh9UEGOCU4xUFxyE5ywZGQyun7HpmyAnjDXAmcvvsABhQVwXxb6qK
+ISMudXPbdFsO+tVWqr9u3DZ0XfQoKP8sq7LqtwTzYamqM6OhipwloxcNJWAV6lHGpRaJ6rmm8
+BIZ5YbvUbWqEmzkyGQe5U/q+szvE2A/a8W7SPJ4KjomrBHOu2ccAapwDe9t8OnHVz7ZpoP6Vy
+O8dx4CKOOC99Nh1/Y7XzKE0GWkh/LXW3rXjV+B28mo+O5UTCFpdVztv7b/wDLT4PxDgQAAA==
+
+------=_NextPart_d6855ce2-8f39-4a52-bbac-f5d51faed3e7--

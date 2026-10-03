@@ -1,0 +1,7 @@
+2026-10-02T14:48:28.641007+00:00 receiver postfix/smtpd[2627]: 9C75840114: client=unknown[10.77.0.11]
+2026-10-02T14:48:28.642209+00:00 receiver postfix/cleanup[2630]: 9C75840114: message-id=<S05d@sender.test>
+2026-10-02T14:48:28.762722+00:00 receiver postfix/qmgr[1182]: 9C75840114: from=<analyst@sender.test>, size=1420, nrcpt=1 (queue active)
+2026-10-02T14:48:28.769410+00:00 receiver postfix/smtp[2631]: 9C75840114: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=0.13, delays=0.12/0.01/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 0ZKsYEdpk2mZdRk5nTvIKk)
+2026-10-02T14:48:28.769470+00:00 receiver postfix/qmgr[1182]: 9C75840114: removed
+2026-10-02 14:48:28 #2624(rspamd_proxy) <aa15c9>; proxy; rspamd_message_parse: loaded message; id: <S05d@sender.test>; queue-id: <9C75840114>; size: 1183; checksum: <0c0f7a26e8fb0b4d2c67be18c705f1fc>
+2026-10-02 14:48:28 #2624(rspamd_proxy) <aa15c9>; proxy; rspamd_task_write_log: id: <S05d@sender.test>, qid: <9C75840114>, ip: 10.77.0.11, from: <analyst@sender.test>, (default: F (no action): [1.10/1000.00] [R_SPF_FAIL(1.00){-all;},DMARC_POLICY_SOFTFAIL(0.10){sender.test : No valid SPF;none;},DKIM_TRACE(0.00){sender.test:~;},R_DKIM_PERMFAIL(0.00){sender.test:s=lab1;}]), len: 1183, time: 54.092ms, dns req: 3, digest: <0c0f7a26e8fb0b4d2c67be18c705f1fc>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>

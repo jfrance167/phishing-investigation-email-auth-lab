@@ -1,0 +1,14 @@
+{
+  "id": "S10",
+  "name": "Forged own AR, conflicting AR and Received",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": false,
+  "forged": true,
+  "spf": "fail",
+  "dkim": "none",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered"
+}

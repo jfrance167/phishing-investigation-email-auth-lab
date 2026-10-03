@@ -1,0 +1,117 @@
+{
+    "helo": "sender.sender.test",
+    "ip": "10.77.0.10",
+    "envelope_to": [
+        {
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "addr": "analyst@recipient.test",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            }
+        }
+    ],
+    "header_from": [
+        {
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            }
+        }
+    ],
+    "collected_unix": 1790953889,
+    "scenario_claim": "S01",
+    "run_claim": "4c1111611c0842e2b7e7c05ab94e778b",
+    "symbols": [
+        {
+            "name": "DMARC_POLICY_ALLOW",
+            "weight": 1,
+            "score": -0.500000,
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "options": [
+                "sender.test",
+                "none"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_DKIM_ALLOW",
+            "weight": 1,
+            "score": -0.100000,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_SPF_ALLOW",
+            "weight": 1,
+            "score": -0.200000,
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "options": [
+                "+ip4:10.77.0.10"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "R_DKIM_ALIGNED",
+            "weight": 1,
+            "score": -0.100000,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "options": [
+                "strict"
+            ],
+            "group": "policies"
+        },
+        {
+            "name": "DKIM_TRACE",
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "options": [
+                "sender.test:+"
+            ],
+            "group": "policies"
+        }
+    ],
+    "action": "no action",
+    "envelope_from": [
+        {
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            }
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "queue_id": "A326640138"
+}

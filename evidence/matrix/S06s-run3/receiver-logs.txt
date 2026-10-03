@@ -1,0 +1,7 @@
+2026-10-02T14:57:11.529737+00:00 receiver postfix/smtpd[4288]: 814BF4013B: client=unknown[10.77.0.10]
+2026-10-02T14:57:11.530398+00:00 receiver postfix/cleanup[4292]: 814BF4013B: message-id=<S06s@sender.test>
+2026-10-02T14:57:11.633052+00:00 receiver postfix/qmgr[4197]: 814BF4013B: from=<analyst@sender.test>, size=1478, nrcpt=1 (queue active)
+2026-10-02T14:57:11.634062+00:00 receiver postfix/smtp[4293]: 814BF4013B: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=0.1, delays=0.1/0/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 31LCzJsQA04LGJ438exkak)
+2026-10-02T14:57:11.634148+00:00 receiver postfix/qmgr[4197]: 814BF4013B: removed
+2026-10-02 14:57:11 #4482(rspamd_proxy) <994085>; proxy; rspamd_message_parse: loaded message; id: <S06s@sender.test>; queue-id: <814BF4013B>; size: 1241; checksum: <25d7016e4f65f0dbc0326c3066dfb9f2>
+2026-10-02 14:57:11 #4482(rspamd_proxy) <994085>; proxy; rspamd_task_write_log: id: <S06s@sender.test>, qid: <814BF4013B>, ip: 10.77.0.10, from: <analyst@sender.test>, (default: F (no action): [-0.20/1000.00] [R_SPF_ALLOW(-0.20){+ip4:10.77.0.10;},DMARC_POLICY_SOFTFAIL(0.10){mail.sender.test : SPF not aligned (strict), DKIM not aligned (strict);none;},R_DKIM_ALLOW(-0.10){sender.test:s=lab1;},DKIM_TRACE(0.00){sender.test:+;}]), len: 1241, time: 52.443ms, dns req: 3, digest: <25d7016e4f65f0dbc0326c3066dfb9f2>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>

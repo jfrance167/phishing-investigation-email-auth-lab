@@ -1,0 +1,23 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Fri, 2 Oct 2026 15:00:19 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id D8C8E4013A
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:00:16 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=temperror reason="query timed out" header.from=sender.test (policy=temperror);
+	spf=temperror (receiver.recipient.test: error in processing during lookup of analyst@sender.test: DNS error) smtp.mailfrom=analyst@sender.test
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S08d Controlled DNS failure
+Message-ID: <S08d@sender.test>
+X-Lab-Scenario: S08d
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 70c3ccede6c747a6aa23a79053f82746
+X-Rspamd-Queue-Id: D8C8E4013A
+
+Harmless synthetic lab content. No real credentials or attachments.
+

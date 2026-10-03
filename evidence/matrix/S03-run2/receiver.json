@@ -1,0 +1,87 @@
+{
+    "source": "receiver-rspamd-milter",
+    "header_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@lookalike.test>",
+            "user": "analyst",
+            "addr": "analyst@lookalike.test",
+            "domain": "lookalike.test"
+        }
+    ],
+    "collected_unix": 1790952307,
+    "envelope_to": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "addr": "analyst@recipient.test",
+            "domain": "recipient.test"
+        }
+    ],
+    "queue_id": "34ABA40114",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test"
+        }
+    ],
+    "ip": "10.77.0.10",
+    "symbols": [
+        {
+            "options": [
+                "+ip4:10.77.0.10"
+            ],
+            "name": "R_SPF_ALLOW",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies",
+            "weight": 1,
+            "score": -0.200000
+        },
+        {
+            "name": "R_DKIM_NA",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies",
+            "weight": 0,
+            "score": 0
+        },
+        {
+            "options": [
+                "lookalike.test : SPF not aligned (relaxed), No valid DKIM",
+                "none"
+            ],
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies",
+            "weight": 1,
+            "score": 0.100000
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S03"
+}

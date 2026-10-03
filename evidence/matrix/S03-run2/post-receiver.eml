@@ -1,0 +1,22 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Fri, 2 Oct 2026 14:45:07 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.10])
+	by receiver.recipient.test (Postfix) with ESMTP id 34ABA40114
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 14:45:07 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=fail reason="SPF not aligned (relaxed), No valid DKIM" header.from=lookalike.test (policy=none);
+	spf=pass (receiver.recipient.test: domain of analyst@sender.test designates 10.77.0.10 as permitted sender) smtp.mailfrom=analyst@sender.test
+From: Synthetic Lab Analyst <analyst@lookalike.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S03 Passing unaligned SPF
+Message-ID: <S03@sender.test>
+X-Lab-Scenario: S03
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Rspamd-Queue-Id: 34ABA40114
+
+Harmless synthetic lab content. No real credentials or attachments.
+

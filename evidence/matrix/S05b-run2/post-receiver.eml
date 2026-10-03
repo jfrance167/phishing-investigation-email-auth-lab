@@ -1,0 +1,39 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Fri, 2 Oct 2026 14:45:44 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id 398FD40114
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 14:45:44 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=fail ("body hash did not verify") header.d=sender.test header.s=lab1 header.b=vLHHIPXE;
+	dmarc=fail reason="No valid SPF" header.from=sender.test (policy=none);
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.11 as permitted sender) smtp.mailfrom=analyst@sender.test
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id C790B903
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 14:45:42 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790952342;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=vLHHIPXERJfMDBBNq8MbicpbDzGuQsWU2K1ocmVM7NOTfVyb1o6uZj5WVHoVkZYbWixVYz
+	W5V/p151MQczd2++QmCwOMPvaO2V38n/oWmFV9gXfxmkbCuNoxq4enV3zK/HD7+efPHfD8
+	IMNcX/INvB96i9ZvEPKYfe0ftcIfQz+ra9LGcoPVoRDXAcJ2SqqKPDJdcEcpePsqXv5HBo
+	RLq00+siwDq8WPo13wx/lkyT8Xsvq4lcBKDKUI2yWd28b2BFT5ED810TSD/sFfhJNq9xgN
+	85JOl/bw3RJcm+jO/NUNaZi8KMbj7JBVbLMfv0Do6MRhJnhrpyu1l0yTo3lc0w==
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05b Changed body without aligned SPF
+Message-ID: <S05b@sender.test>
+X-Lab-Scenario: S05b
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Date: Fri, 02 Oct 2026 14:45:42 +0000 (UTC)
+X-Rspamd-Queue-Id: 398FD40114
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+
+Synthetic mailing-list footer added after signing.
+

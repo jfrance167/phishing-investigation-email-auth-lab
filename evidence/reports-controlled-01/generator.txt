@@ -1,0 +1,205 @@
+previous last report date is 1790812800
+Process date 20261002
+processing report batch 1 to 2 (of 2 total)
+got DMARC record: v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r, tld_flag=false, processed={[p] = none, [aspf] = r, [adkim] = r, [rua] = mailto:reports@recipient.test}
+process reporting domain sender.test: {[sp] = none, [aspf] = r, [p] = none, [pct] = 100, [adkim] = r, [rua] = {[1] = reports@recipient.test}}
+got xml: <?xml version="1.0" encoding="UTF-8" ?>
+<feedback>
+  <report_metadata>
+    <org_name>Disposable email lab</org_name>
+    <email>reports@recipient.test</email>
+    <report_id>sender.test.1790812800.1790899200</report_id>
+    <date_range>
+      <begin>1790812800</begin>
+      <end>1790899200</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>sender.test</domain>
+    <adkim>r</adkim>
+    <aspf>r</aspf>
+    <p>none</p>
+    <sp>none</sp>
+    <pct>100</pct>
+  </policy_published>
+<record>
+  <row>
+    <source_ip>10.77.0.10</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>pass</dkim>
+      <spf>pass</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <dkim>
+      <domain>sender.test</domain>
+      <result>pass</result>
+    </dkim>
+    <spf>
+      <domain>sender.test</domain>
+      <result>pass</result>
+    </spf>
+  </auth_results>
+</record>
+<record>
+  <row>
+    <source_ip>10.77.0.11</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>fail</dkim>
+      <spf>fail</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <spf>
+      <domain>sender.test</domain>
+      <result>fail</result>
+    </spf>
+  </auth_results>
+</record>
+</feedback>
+got final message: From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Bcc: reports@recipient.test
+Subject: Report Domain: sender.test
+	Submitter: recipient.test
+	Report-ID: sender.test.1790812800.1790899200
+Date: Fri, 02 Oct 2026 15:05:59 GMT
+MIME-Version: 1.0
+Message-ID: <6e4ebd6cf21e9131@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_63eba6ba-e6bf-45ea-afd1-9679788e17e0"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+
+This is a multipart message in MIME format.
+
+------=_NextPart_63eba6ba-e6bf-45ea-afd1-9679788e17e0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: sender.test
+Submitter: recipient.test
+Report ID: sender.test.1790812800.1790899200
+
+------=_NextPart_63eba6ba-e6bf-45ea-afd1-9679788e17e0
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!sender.test!1790812800!1790899200.xml.gz"
+
+H4sIAAAAAAAAA81UyW7jMAy99yuM3GvZvSQBVHUORb+gczZki06E2pIgyZ2Zvx/alJdMC3QDi
+jmFeiQfl8eY3/3uu+wZfNDW3O7KvNhlYBqrtDnd7n4+PlwfdtmduOItgKpl8ySusox7cNbHqo
+colYxyxBC1/lQZ2YO418HZIOsOMuil7rJO1pwtboqePIKYwg8PjXYaTMwjhMgZeSkyVdNKBDA
+K/BSSl/tjcShvDkVB5vF4UxScrcGUjP1B5aU5pboI1XDSRqz5nBEy+7GI2FKObyJjl2xLte0i
+uLOdbv5Ubqg7Hc6wNGJxJLMdAekIowCpnnQvPGdkJDC4dsLGX4KcMNYAZy69wwyEGXFNFOXY+
+WhMfb7sCbfaWK9ITvtr5rKDb6DSDvPz/T7H3SLNilJUYweDFTgjIxWlEvAsuwG3pJZ1qukadM
+QDS41ukSVqnNnJENC9jD9N1yZ43QB7rRaKQWNwrfCOdKvxqFPCGSQuvWq97S8F2Domjn9yuRz
+iufIQhi7OZBftvaXqdL5jdhoiPeZzWoVepvsyaWLCm7nofQwjxd8tffmN0rf4f39FeoL/F+k/
+JxLN8FGR2PLF/Qsg4Y4jpAUAAA==
+------=_NextPart_63eba6ba-e6bf-45ea-afd1-9679788e17e0--
+got DMARC record: v=DMARC1; p=none; rua=mailto:reports@recipient.test, tld_flag=false, processed={[p] = none, [rua] = mailto:reports@recipient.test}
+process reporting domain lookalike.test: {[sp] = none, [aspf] = r, [p] = none, [pct] = 100, [adkim] = r, [rua] = {[1] = reports@recipient.test}}
+got xml: <?xml version="1.0" encoding="UTF-8" ?>
+<feedback>
+  <report_metadata>
+    <org_name>Disposable email lab</org_name>
+    <email>reports@recipient.test</email>
+    <report_id>lookalike.test.1790812800.1790899200</report_id>
+    <date_range>
+      <begin>1790812800</begin>
+      <end>1790899200</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>lookalike.test</domain>
+    <adkim>r</adkim>
+    <aspf>r</aspf>
+    <p>none</p>
+    <sp>none</sp>
+    <pct>100</pct>
+  </policy_published>
+<record>
+  <row>
+    <source_ip>10.77.0.10</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>pass</dkim>
+      <spf>pass</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>lookalike.test</header_from>
+  </identifiers>
+  <auth_results>
+    <dkim>
+      <domain>lookalike.test</domain>
+      <result>pass</result>
+    </dkim>
+    <spf>
+      <domain>lookalike.test</domain>
+      <result>pass</result>
+    </spf>
+  </auth_results>
+</record>
+</feedback>
+got final message: From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Bcc: reports@recipient.test
+Subject: Report Domain: lookalike.test
+	Submitter: recipient.test
+	Report-ID: lookalike.test.1790812800.1790899200
+Date: Fri, 02 Oct 2026 15:05:59 GMT
+MIME-Version: 1.0
+Message-ID: <35e257cfe5e2ff61@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_8f248dbc-689f-4d4a-ad59-a7353ff77ea9"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+
+This is a multipart message in MIME format.
+
+------=_NextPart_8f248dbc-689f-4d4a-ad59-a7353ff77ea9
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: lookalike.test
+Submitter: recipient.test
+Report ID: lookalike.test.1790812800.1790899200
+
+------=_NextPart_8f248dbc-689f-4d4a-ad59-a7353ff77ea9
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!lookalike.test!1790812800!1790899200.xml.gz"
+
+H4sIAAAAAAAAA61TPVPDMAzd+RW57sQpS9s7Yxg4fgHMOSdWWl8d22c7fPx7lMhJWmBgYIr8J
+D3pSQp/+OhN8QYhamfvN9uy2hRgW6e0Pd5vXl+eb/eb4kHc8A5ANbI9i5ui4AG8C6nuIUklkx
+wxRF041lb2IJ509C7KxkABvdSmMLLhbHFT9OQRxBQfA7Taa7CpTBATZ+SlyFxNK2GcO0ujzzB
+Fldvdodpv7/ZVRebhcFdVnK3xlI8tQh2kPebSCDVw1Fas+ZwRMvvBKnFJOb6JjF2zLdUuZ8G9
+M7r9rP3QGB1PsDTiUJX9pgIZCaYYqc66F4EzMjIYfTdh45cgL6yzwJnP7zgDcUZ8m8R2bH40p
+lZ/toWzbV1QtFT3PnO5IbRQa4/55W5X4niRZkUpqnWDxQqckZGLUgl4k2bAQallomq6CZ3wzH
+Kjl8gSNWr2MkZ0L/IndV2G1wmw32rhPkgG1wqvSXcaTzsnnEAqCHUXXP9jB5e+ieZbOpdDOtU
+B4mDSzHfV4R92O53ySJCl5Md8V+u6F43/wZvJ8HiuFIxhtHrOln/7C894D0UOBAAA
+------=_NextPart_8f248dbc-689f-4d4a-ad59-a7353ff77ea9--
+send data for 2 domains (from 1 to 2)
+successfully sent a report for sender.test: 1735 bytes sent
+successfully sent a report for lookalike.test: 1712 bytes sent
+set last report date to 1790899200
+Reporting collection has finished 1 dates processed, 2 reports: 2 completed, 0 failed

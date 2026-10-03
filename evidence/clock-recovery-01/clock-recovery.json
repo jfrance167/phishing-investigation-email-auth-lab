@@ -1,0 +1,20 @@
+[
+  {
+    "role": "sender",
+    "before_unix": 1790954710,
+    "host_unix": 1790997525,
+    "after": "Sat Oct  3 03:18:45 AM UTC 2026\n1790997525\n"
+  },
+  {
+    "role": "receiver",
+    "before_unix": 1790954711,
+    "host_unix": 1790997526,
+    "after": "Sat Oct  3 03:18:46 AM UTC 2026\n1790997526\n"
+  },
+  {
+    "role": "relay",
+    "before_unix": 1790954712,
+    "host_unix": 1790997527,
+    "after": "Sat Oct  3 03:18:47 AM UTC 2026\n1790997527\n"
+  }
+]

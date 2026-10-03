@@ -1,0 +1,53 @@
+Return-Path: <reports@recipient.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <reports@recipient.test>; Sat, 3 Oct 2026 03:21:19 +0000 (UTC)
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+	by receiver.recipient.test (Postfix) with SMTP id C42E74019D;
+	Sat, 03 Oct 2026 03:21:19 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	dmarc=none;
+	spf=none (receiver.recipient.test: domain of reports@recipient.test has no SPF policy when checking 127.0.0.1) smtp.mailfrom=reports@recipient.test
+From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Subject: Report Domain: lookalike.test
+	Submitter: recipient.test
+	Report-ID: lookalike.test.1790997552.1790997679
+Date: Sat, 03 Oct 2026 03:21:19 GMT
+MIME-Version: 1.0
+Message-ID: <acee06dc706e2d0b@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_b5a94fa8-6e12-40fd-b2b5-41101dc563cc"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+X-Rspamd-Queue-Id: C42E74019D
+
+This is a multipart message in MIME format.
+
+------=_NextPart_b5a94fa8-6e12-40fd-b2b5-41101dc563cc
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: lookalike.test
+Submitter: recipient.test
+Report ID: lookalike.test.1790997552.1790997679
+
+------=_NextPart_b5a94fa8-6e12-40fd-b2b5-41101dc563cc
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!lookalike.test!1790997552!1790997679.xml.gz"
+
+H4sIAAAAAAAAA61TwW7bMAy99yuM3Gc5BTo3gKL2MPQLtrMhW3RCRJYESW63vx9tyXbS9tBDT
+6YeyUc+kuZPfwddvIIPaM1xty+rXQGmswrN6bj78/vlx+OueBJ3vAdQrewu4q4ouAdnfWwGiF
+LJKCeMUOtPjZEDiF8YnA2y1VDAIFEXWracre4UPXtEYgrPHjp0CCaWEULkLHlTZK6GSmhrL1L
+jBeaocl8fqsOhfni4X8yf9YGzLT7lU4vQeGlOuTRBLZzQiC2fs4QsfjBKXFNO70TGbtnWatez
+4M5q7P41bmw1hjOsjVhSZd6pIMYEpxipLjgIz1kyMhhcP2PTN0FOGGuAM5ffYQHCgrguin1VU
+QgZc6sf26LZdtartFT7tnDZ0XfQoKP8sq7LqtwTzYamqM6OhipwloxcNJWAV6lHGpRaJ6rmm8
+BIZ5YbvUbWqEmzkyGQe5U/q+szvE2AfVaL9pFkcFR0TdgjnXZOOINU4Jve2+HDDq59M827dC7
+HeG48hFHHhe+mwy/sdj7liSBLyY/lrrZ1rxq/gzeT0fHcKJjC0uo5W//t/9VTJ64OBAAA
+------=_NextPart_b5a94fa8-6e12-40fd-b2b5-41101dc563cc--

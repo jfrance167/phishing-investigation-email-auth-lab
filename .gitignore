@@ -1,0 +1,10 @@
+.private/
+__pycache__/
+*.pyc
+.venv/
+*.key
+*.pem
+*.vdi
+*.iso
+*.vbox*
+evidence/runtime/

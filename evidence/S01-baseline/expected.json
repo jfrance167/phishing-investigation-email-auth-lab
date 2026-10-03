@@ -1,0 +1,15 @@
+{
+  "scenario_id": "S01-baseline",
+  "defined_before_execution": true,
+  "connecting_ip": "10.77.0.10",
+  "envelope_from": "analyst@sender.test",
+  "visible_from_domain": "sender.test",
+  "spf": "pass",
+  "dkim": "pass",
+  "dkim_domain": "sender.test",
+  "spf_aligned": true,
+  "dkim_aligned": true,
+  "dmarc": "pass",
+  "published_policy": "none",
+  "disposition": "delivered-to-mailpit"
+}

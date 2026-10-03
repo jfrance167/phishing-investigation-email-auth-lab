@@ -1,0 +1,8 @@
+2026-10-02T15:02:57.794325+00:00 receiver postfix/smtpd[7555]: C1E3040139: client=unknown[10.77.0.10]
+2026-10-02T15:02:57.795150+00:00 receiver postfix/cleanup[7559]: C1E3040139: message-id=<S12b@sender.test>
+2026-10-02T15:02:57.894591+00:00 receiver postfix/qmgr[7461]: C1E3040139: from=<analyst@sender.test>, size=1469, nrcpt=1 (queue active)
+2026-10-02T15:02:57.896546+00:00 receiver postfix/smtp[7560]: C1E3040139: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=0.1, delays=0.1/0/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 7hmClKquCP2WAFHCD0ecbC)
+2026-10-02T15:02:57.896588+00:00 receiver postfix/qmgr[7461]: C1E3040139: removed
+2026-10-02 15:02:57 #7830(rspamd_proxy) <b5f05f>; proxy; rspamd_message_parse: loaded message; id: <S12b@sender.test>; queue-id: <C1E3040139>; size: 1232; checksum: <18afd9f7bf5040d70f58abddab6c20fb>
+2026-10-02 15:02:57 #7830(rspamd_proxy) <b5f05f>; proxy; rspamd_task_write_log: id: <S12b@sender.test>, qid: <C1E3040139>, ip: 10.77.0.10, from: <analyst@sender.test>, (default: F (no action): [-0.90/1000.00] [DMARC_POLICY_ALLOW(-0.50){sender.test;none;},R_SPF_ALLOW(-0.20){+ip4:10.77.0.10;},R_DKIM_ALIGNED(-0.10){strict;},R_DKIM_ALLOW(-0.10){sender.test:s=lab2;},DKIM_TRACE(0.00){sender.test:+;}]), len: 1232, time: 51.801ms, dns req: 3, digest: <18afd9f7bf5040d70f58abddab6c20fb>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>
+{"queue_name": "hold", "queue_id": "7ECDE4013B", "arrival_time": 1790953039, "message_size": 596, "forced_expire": false, "sender": "analyst@sender.test", "recipients": [{"address": "analyst@recipient.test"}]}

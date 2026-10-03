@@ -1,0 +1,9 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=lf
+*.yml text eol=lf
+# Preserve all raw evidence bytes and manifests across Windows/Linux clones.
+evidence/** -text
+*.eml -text
+*.rdb -text

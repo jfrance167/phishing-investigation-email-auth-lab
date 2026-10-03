@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S08a Missing SPF record
+Message-ID: <S08a@sender.test>
+X-Lab-Scenario: S08a
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: e24cfe2284a6439387e1027740d54b23
+
+Harmless synthetic lab content. No real credentials or attachments.

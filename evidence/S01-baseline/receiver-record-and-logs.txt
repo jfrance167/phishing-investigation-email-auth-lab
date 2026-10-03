@@ -1,0 +1,264 @@
+{
+    "envelope_from": [
+        {
+            "domain": "sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "domain": "recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S01-baseline",
+    "source": "receiver-rspamd-milter",
+    "symbols": [
+        {
+            "weight": 1,
+            "score": -0.500000,
+            "name": "DMARC_POLICY_ALLOW",
+            "options": [
+                "sender.test",
+                "none"
+            ],
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "FROM_HAS_DN",
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "FROM_EQ_ENVFROM",
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "LOCAL_OUTBOUND",
+            "groups": [
+                "aliases"
+            ],
+            "group": "aliases"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "TO_MATCH_ENVRCPT_ALL",
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "PREVIOUSLY_DELIVERED",
+            "options": [
+                "analyst@recipient.test"
+            ],
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "TO_DN_ALL",
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 1,
+            "score": -0.100000,
+            "name": "R_DKIM_ALLOW",
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        },
+        {
+            "weight": 1,
+            "score": -0.100000,
+            "name": "MIME_GOOD",
+            "options": [
+                "text/plain"
+            ],
+            "groups": [
+                "mime_types"
+            ],
+            "group": "mime_types"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "MID_RHS_MATCH_FROM",
+            "groups": [
+                "Message ID"
+            ],
+            "group": "Message ID"
+        },
+        {
+            "weight": 1,
+            "score": -0.200000,
+            "name": "R_SPF_ALLOW",
+            "options": [
+                "+ip4:10.77.0.10:c"
+            ],
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "ARC_NA",
+            "groups": [
+                "policies",
+                "arc"
+            ],
+            "group": "policies"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "RCPT_COUNT_ONE",
+            "options": [
+                "1"
+            ],
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "RCVD_COUNT_ONE",
+            "options": [
+                "1"
+            ],
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 1,
+            "score": 0.100000,
+            "name": "RCVD_NO_TLS_LAST",
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "MISSING_XM_UA",
+            "groups": [
+                "headers"
+            ],
+            "group": "headers"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "MIME_TRACE",
+            "options": [
+                "0:+"
+            ],
+            "groups": [
+                "mime_types"
+            ],
+            "group": "mime_types"
+        },
+        {
+            "weight": 1,
+            "score": -0.100000,
+            "name": "R_DKIM_ALIGNED",
+            "options": [
+                "strict"
+            ],
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "DKIM_TRACE",
+            "options": [
+                "sender.test:+"
+            ],
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies"
+        }
+    ],
+    "helo": "sender.sender.test",
+    "collected_unix": 1790904671,
+    "queue_id": "C8E344018B",
+    "header_from": [
+        {
+            "domain": "sender.test",
+            "name": "Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "ip": "10.77.0.10"
+}2026-10-02T01:31:11.823000+00:00 receiver postfix/smtpd[1734]: C8E344018B: client=unknown[10.77.0.10]
+2026-10-02T01:31:11.823668+00:00 receiver postfix/cleanup[1779]: C8E344018B: message-id=<synthetic-baseline@sender.test>
+2026-10-02T01:31:11.870944+00:00 receiver postfix/qmgr[1665]: C8E344018B: from=<analyst@sender.test>, size=1494, nrcpt=1 (queue active)
+2026-10-02T01:31:11.872740+00:00 receiver postfix/smtp[1783]: C8E344018B: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=0.05, delays=0.05/0/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 6k96hzYUJ29OgRMhC6yAky)
+2026-10-02T01:31:11.872776+00:00 receiver postfix/qmgr[1665]: C8E344018B: removed
+2026-10-02 01:31:11 #1549(rspamd_proxy) <ac511e>; proxy; rspamd_message_parse: loaded message; id: <synthetic-baseline@sender.test>; queue-id: <C8E344018B>; size: 1257; checksum: <5a1334f03e29dbc2c419075e176b4123>
+2026-10-02 01:31:11 #1549(rspamd_proxy) <ac511e>; proxy; rspamd_task_write_log: id: <synthetic-baseline@sender.test>, qid: <C8E344018B>, ip: 10.77.0.10, from: <analyst@sender.test>, (default: F (no action): [-0.90/1000.00] [DMARC_POLICY_ALLOW(-0.50){sender.test;none;},R_SPF_ALLOW(-0.20){+ip4:10.77.0.10:c;},MIME_GOOD(-0.10){text/plain;},RCVD_NO_TLS_LAST(0.10){},R_DKIM_ALIGNED(-0.10){strict;},R_DKIM_ALLOW(-0.10){sender.test:s=lab1;},ARC_NA(0.00){},DKIM_TRACE(0.00){sender.test:+;},FROM_EQ_ENVFROM(0.00){},FROM_HAS_DN(0.00){},LOCAL_OUTBOUND(0.00){},MID_RHS_MATCH_FROM(0.00){},MIME_TRACE(0.00){0:+;},MISSING_XM_UA(0.00){},PREVIOUSLY_DELIVERED(0.00){analyst@recipient.test;},RCPT_COUNT_ONE(0.00){1;},RCVD_COUNT_ONE(0.00){1;},TO_DN_ALL(0.00){},TO_MATCH_ENVRCPT_ALL(0.00){}]), len: 1257, time: 2.176ms, dns req: 1, digest: <5a1334f03e29dbc2c419075e176b4123>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>

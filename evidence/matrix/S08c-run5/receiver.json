@@ -1,0 +1,88 @@
+{
+    "ip": "10.77.0.11",
+    "queue_id": "98F9440139",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": ""
+        }
+    ],
+    "envelope_to": [
+        {
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test",
+            "name": ""
+        }
+    ],
+    "header_from": [
+        {
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": "Synthetic Lab Analyst"
+        }
+    ],
+    "symbols": [
+        {
+            "group": "policies",
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "R_DKIM_NA"
+        },
+        {
+            "group": "policies",
+            "weight": 1,
+            "score": 0.100000,
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "none"
+            ],
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "name": "DMARC_POLICY_SOFTFAIL"
+        },
+        {
+            "group": "policies",
+            "weight": 0,
+            "score": 0,
+            "options": [
+                "-any"
+            ],
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "name": "R_SPF_PERMFAIL"
+        }
+    ],
+    "scenario_claim": "S08c",
+    "run_claim": "6f873b6b0026474289262464d0746513",
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790953302,
+    "action": "no action"
+}

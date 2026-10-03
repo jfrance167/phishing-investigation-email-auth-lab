@@ -1,0 +1,8 @@
+2026-10-02T15:00:16.888050+00:00 receiver postfix/smtpd[5678]: D8C8E4013A: client=unknown[10.77.0.11]
+2026-10-02T15:00:16.888728+00:00 receiver postfix/cleanup[5682]: D8C8E4013A: message-id=<S08d@sender.test>
+2026-10-02T15:00:19.167141+00:00 receiver postfix/qmgr[5585]: D8C8E4013A: from=<analyst@sender.test>, size=595, nrcpt=1 (queue active)
+2026-10-02T15:00:19.168918+00:00 receiver postfix/smtp[5683]: D8C8E4013A: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=2.3, delays=2.3/0/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 1ZRt4Olvsdnq2X0s4xu2qN)
+2026-10-02T15:00:19.168952+00:00 receiver postfix/qmgr[5585]: D8C8E4013A: removed
+2026-10-02 15:00:17 #6268(rspamd_proxy) <806870>; proxy; rspamd_message_parse: loaded message; id: <S08d@sender.test>; queue-id: <D8C8E4013A>; size: 369; checksum: <80589382652f97630534d36d2998daab>
+2026-10-02 15:00:19 #6268(rspamd_proxy) <806870>; proxy; rspamd_task_write_log: id: <S08d@sender.test>, qid: <D8C8E4013A>, ip: 10.77.0.11, from: <analyst@sender.test>, (default: F (no action): [0.00/1000.00] [DMARC_DNSFAIL(0.00){sender.test : query timed out;},R_DKIM_NA(0.00){},R_SPF_DNSFAIL(0.00){temporary DNS error;}]), len: 369, time: 2046.818ms, dns req: 2, digest: <80589382652f97630534d36d2998daab>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>
+{"queue_name": "hold", "queue_id": "7ECDE4013B", "arrival_time": 1790953039, "message_size": 596, "forced_expire": false, "sender": "analyst@sender.test", "recipients": [{"address": "analyst@recipient.test"}]}

@@ -1,0 +1,69 @@
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45376
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 28e9c4fdc9c25107010000006ac07475d60ca547f5e91dc3 (good)
+;; QUESTION SECTION:
+;sender.test.			IN	TXT
+
+;; ANSWER SECTION:
+sender.test.		30	IN	TXT	"v=spf1 ip4:10.77.0.10 -all"
+
+;; Query time: 0 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Sat Oct 03 03:20:21 UTC 2026
+;; MSG SIZE  rcvd: 107
+
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 _dmarc.sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28548
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: ac5e9404bb3cb5e8010000006ac074756aec5499d7ba20c0 (good)
+;; QUESTION SECTION:
+;_dmarc.sender.test.		IN	TXT
+
+;; ANSWER SECTION:
+_dmarc.sender.test.	30	IN	TXT	"v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r"
+
+;; Query time: 0 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Sat Oct 03 03:20:21 UTC 2026
+;; MSG SIZE  rcvd: 156
+
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 lab1._domainkey.sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 15366
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: d5bf6950ad37d597010000006ac074759fd4a793b682cc4b (good)
+;; QUESTION SECTION:
+;lab1._domainkey.sender.test.	IN	TXT
+
+;; ANSWER SECTION:
+lab1._domainkey.sender.test. 30	IN	TXT	"v=DKIM1; k=rsa; " "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwwJ5N+Vlpns5X5aXNMNeg8ySGkGjIl9m2oDpdlgAhvHD3KVRpZGRt0DuYtQwY+U8aF6s9Pb91X4cbsMy2lGQNumwPYPnUwpH7qG9+5E8UiS/7EhLoX3nmdTiW1YC1oUjRnWgWyVIGEohxARRDWneCKOduy5dIaFEg1p2Lij+31Rx9Gci17U1DwEpAXFJiAbOwZ5iUpZ9r+HXiP9dw" "1MmyM5sX0+9s829+Utz/ywSjc5SKvempqQ9GkWKmGa/iAoyV9AuNr3RLHTa+TRZjVDWeGnpVgEHPgL5fX0QDSiNKmdZMNllrRYY4uX9P3Bg4ITIbIQcM3lKS8dct0GvUEPxJwIDAQAB"
+
+;; Query time: 0 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Sat Oct 03 03:20:21 UTC 2026
+;; MSG SIZE  rcvd: 509
+

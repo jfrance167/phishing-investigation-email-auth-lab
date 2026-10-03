@@ -1,0 +1,103 @@
+{
+    "queue_id": "C742840114",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "domain": "sender.test",
+            "addr": "analyst@sender.test",
+            "name": ""
+        }
+    ],
+    "envelope_to": [
+        {
+            "raw": "<analyst@recipient.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "domain": "recipient.test",
+            "addr": "analyst@recipient.test",
+            "name": ""
+        }
+    ],
+    "header_from": [
+        {
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "domain": "sender.test",
+            "addr": "analyst@sender.test",
+            "name": "Synthetic Lab Analyst"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S05e",
+    "symbols": [
+        {
+            "weight": 1,
+            "score": 0.100000,
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "group": "policies",
+            "options": [
+                "sender.test : No valid SPF",
+                "none"
+            ],
+            "name": "DMARC_POLICY_SOFTFAIL"
+        },
+        {
+            "weight": 1,
+            "score": 1,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies",
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "name": "R_DKIM_REJECT"
+        },
+        {
+            "weight": 1,
+            "score": 1,
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "group": "policies",
+            "options": [
+                "-all"
+            ],
+            "name": "R_SPF_FAIL"
+        },
+        {
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "group": "policies",
+            "options": [
+                "sender.test:-"
+            ],
+            "name": "DKIM_TRACE"
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790952520,
+    "ip": "10.77.0.11"
+}

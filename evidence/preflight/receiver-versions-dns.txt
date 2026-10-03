@@ -1,0 +1,9 @@
+syntax OK
+"v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r"
+"v=DKIM1; k=rsa; " "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwwJ5N+Vlpns5X5aXNMNeg8ySGkGjIl9m2oDpdlgAhvHD3KVRpZGRt0DuYtQwY+U8aF6s9Pb91X4cbsMy2lGQNumwPYPnUwpH7qG9+5E8UiS/7EhLoX3nmdTiW1YC1oUjRnWgWyVIGEohxARRDWneCKOduy5dIaFEg1p2Lij+31Rx9Gci17U1DwEpAXFJiAbOwZ5iUpZ9r+HXiP9dw" "1MmyM5sX0+9s829+Utz/ywSjc5SKvempqQ9GkWKmGa/iAoyV9AuNr3RLHTa+TRZjVDWeGnpVgEHPgL5fX0QDSiNKmdZMNllrRYY4uX9P3Bg4ITIbIQcM3lKS8dct0GvUEPxJwIDAQAB"
+bind9	1:9.20.29-1~deb13u1
+postfix	3.10.13-0+deb13u1
+redis-server	5:8.0.2-3+deb13u2
+rspamd	4.2.1-1~b7a16ae~trixie
+swaks	20240103.0-2
+Fri Oct  2 01:30:09 AM UTC 2026

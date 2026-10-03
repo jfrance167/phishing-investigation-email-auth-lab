@@ -1,0 +1,103 @@
+{
+    "symbols": [
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "weight": 1,
+            "name": "R_DKIM_ALLOW",
+            "score": -0.100000
+        },
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "options": [
+                "-all"
+            ],
+            "weight": 1,
+            "name": "R_SPF_FAIL",
+            "score": 1
+        },
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "options": [
+                "lookalike.test : No valid SPF, DKIM not aligned (relaxed)",
+                "none"
+            ],
+            "weight": 1,
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "score": 0.100000
+        },
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "options": [
+                "sender.test:+"
+            ],
+            "weight": 0,
+            "name": "DKIM_TRACE",
+            "score": 0
+        }
+    ],
+    "queue_id": "BDAF640114",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>"
+        }
+    ],
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "domain": "lookalike.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@lookalike.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@lookalike.test>"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S04",
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790952319,
+    "ip": "10.77.0.11"
+}

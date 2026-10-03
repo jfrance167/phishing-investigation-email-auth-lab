@@ -1,0 +1,29 @@
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id 8F6D490E
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 14:49:04 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790952544;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=Ue3Yx346qCclcLipJv2sbTxiMro5TF70yKtC2MACX5eCfSZsgzQaY4Z2j8QvLtcBuEg3gB
+	eW3frJYaJ+dc1obx2cu41G2LJqOaQhDbAAYHGjoL/WrIIgn7LwcIKj+c+OTd88vqZGUAcq
+	V5RBXxpgH3HGSrtU3vRmylJt1+q7GsW12txJEFK0dOPIOb14luWMAon1hjfuaWAhUlhD2b
+	LNRIebz2Xtf7vt55NZ7ruLYv3up2TX3euUK5IhcLn9HoNXLK/imsfItxFnx/3HWQIRUqD5
+	U9YDswmi2zy3DOKvsw3OTpC350uJYcK5m9e4zZrPMAVNt0c4XBlkiP4wIeLyjA==
+Authentication-Results: sender.sender.test;
+	dkim=none;
+	dmarc=none;
+	spf=fail (sender.sender.test: domain of analyst@sender.test does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=analyst@sender.test
+From: Synthetic Lab Analyst <analyst@mail.sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S06s Strict sibling alignment
+Message-ID: <S06s@sender.test>
+X-Lab-Scenario: S06s
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Date: Fri, 02 Oct 2026 14:49:04 +0000 (UTC)
+X-Rspamd-Queue-Id: 8F6D490E
+
+Harmless synthetic lab content. No real credentials or attachments.
+

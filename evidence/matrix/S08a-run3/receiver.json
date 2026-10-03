@@ -1,0 +1,88 @@
+{
+    "queue_id": "E074F40142",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "domain": "sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "user": "analyst"
+        }
+    ],
+    "ip": "10.77.0.11",
+    "header_from": [
+        {
+            "domain": "sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "user": "analyst"
+        }
+    ],
+    "action": "no action",
+    "symbols": [
+        {
+            "score": 0,
+            "group": "policies",
+            "name": "R_SPF_NA",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "options": [
+                "no SPF record"
+            ],
+            "weight": 0
+        },
+        {
+            "score": 0,
+            "group": "policies",
+            "name": "R_DKIM_NA",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0
+        },
+        {
+            "score": 0.100000,
+            "group": "policies",
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "none"
+            ],
+            "weight": 1
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790953047,
+    "scenario_claim": "S08a",
+    "envelope_to": [
+        {
+            "domain": "recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "addr": "analyst@recipient.test",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "user": "analyst"
+        }
+    ],
+    "run_claim": "e24cfe2284a6439387e1027740d54b23"
+}

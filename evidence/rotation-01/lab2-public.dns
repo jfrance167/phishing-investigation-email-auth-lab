@@ -1,0 +1,4 @@
+lab2._domainkey IN TXT ( "v=DKIM1; k=rsa; "
+	"p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsMWUYNdx6ZrTGMGkIME74jQrdJ4DEviBnsj0Jnnr9WyoOe8cto/h5kEB+MtgAkin4aJMqOT8pYqRNOXgTH9ovZbjpxJLbSKa5U1RaWMxijAWtsFmVN3yWlgjga3ffr+YEJzT1ijzrWKSTBmwbkpXrtrnUpgSo4x3DTVDedcXEM3zi6jc+9n09DmxYcJRPjYCw6OPIfrUyUu8lMVG7"
+	"mtRImwRJ57X7ok3v2kmccwKe17FCEIvJ/APwi9W/Eqnrcwoym1WryTpClJWsmnba3pSBqpMEo7g/ARMgvqHvCWn23rqLjAqJjYaK2VIyMlqe7yShNSoJ+IF+uxXZ2Mbl57Y/QIDAQAB"
+) ; 

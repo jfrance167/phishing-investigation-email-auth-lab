@@ -1,0 +1,88 @@
+{
+    "ip": "10.77.0.11",
+    "source": "receiver-rspamd-milter",
+    "symbols": [
+        {
+            "name": "R_DKIM_NA",
+            "weight": 0,
+            "score": 0,
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ]
+        },
+        {
+            "name": "R_SPF_FAIL",
+            "group": "policies",
+            "weight": 1,
+            "score": 1,
+            "options": [
+                "-all"
+            ],
+            "groups": [
+                "policies",
+                "spf"
+            ]
+        },
+        {
+            "name": "DMARC_POLICY_REJECT",
+            "group": "policies",
+            "weight": 1,
+            "score": 2,
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "reject"
+            ],
+            "groups": [
+                "policies",
+                "dmarc"
+            ]
+        }
+    ],
+    "queue_id": "77175401A3",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "addr": "analyst@recipient.test",
+            "domain": "recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "addr": "analyst@sender.test",
+            "domain": "sender.test"
+        }
+    ],
+    "action": "reject",
+    "scenario_claim": "S07x",
+    "run_claim": "b2c40cd4c8194a088a6b433aaa98c410",
+    "collected_unix": 1790997594
+}

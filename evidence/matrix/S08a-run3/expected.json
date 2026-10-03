@@ -1,0 +1,14 @@
+{
+  "id": "S08a",
+  "name": "Missing SPF record",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": false,
+  "dns": "missing-spf",
+  "spf": "none",
+  "dkim": "none",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered"
+}

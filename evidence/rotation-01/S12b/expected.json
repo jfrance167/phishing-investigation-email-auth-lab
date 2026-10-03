@@ -1,0 +1,14 @@
+{
+  "id": "S12b",
+  "name": "New selector overlap",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.10",
+  "signed": true,
+  "spf": "pass",
+  "dkim": "pass",
+  "dmarc": "pass",
+  "policy": "none",
+  "disposition": "delivered",
+  "selector": "lab2"
+}

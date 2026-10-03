@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S08b Malformed duplicate DMARC
+Message-ID: <S08b@sender.test>
+X-Lab-Scenario: S08b
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 21748e433d9847d0ae0910069b364d55
+
+Harmless synthetic lab content. No real credentials or attachments.

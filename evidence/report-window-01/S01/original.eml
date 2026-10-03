@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S01 Legitimate aligned
+Message-ID: <S01@sender.test>
+X-Lab-Scenario: S01
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 15068c9309d64561b821bb282a012566
+
+Harmless synthetic lab content. No real credentials or attachments.

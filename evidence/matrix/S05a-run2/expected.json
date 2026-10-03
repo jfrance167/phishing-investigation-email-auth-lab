@@ -1,0 +1,14 @@
+{
+  "id": "S05a",
+  "name": "Changed body with aligned SPF remaining",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.10",
+  "signed": true,
+  "mutate": "body",
+  "spf": "pass",
+  "dkim": "fail",
+  "dmarc": "pass",
+  "policy": "none",
+  "disposition": "delivered"
+}

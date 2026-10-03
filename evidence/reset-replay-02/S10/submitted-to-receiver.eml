@@ -1,0 +1,13 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S10 Forged own AR, conflicting AR and Received
+Message-ID: <S10@sender.test>
+X-Lab-Scenario: S10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: bbdfc90de1884cdf8e7482fb0caf1bda
+Authentication-Results: receiver.recipient.test; spf=pass; dkim=pass; dmarc=pass
+Authentication-Results: conflicting.test; spf=fail; dkim=fail; dmarc=fail
+Received: from trusted.test (trusted.test [10.77.0.10]) by receiver.recipient.test with ESMTP id FORGED
+
+Harmless synthetic lab content. No real credentials or attachments.

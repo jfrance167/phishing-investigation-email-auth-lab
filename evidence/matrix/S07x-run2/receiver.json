@@ -1,0 +1,87 @@
+{
+    "source": "receiver-rspamd-milter",
+    "queue_id": "AC8B940114",
+    "ip": "10.77.0.11",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "symbols": [
+        {
+            "weight": 0,
+            "score": 0,
+            "name": "R_DKIM_NA",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ]
+        },
+        {
+            "weight": 1,
+            "score": 1,
+            "options": [
+                "-all"
+            ],
+            "name": "R_SPF_FAIL",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "spf"
+            ]
+        },
+        {
+            "weight": 1,
+            "score": 2,
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "reject"
+            ],
+            "name": "DMARC_POLICY_REJECT",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dmarc"
+            ]
+        }
+    ],
+    "scenario_claim": "S07x",
+    "collected_unix": 1790952567,
+    "helo": "sender.sender.test",
+    "action": "reject"
+}

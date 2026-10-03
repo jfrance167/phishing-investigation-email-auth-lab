@@ -1,0 +1,35 @@
+Return-Path: <analyst@sender.test>
+Received: from sender.sender.test (unknown [10.77.0.10])
+	by relay.sender.test (Postfix) with ESMTP id 6A6BA989
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:00:53 +0000 (UTC)
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id AB63290E
+	for <analyst@recipient.test>; Fri, 02 Oct 2026 15:00:51 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790953251;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=irKEc9qnVH+kH18pd3+XvP0ZXXOUzNm0/aP9zm6ckAEVsm2PxuWYSUtS+Rpvwy5HOgvX3O
+	xt1CEcyqKGYAUeO0Bc5T8DRyBVosYjOc5WAMgdc0mQQImCgQn4YFEHZJAzfzaLKDzTrT7D
+	HAg6MGwf41vAjqD82RzCybtey4BmQS/y7SCyPCywcYu+Vc/oWV1/L5K6wD9ry/qfl02/Fn
+	056gsAWRtQdB7oVqyFvUFxTPqhyWw5cM4TRcn7VFbPA7fURxjHc/GhV1FWwdEs5cCkgDnb
+	plgvHkEgSVVqb66m6D3Xqyi7H8phTQsZxjxwjzaizNZpNj3y494Xpsg/UOKaeA==
+Authentication-Results: sender.sender.test;
+	dkim=none;
+	spf=fail (sender.sender.test: domain of analyst@sender.test does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=sender.test (policy=none)
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S09f Forwarding unchanged
+Message-ID: <S09f@sender.test>
+X-Lab-Scenario: S09f
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: b228302791534b48817606600149bddf
+Date: Fri, 02 Oct 2026 15:00:51 +0000 (UTC)
+X-Rspamd-Queue-Id: AB63290E
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+

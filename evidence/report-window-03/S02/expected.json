@@ -1,0 +1,13 @@
+{
+  "id": "S02",
+  "name": "Unauthorized unsigned envelope spoof",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": false,
+  "spf": "fail",
+  "dkim": "none",
+  "dmarc": "fail",
+  "policy": "none",
+  "disposition": "delivered"
+}

@@ -1,0 +1,7 @@
+2026-10-02T14:49:05.485293+00:00 receiver postfix/smtpd[2627]: 7672F40114: client=unknown[10.77.0.10]
+2026-10-02T14:49:05.486062+00:00 receiver postfix/cleanup[2630]: 7672F40114: message-id=<S06s@sender.test>
+2026-10-02T14:49:05.589422+00:00 receiver postfix/qmgr[1182]: 7672F40114: from=<analyst@sender.test>, size=1433, nrcpt=1 (queue active)
+2026-10-02T14:49:05.591114+00:00 receiver postfix/smtp[2631]: 7672F40114: to=<analyst@recipient.test>, relay=127.0.0.1[127.0.0.1]:1025, delay=0.11, delays=0.1/0/0/0, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 5ZkDe6eJipj4ihwXCjPxas)
+2026-10-02T14:49:05.591144+00:00 receiver postfix/qmgr[1182]: 7672F40114: removed
+2026-10-02 14:49:05 #3201(rspamd_proxy) <b56a72>; proxy; rspamd_message_parse: loaded message; id: <S06s@sender.test>; queue-id: <7672F40114>; size: 1196; checksum: <25d7016e4f65f0dbc0326c3066dfb9f2>
+2026-10-02 14:49:05 #3201(rspamd_proxy) <b56a72>; proxy; rspamd_task_write_log: id: <S06s@sender.test>, qid: <7672F40114>, ip: 10.77.0.10, from: <analyst@sender.test>, (default: F (no action): [-0.30/1000.00] [R_SPF_ALLOW(-0.20){+ip4:10.77.0.10;},R_DKIM_ALLOW(-0.10){sender.test:s=lab1;},DKIM_TRACE(0.00){sender.test:+;},DMARC_NA(0.00){mail.sender.test;}]), len: 1196, time: 47.767ms, dns req: 3, digest: <25d7016e4f65f0dbc0326c3066dfb9f2>, rcpts: <analyst@recipient.test>, mime_rcpts: <analyst@recipient.test>

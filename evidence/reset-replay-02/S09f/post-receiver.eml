@@ -1,0 +1,45 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Sat, 3 Oct 2026 03:20:07 +0000 (UTC)
+Received: from relay.sender.test (unknown [10.77.0.30])
+	by receiver.recipient.test (Postfix) with ESMTP id 89AF1401A3
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:20:07 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=pass header.d=sender.test header.s=lab1 header.b=dbpr3HsL;
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.30 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=pass (policy=none) header.from=sender.test
+Received: from relay.test (localhost [127.0.0.1])
+	by relay.sender.test (Postfix) with ESMTP id EF7F79A7
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:20:07 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.10])
+	by relay.sender.test (Postfix) with ESMTP id E489198E
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:20:07 +0000 (UTC)
+Received: from sender.sender.test (localhost [127.0.0.1])
+	by sender.sender.test (Postfix) with ESMTP id DE7BC99F
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:20:05 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+	t=1790997606;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+	b=dbpr3HsL1hCXmZoCAZ5IQyvqts387ywSVdtTqjQVllY5HhRNZpcjcNwBmvqC4LNVbz9VJB
+	6Jzi2eECR0agwNkeTf3ywPgmQlAxYhMcUZcpHMa5hKljqQ6m69pgQKZ2bELMFzDyziKNpm
+	7QggoEptS5dODtESHQur9csc1BPlB67sdg+AAxYOnEvslAzkLV8XiYTZH6Lr2JSy9kVQrw
+	h/kQpqiBBojS167fZflm5ii7jZiXv2TWxKot435RiTL5Xh/rWD46UWDWnuS/ocbe9BRBBb
+	dI6drxfr4TtBXTUc/oFnwWZleeXm+EeQCSm0n0nk9GOzoz2a0S7wqcPG5mPGLQ==
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S09f Forwarding unchanged
+Message-ID: <S09f@sender.test>
+X-Lab-Scenario: S09f
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 35db4610d74646988c9cf437d4785b7e
+Date: Sat, 03 Oct 2026 03:20:05 +0000 (UTC)
+X-Rspamd-Queue-Id: 89AF1401A3
+
+Harmless synthetic lab content. No real credentials or attachments.
+
+
+

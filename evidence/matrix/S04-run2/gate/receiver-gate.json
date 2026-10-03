@@ -1,0 +1,97 @@
+{
+  "role": "receiver",
+  "collected_unix": 1790952313.040266,
+  "routes": [
+    {
+      "dst": "10.77.0.0/24",
+      "dev": "enp0s8",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "10.77.0.20",
+      "flags": []
+    },
+    {
+      "dst": "192.168.56.0/24",
+      "dev": "enp0s3",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "192.168.56.51",
+      "flags": []
+    },
+    {
+      "type": "local",
+      "dst": "10.77.0.20",
+      "dev": "enp0s8",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "host",
+      "prefsrc": "10.77.0.20",
+      "flags": []
+    },
+    {
+      "type": "broadcast",
+      "dst": "10.77.0.255",
+      "dev": "enp0s8",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "10.77.0.20",
+      "flags": []
+    },
+    {
+      "type": "local",
+      "dst": "127.0.0.0/8",
+      "dev": "lo",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "host",
+      "prefsrc": "127.0.0.1",
+      "flags": []
+    },
+    {
+      "type": "local",
+      "dst": "127.0.0.1",
+      "dev": "lo",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "host",
+      "prefsrc": "127.0.0.1",
+      "flags": []
+    },
+    {
+      "type": "broadcast",
+      "dst": "127.255.255.255",
+      "dev": "lo",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "127.0.0.1",
+      "flags": []
+    },
+    {
+      "type": "local",
+      "dst": "192.168.56.51",
+      "dev": "enp0s3",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "host",
+      "prefsrc": "192.168.56.51",
+      "flags": []
+    },
+    {
+      "type": "broadcast",
+      "dst": "192.168.56.255",
+      "dev": "enp0s3",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "192.168.56.51",
+      "flags": []
+    }
+  ],
+  "ipv6_routes": [],
+  "firewall": "table inet peal {\n\tchain input {\n\t\ttype filter hook input priority filter; policy drop;\n\t\tiifname \"lo\" accept\n\t\tct state established,related accept\n\t\tiifname \"enp0s3\" ip saddr 192.168.56.1 tcp dport 22 accept\n\t\tiifname \"enp0s8\" ip saddr { 10.77.0.10, 10.77.0.11, 10.77.0.20, 10.77.0.30 } tcp dport { 25, 53 } accept\n\t\tiifname \"enp0s8\" ip saddr { 10.77.0.10, 10.77.0.11, 10.77.0.20, 10.77.0.30 } udp dport 53 accept\n\t\tiifname \"enp0s8\" ip saddr 10.77.0.0/24 ip protocol icmp accept\n\t\tcounter packets 0 bytes 0 drop\n\t}\n\n\tchain forward {\n\t\ttype filter hook forward priority filter; policy drop;\n\t\tcounter packets 0 bytes 0 drop\n\t}\n\n\tchain output {\n\t\ttype filter hook output priority filter; policy drop;\n\t\toifname \"lo\" accept\n\t\tct state established,related accept\n\t\toifname \"enp0s8\" ip daddr { 10.77.0.10, 10.77.0.11, 10.77.0.20, 10.77.0.30 } tcp dport { 25, 53 } accept\n\t\toifname \"enp0s8\" ip daddr 10.77.0.20 udp dport 53 accept\n\t\toifname \"enp0s8\" ip daddr 10.77.0.0/24 ip protocol icmp accept\n\t\tcounter packets 0 bytes 0 drop\n\t}\n}\n",
+  "sockets": "Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                     \nudp   UNCONN 0      0         10.77.0.20:53         0.0.0.0:*    users:((\"named\",pid=1782,fd=25))                           \nudp   UNCONN 0      0         10.77.0.20:53         0.0.0.0:*    users:((\"named\",pid=1782,fd=24))                           \nudp   UNCONN 0      0          127.0.0.1:53         0.0.0.0:*    users:((\"named\",pid=1782,fd=19))                           \nudp   UNCONN 0      0          127.0.0.1:53         0.0.0.0:*    users:((\"named\",pid=1782,fd=18))                           \ntcp   LISTEN 0      100        127.0.0.1:25         0.0.0.0:*    users:((\"smtpd\",pid=1269,fd=7),(\"master\",pid=1180,fd=14))  \ntcp   LISTEN 0      4096       127.0.0.1:1025       0.0.0.0:*    users:((\"mailpit\",pid=738,fd=8))                           \ntcp   LISTEN 0      10         127.0.0.1:53         0.0.0.0:*    users:((\"named\",pid=1782,fd=22))                           \ntcp   LISTEN 0      10         127.0.0.1:53         0.0.0.0:*    users:((\"named\",pid=1782,fd=20))                           \ntcp   LISTEN 0      4096       127.0.0.1:11333      0.0.0.0:*    users:((\"rspamd\",pid=1797,fd=15),(\"rspamd\",pid=1791,fd=15))\ntcp   LISTEN 0      4096       127.0.0.1:11332      0.0.0.0:*    users:((\"rspamd\",pid=1795,fd=9),(\"rspamd\",pid=1791,fd=9))  \ntcp   LISTEN 0      4096       127.0.0.1:11334      0.0.0.0:*    users:((\"rspamd\",pid=1796,fd=12),(\"rspamd\",pid=1791,fd=12))\ntcp   LISTEN 0      511        127.0.0.1:6379       0.0.0.0:*    users:((\"redis-server\",pid=1051,fd=8))                     \ntcp   LISTEN 0      10        10.77.0.20:53         0.0.0.0:*    users:((\"named\",pid=1782,fd=27))                           \ntcp   LISTEN 0      10        10.77.0.20:53         0.0.0.0:*    users:((\"named\",pid=1782,fd=26))                           \ntcp   LISTEN 0      100       10.77.0.20:25         0.0.0.0:*    users:((\"smtpd\",pid=1269,fd=6),(\"master\",pid=1180,fd=13))  \ntcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*    users:((\"sshd\",pid=757,fd=6))                              \ntcp   LISTEN 0      4096       127.0.0.1:8025       0.0.0.0:*    users:((\"mailpit\",pid=738,fd=9))                           \ntcp   LISTEN 0      5          127.0.0.1:953        0.0.0.0:*    users:((\"named\",pid=1782,fd=29))                           \ntcp   LISTEN 0      5              [::1]:953           [::]:*    users:((\"named\",pid=1782,fd=30))                           \ntcp   LISTEN 0      128             [::]:22            [::]:*    users:((\"sshd\",pid=757,fd=7))                              \n",
+  "status": "passed-static-runtime-gate",
+  "limits": "Still requires positive and negative lab-local connectivity and observed authentication."
+}

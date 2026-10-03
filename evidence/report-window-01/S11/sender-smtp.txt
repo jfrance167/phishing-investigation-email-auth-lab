@@ -1,0 +1,37 @@
+=== Trying 127.0.0.1:25...
+=== Connected to 127.0.0.1.
+<-  220 sender.sender.test ESMTP Postfix (Debian)
+ -> EHLO sender.sender.test
+<-  250-sender.sender.test
+<-  250-PIPELINING
+<-  250-SIZE 2097152
+<-  250-VRFY
+<-  250-ETRN
+<-  250-ENHANCEDSTATUSCODES
+<-  250-8BITMIME
+<-  250-DSN
+<-  250-SMTPUTF8
+<-  250 CHUNKING
+ -> MAIL FROM:<analyst@lookalike.test>
+<-  250 2.1.0 Ok
+ -> RCPT TO:<analyst@recipient.test>
+<-  250 2.1.5 Ok
+ -> DATA
+<-  354 End data with <CR><LF>.<CR><LF>
+ -> From: Campus Security Team <analyst@lookalike.test>
+ -> To: Analyst <analyst@recipient.test>
+ -> Subject: Synthetic S11 Authenticated lookalike/display impersonation
+ -> Message-ID: <S11@sender.test>
+ -> X-Lab-Scenario: S11
+ -> MIME-Version: 1.0
+ -> Content-Type: text/plain; charset=utf-8
+ -> X-Lab-Run: 3ed783aa6c864f0b80f1de149fef372d
+ -> 
+ -> Harmless synthetic lab content. No real credentials or attachments.
+ -> Urgent: review your fictional account at hxxps://portal[.]lookalike[.]test. Do not enter credentials.
+ -> 
+ -> .
+<-  250 2.0.0 Ok: queued as BBD53970
+ -> QUIT
+<-  221 2.0.0 Bye
+=== Connection closed with remote host.

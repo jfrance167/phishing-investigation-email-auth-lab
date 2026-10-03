@@ -1,0 +1,12 @@
+previous last report date is 1790812800
+Process date 20261002
+processing report batch 1 to 2 (of 2 total)
+got DMARC record: v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r, tld_flag=false, processed={[adkim] = r, [rua] = mailto:reports@recipient.test, [aspf] = r, [p] = none}
+process reporting domain sender.test: nil
+Cannot process reports for domain sender.test; invalid dmarc record
+got DMARC record: v=DMARC1; p=none; rua=mailto:reports@recipient.test, tld_flag=false, processed={[rua] = mailto:reports@recipient.test, [p] = none}
+process reporting domain lookalike.test: nil
+Cannot process reports for domain lookalike.test; invalid dmarc record
+send data for 0 domains (from 1 to 0)
+cannot resolve sender.test._report._dmarc.recipient.test: no records with this name; exclude mailto:reports@recipient.test
+cannot resolve lookalike.test._report._dmarc.recipient.test: no records with this name; exclude mailto:reports@recipient.test

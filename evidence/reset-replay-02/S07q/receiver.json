@@ -1,0 +1,88 @@
+{
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790997586,
+    "queue_id": "5D22F40137",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "action": "quarantine",
+    "scenario_claim": "S07q",
+    "ip": "10.77.0.11",
+    "run_claim": "1ec3181b00354a239dc2c4ff511557ec",
+    "symbols": [
+        {
+            "group": "policies",
+            "weight": 0,
+            "name": "R_DKIM_NA",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "score": 0
+        },
+        {
+            "options": [
+                "-all"
+            ],
+            "group": "policies",
+            "weight": 1,
+            "name": "R_SPF_FAIL",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "score": 1
+        },
+        {
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "quarantine"
+            ],
+            "group": "policies",
+            "weight": 1,
+            "name": "DMARC_POLICY_QUARANTINE",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "score": 1.500000
+        }
+    ]
+}

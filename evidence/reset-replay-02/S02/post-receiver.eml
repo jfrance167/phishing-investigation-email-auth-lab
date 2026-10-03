@@ -1,0 +1,23 @@
+Return-Path: <analyst@sender.test>
+Received: from receiver.recipient.test (localhost [127.0.0.1])
+        by receiver (Mailpit) with SMTP
+        for <analyst@recipient.test>; Sat, 3 Oct 2026 03:19:24 +0000 (UTC)
+Received: from sender.sender.test (unknown [10.77.0.11])
+	by receiver.recipient.test (Postfix) with ESMTP id 9BD3240137
+	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:19:24 +0000 (UTC)
+Authentication-Results: receiver.recipient.test;
+	dkim=none;
+	spf=fail (receiver.recipient.test: domain of analyst@sender.test does not designate 10.77.0.11 as permitted sender) smtp.mailfrom=analyst@sender.test;
+	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=sender.test (policy=none)
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S02 Unauthorized unsigned envelope spoof
+Message-ID: <S02@sender.test>
+X-Lab-Scenario: S02
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: 1557000add0f4c36afa0e161ec6fc6a6
+X-Rspamd-Queue-Id: 9BD3240137
+
+Harmless synthetic lab content. No real credentials or attachments.
+

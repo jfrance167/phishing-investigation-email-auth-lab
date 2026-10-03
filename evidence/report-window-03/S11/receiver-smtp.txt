@@ -1,0 +1,57 @@
+=== Trying 10.77.0.20:25...
+=== Connected to 10.77.0.20.
+<-  220 receiver.recipient.test ESMTP Postfix (Debian)
+ -> EHLO sender.sender.test
+<-  250-receiver.recipient.test
+<-  250-PIPELINING
+<-  250-SIZE 2097152
+<-  250-VRFY
+<-  250-ETRN
+<-  250-ENHANCEDSTATUSCODES
+<-  250-8BITMIME
+<-  250-DSN
+<-  250-SMTPUTF8
+<-  250 CHUNKING
+ -> MAIL FROM:<analyst@lookalike.test>
+<-  250 2.1.0 Ok
+ -> RCPT TO:<analyst@recipient.test>
+<-  250 2.1.5 Ok
+ -> DATA
+<-  354 End data with <CR><LF>.<CR><LF>
+ -> Received: from sender.sender.test (localhost [127.0.0.1])
+ -> 	by sender.sender.test (Postfix) with ESMTP id E37E299F
+ -> 	for <analyst@recipient.test>; Sat, 03 Oct 2026 03:21:50 +0000 (UTC)
+ -> DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=lookalike.test;
+ -> 	s=lab1; t=1790997711;
+ -> 	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ -> 	 to:to:cc:mime-version:mime-version:content-type:content-type;
+ -> 	bh=QIV+ZrFwumbppgbZQbhxAZ9xkkRZXYcF/six+ph2nME=;
+ -> 	b=TOJU6lJnRVusUUU3LNNEor8khTUhEoYzcI1XxsHFcGe6iFKrA+CcjRim2iyl4oqwEGcs60
+ -> 	Za+9Tk9MKoxABMLm7GV8gkh9+xyU8YG7Ud5N1aDWZbNfh4N0chDGV7DnD719Kd3IQy+Hxg
+ -> 	HBbu8BPmdE7zm2D6TatSG9SyneYl/BTVFMKUoUqCpA3i7bA5O8u+AidnOefRZ5v/7SIsOe
+ -> 	kHNK2ta/Fe5HQHKzcjayMniwvZd4vtm7FadFPGBU0xjfivlUu71xMQlk33oqha0SPIww/i
+ -> 	OyJiK7WI8f7Z4lx1d07as6eV+t9mFlKoN1k+w1xcKPA0vWZzwRM28cQKs2EsAg==
+ -> Authentication-Results: sender.sender.test;
+ -> 	dkim=none;
+ -> 	spf=fail (sender.sender.test: domain of analyst@lookalike.test does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=analyst@lookalike.test;
+ -> 	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=lookalike.test (policy=none)
+ -> From: Campus Security Team <analyst@lookalike.test>
+ -> To: Analyst <analyst@recipient.test>
+ -> Subject: Synthetic S11 Authenticated lookalike/display impersonation
+ -> Message-ID: <S11@sender.test>
+ -> X-Lab-Scenario: S11
+ -> MIME-Version: 1.0
+ -> Content-Type: text/plain; charset=utf-8
+ -> X-Lab-Run: 9b30d506a2454e9c83a56828fff271f5
+ -> Date: Sat, 03 Oct 2026 03:21:50 +0000 (UTC)
+ -> X-Rspamd-Queue-Id: E37E299F
+ -> 
+ -> Harmless synthetic lab content. No real credentials or attachments.
+ -> Urgent: review your fictional account at hxxps://portal[.]lookalike[.]test. Do not enter credentials.
+ -> 
+ -> 
+ -> .
+<-  250 2.0.0 Ok: queued as 690F6401A3
+ -> QUIT
+<-  221 2.0.0 Bye
+=== Connection closed with remote host.

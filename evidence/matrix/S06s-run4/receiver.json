@@ -1,0 +1,117 @@
+{
+    "envelope_to": [
+        {
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>"
+        }
+    ],
+    "header_from": [
+        {
+            "user": "analyst",
+            "domain": "mail.sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@mail.sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@mail.sender.test>"
+        }
+    ],
+    "symbols": [
+        {
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 1,
+            "score": -0.100000,
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "name": "R_DKIM_ALLOW",
+            "group": "policies"
+        },
+        {
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "weight": 1,
+            "score": 0.100000,
+            "options": [
+                "mail.sender.test : SPF not aligned (strict), DKIM not aligned (strict)",
+                "none"
+            ],
+            "name": "DMARC_POLICY_SOFTFAIL",
+            "group": "policies"
+        },
+        {
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "weight": 1,
+            "score": -0.200000,
+            "options": [
+                "+ip4:10.77.0.10"
+            ],
+            "name": "R_SPF_ALLOW",
+            "group": "policies"
+        },
+        {
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 1,
+            "score": -0.100000,
+            "options": [
+                "relaxed"
+            ],
+            "name": "R_DKIM_ALIGNED",
+            "group": "policies"
+        },
+        {
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0,
+            "score": 0,
+            "options": [
+                "sender.test:+"
+            ],
+            "name": "DKIM_TRACE",
+            "group": "policies"
+        }
+    ],
+    "scenario_claim": "S06s",
+    "run_claim": "36521985716c4c959d5f74effc85eeb9",
+    "action": "no action",
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790953201,
+    "helo": "sender.sender.test",
+    "queue_id": "EA23E4013A",
+    "ip": "10.77.0.10",
+    "envelope_from": [
+        {
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>"
+        }
+    ]
+}

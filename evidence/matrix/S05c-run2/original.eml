@@ -1,0 +1,9 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S05c Changed signed subject
+Message-ID: <S05c@sender.test>
+X-Lab-Scenario: S05c
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Harmless synthetic lab content. No real credentials or attachments.

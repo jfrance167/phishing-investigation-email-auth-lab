@@ -1,0 +1,17 @@
+test_forged_own_authserv_and_conflicting_headers_remain_claims (test_evidence.EvidenceTests.test_forged_own_authserv_and_conflicting_headers_remain_claims) ... ok
+test_malformed_receiver_input_is_rejected (test_evidence.EvidenceTests.test_malformed_receiver_input_is_rejected) ... ok
+test_manifest_detects_tamper_addition_and_removal (test_evidence.EvidenceTests.test_manifest_detects_tamper_addition_and_removal) ... ok
+test_oversized_untrusted_message_is_rejected (test_evidence.EvidenceTests.test_oversized_untrusted_message_is_rejected) ... ok
+test_receiver_record_does_not_infer_disposition_from_policy (test_evidence.EvidenceTests.test_receiver_record_does_not_infer_disposition_from_policy) ... ok
+test_forward_retains_bytes_and_footer_changes_body_only (test_relay.RelayTests.test_forward_retains_bytes_and_footer_changes_body_only) ... ok
+test_hostile_claims_cannot_select_files_or_transformations (test_relay.RelayTests.test_hostile_claims_cannot_select_files_or_transformations) ... ok
+test_expansion_and_entities_are_rejected (test_reports.ReportBoundaryTests.test_expansion_and_entities_are_rejected) ... ok
+test_unrelated_xml_and_missing_attachment_are_rejected (test_reports.ReportBoundaryTests.test_unrelated_xml_and_missing_attachment_are_rejected) ... ok
+test_all_predefined_cases_obey_boundaries (test_scenario_boundaries.ScenarioBoundaryTests.test_all_predefined_cases_obey_boundaries) ... ok
+test_dns_policy_follows_ttl_even_after_windows_newline_translations (test_scenario_boundaries.ScenarioBoundaryTests.test_dns_policy_follows_ttl_even_after_windows_newline_translations) ... ok
+test_shell_and_network_boundary_fields_are_rejected (test_scenario_boundaries.ScenarioBoundaryTests.test_shell_and_network_boundary_fields_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.041s
+
+OK

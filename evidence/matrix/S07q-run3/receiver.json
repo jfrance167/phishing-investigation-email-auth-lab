@@ -1,0 +1,88 @@
+{
+    "source": "receiver-rspamd-milter",
+    "run_claim": "394ea4e59bc540118148e91a4e713f83",
+    "action": "quarantine",
+    "queue_id": "7ECDE4013B",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "domain": "sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "envelope_to": [
+        {
+            "domain": "recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "domain": "sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "addr": "analyst@sender.test"
+        }
+    ],
+    "collected_unix": 1790953039,
+    "scenario_claim": "S07q",
+    "symbols": [
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "R_DKIM_NA",
+            "weight": 0,
+            "score": 0
+        },
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "name": "R_SPF_FAIL",
+            "weight": 1,
+            "score": 1,
+            "options": [
+                "-all"
+            ]
+        },
+        {
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "name": "DMARC_POLICY_QUARANTINE",
+            "weight": 1,
+            "score": 1.500000,
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "quarantine"
+            ]
+        }
+    ],
+    "ip": "10.77.0.11"
+}

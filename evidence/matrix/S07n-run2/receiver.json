@@ -1,0 +1,87 @@
+{
+    "header_from": [
+        {
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": "Synthetic Lab Analyst"
+        }
+    ],
+    "ip": "10.77.0.11",
+    "scenario_claim": "S07n",
+    "symbols": [
+        {
+            "group": "policies",
+            "options": [
+                "sender.test : No valid SPF, No valid DKIM",
+                "none"
+            ],
+            "weight": 1,
+            "score": 0.100000,
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "name": "DMARC_POLICY_SOFTFAIL"
+        },
+        {
+            "group": "policies",
+            "weight": 0,
+            "score": 0,
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "name": "R_DKIM_NA"
+        },
+        {
+            "group": "policies",
+            "options": [
+                "-all"
+            ],
+            "weight": 1,
+            "score": 1,
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "name": "R_SPF_FAIL"
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790952552,
+    "queue_id": "A0CB940114",
+    "action": "no action",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "raw": "<analyst@sender.test>",
+            "user": "analyst",
+            "domain": "sender.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@sender.test",
+            "name": ""
+        }
+    ],
+    "envelope_to": [
+        {
+            "raw": "<analyst@recipient.test>",
+            "user": "analyst",
+            "domain": "recipient.test",
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "addr": "analyst@recipient.test",
+            "name": ""
+        }
+    ]
+}

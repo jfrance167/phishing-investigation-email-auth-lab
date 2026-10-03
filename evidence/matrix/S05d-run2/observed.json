@@ -1,0 +1,55 @@
+{
+  "queue_id": "9C75840114",
+  "ip": "10.77.0.11",
+  "helo": "sender.sender.test",
+  "envelope_from": [
+    {
+      "name": "",
+      "raw": "<analyst@sender.test>",
+      "user": "analyst",
+      "domain": "sender.test",
+      "flags": {
+        "valid": true,
+        "braced": true
+      },
+      "addr": "analyst@sender.test"
+    }
+  ],
+  "envelope_to": [
+    {
+      "name": "",
+      "raw": "<analyst@recipient.test>",
+      "user": "analyst",
+      "domain": "recipient.test",
+      "flags": {
+        "valid": true,
+        "braced": true
+      },
+      "addr": "analyst@recipient.test"
+    }
+  ],
+  "scenario_claim": "S05d",
+  "recommended_action": "no action",
+  "spf": "fail",
+  "dkim": "permerror",
+  "dmarc": "fail",
+  "symbols": {
+    "DMARC_POLICY_SOFTFAIL": [
+      "sender.test : No valid SPF",
+      "none"
+    ],
+    "R_SPF_FAIL": [
+      "-all"
+    ],
+    "R_DKIM_PERMFAIL": [
+      "sender.test:s=lab1"
+    ],
+    "DKIM_TRACE": [
+      "sender.test:~"
+    ]
+  },
+  "provenance_requirement": "Validate pinned-SSH receiver collection and queue-correlated SMTP/log/disposition evidence; this JSON cannot establish its own authenticity.",
+  "disposition": "delivered",
+  "expected_match": true,
+  "swaks_exit": 0
+}

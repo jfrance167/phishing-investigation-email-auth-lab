@@ -1,0 +1,36 @@
+=== Trying 10.77.0.20:25...
+=== Connected to 10.77.0.20.
+<-  220 receiver.recipient.test ESMTP Postfix (Debian)
+ -> EHLO sender.sender.test
+<-  250-receiver.recipient.test
+<-  250-PIPELINING
+<-  250-SIZE 2097152
+<-  250-VRFY
+<-  250-ETRN
+<-  250-ENHANCEDSTATUSCODES
+<-  250-8BITMIME
+<-  250-DSN
+<-  250-SMTPUTF8
+<-  250 CHUNKING
+ -> MAIL FROM:<analyst@sender.test>
+<-  250 2.1.0 Ok
+ -> RCPT TO:<analyst@recipient.test>
+<-  250 2.1.5 Ok
+ -> DATA
+<-  354 End data with <CR><LF>.<CR><LF>
+ -> From: Synthetic Lab Analyst <analyst@sender.test>
+ -> To: Analyst <analyst@recipient.test>
+ -> Subject: Synthetic S07q Failed DMARC quarantine
+ -> Message-ID: <S07q@sender.test>
+ -> X-Lab-Scenario: S07q
+ -> MIME-Version: 1.0
+ -> Content-Type: text/plain; charset=utf-8
+ -> X-Lab-Run: 1ec3181b00354a239dc2c4ff511557ec
+ -> 
+ -> Harmless synthetic lab content. No real credentials or attachments.
+ -> 
+ -> .
+<-  250 2.0.0 Ok: queued as 5D22F40137
+ -> QUIT
+<-  221 2.0.0 Bye
+=== Connection closed with remote host.

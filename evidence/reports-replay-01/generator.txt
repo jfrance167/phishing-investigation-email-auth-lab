@@ -1,0 +1,318 @@
+previous last report date is 1790997552
+Process date 20261003
+processing report batch 1 to 2 (of 2 total)
+got DMARC record: v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r, tld_flag=false, processed={[aspf] = r, [rua] = mailto:reports@recipient.test, [p] = none, [adkim] = r}
+process reporting domain sender.test: {[sp] = none, [rua] = {[1] = reports@recipient.test}, [p] = none, [pct] = 100, [adkim] = r, [aspf] = r}
+got xml: <?xml version="1.0" encoding="UTF-8" ?>
+<feedback>
+  <report_metadata>
+    <org_name>Disposable email lab</org_name>
+    <email>reports@recipient.test</email>
+    <report_id>sender.test.1790997552.1790997679</report_id>
+    <date_range>
+      <begin>1790997552</begin>
+      <end>1790997679</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>sender.test</domain>
+    <adkim>r</adkim>
+    <aspf>r</aspf>
+    <p>none</p>
+    <sp>none</sp>
+    <pct>100</pct>
+  </policy_published>
+<record>
+  <row>
+    <source_ip>10.77.0.10</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>fail</dkim>
+      <spf>pass</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <dkim>
+      <domain>sender.test</domain>
+      <result>fail</result>
+    </dkim>
+    <spf>
+      <domain>sender.test</domain>
+      <result>pass</result>
+    </spf>
+  </auth_results>
+</record>
+<record>
+  <row>
+    <source_ip>10.77.0.10</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>pass</dkim>
+      <spf>pass</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <dkim>
+      <domain>sender.test</domain>
+      <result>pass</result>
+    </dkim>
+    <spf>
+      <domain>sender.test</domain>
+      <result>pass</result>
+    </spf>
+  </auth_results>
+</record>
+<record>
+  <row>
+    <source_ip>10.77.0.11</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>quarantine</disposition>
+      <dkim>fail</dkim>
+      <spf>fail</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <spf>
+      <domain>sender.test</domain>
+      <result>fail</result>
+    </spf>
+  </auth_results>
+</record>
+<record>
+  <row>
+    <source_ip>10.77.0.11</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>reject</disposition>
+      <dkim>fail</dkim>
+      <spf>fail</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <spf>
+      <domain>sender.test</domain>
+      <result>fail</result>
+    </spf>
+  </auth_results>
+</record>
+<record>
+  <row>
+    <source_ip>10.77.0.30</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>fail</dkim>
+      <spf>fail</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <dkim>
+      <domain>sender.test</domain>
+      <result>fail</result>
+    </dkim>
+    <spf>
+      <domain>sender.test</domain>
+      <result>fail</result>
+    </spf>
+  </auth_results>
+</record>
+<record>
+  <row>
+    <source_ip>10.77.0.30</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>pass</dkim>
+      <spf>fail</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <dkim>
+      <domain>sender.test</domain>
+      <result>pass</result>
+    </dkim>
+    <spf>
+      <domain>sender.test</domain>
+      <result>fail</result>
+    </spf>
+  </auth_results>
+</record>
+<record>
+  <row>
+    <source_ip>10.77.0.11</source_ip>
+    <count>2</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>fail</dkim>
+      <spf>fail</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>sender.test</header_from>
+  </identifiers>
+  <auth_results>
+    <spf>
+      <domain>sender.test</domain>
+      <result>fail</result>
+    </spf>
+  </auth_results>
+</record>
+</feedback>
+got final message: From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Bcc: reports@recipient.test
+Subject: Report Domain: sender.test
+	Submitter: recipient.test
+	Report-ID: sender.test.1790997552.1790997679
+Date: Sat, 03 Oct 2026 03:21:19 GMT
+MIME-Version: 1.0
+Message-ID: <64403c267c7dc5da@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_aa360120-fea7-45f8-ab8a-545226f05553"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+
+This is a multipart message in MIME format.
+
+------=_NextPart_aa360120-fea7-45f8-ab8a-545226f05553
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: sender.test
+Submitter: recipient.test
+Report ID: sender.test.1790997552.1790997679
+
+------=_NextPart_aa360120-fea7-45f8-ab8a-545226f05553
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!sender.test!1790997552!1790997679.xml.gz"
+
+H4sIAAAAAAAAA+1XTW/UMBC991dEeydOikpYyXU5IH4BnCMnnuyaJraxnQL/nknsZBPYClEVi
+BZOa78Zv/l441hL7750bfIA1kmtbnd5mu0SULUWUh1udx/ev3vxepfcsSvaAIiK1/fsKkmoBa
+OtLzvwXHDPBwxRbQ+l4h2wt9IZ7XjVQgIdl23S8oqS2Ry8RwsLTO6NhVoaCcqnHpynJFiDZ4w
+mBXOgBNjRJc2LfbbfFzc319PyVbGn5OQcDmN+UFquDjEuQhUcpGKn85QEZLJjELakHPaBjKzZ
+5mjLRlCjW1l/LU1ftdIdYU5EY0lqWQLSBSw4cHEvO2YpCYsIOtOM2PAbIMOUVkCJiXs3AW5CT
+O1ZnmXogosxzx9zwq7W2oogp/48cene1lBKg+fTokizNEeaExq8at0rjEBJWMSgIQQ88LbHLo
+m5nWKcBulxwGKiS2T2GmpuUHQ0z+WP1TXMcOeG8qYOkHOxUIxQBpUC50g2Eoc6HjgCx6aXjdX
+dWoClYeT47izlvT+WFlzf+olsld7PVB3Hdzgda4ubaZxOQs/V/RJp6MyaNDLhzKxyH9yC4puU
+PlRymdKfU2nj0ufPKf2nnuM308un3P0Ab2UAnibVuau/UaksfITa/5fp2WV6uYF3dFsibekdv
+RzpH3lHL0L63/KO/qWP8/U/euv/pEhk/tP6Deh64yrnDgAA
+------=_NextPart_aa360120-fea7-45f8-ab8a-545226f05553--
+got DMARC record: v=DMARC1; p=none; rua=mailto:reports@recipient.test, tld_flag=false, processed={[p] = none, [rua] = mailto:reports@recipient.test}
+process reporting domain lookalike.test: {[sp] = none, [rua] = {[1] = reports@recipient.test}, [p] = none, [pct] = 100, [adkim] = r, [aspf] = r}
+got xml: <?xml version="1.0" encoding="UTF-8" ?>
+<feedback>
+  <report_metadata>
+    <org_name>Disposable email lab</org_name>
+    <email>reports@recipient.test</email>
+    <report_id>lookalike.test.1790997552.1790997679</report_id>
+    <date_range>
+      <begin>1790997552</begin>
+      <end>1790997679</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>lookalike.test</domain>
+    <adkim>r</adkim>
+    <aspf>r</aspf>
+    <p>none</p>
+    <sp>none</sp>
+    <pct>100</pct>
+  </policy_published>
+<record>
+  <row>
+    <source_ip>10.77.0.10</source_ip>
+    <count>1</count>
+    <policy_evaluated>
+      <disposition>none</disposition>
+      <dkim>pass</dkim>
+      <spf>pass</spf>
+    </policy_evaluated>
+  </row>
+  <identifiers>
+    <header_from>lookalike.test</header_from>
+  </identifiers>
+  <auth_results>
+    <dkim>
+      <domain>lookalike.test</domain>
+      <result>pass</result>
+    </dkim>
+    <spf>
+      <domain>lookalike.test</domain>
+      <result>pass</result>
+    </spf>
+  </auth_results>
+</record>
+</feedback>
+got final message: From: "Rspamd" <reports@recipient.test>
+To: reports@recipient.test
+Bcc: reports@recipient.test
+Subject: Report Domain: lookalike.test
+	Submitter: recipient.test
+	Report-ID: lookalike.test.1790997552.1790997679
+Date: Sat, 03 Oct 2026 03:21:19 GMT
+MIME-Version: 1.0
+Message-ID: <acee06dc706e2d0b@rspamd>
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_b5a94fa8-6e12-40fd-b2b5-41101dc563cc"
+Auto-Submitted: auto-generated
+Precedence: bulk
+X-Auto-Response-Suppress: All
+
+This is a multipart message in MIME format.
+
+------=_NextPart_b5a94fa8-6e12-40fd-b2b5-41101dc563cc
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is an aggregate report from recipient.test.
+
+Report domain: lookalike.test
+Submitter: recipient.test
+Report ID: lookalike.test.1790997552.1790997679
+
+------=_NextPart_b5a94fa8-6e12-40fd-b2b5-41101dc563cc
+Content-Type: application/gzip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="recipient.test!lookalike.test!1790997552!1790997679.xml.gz"
+
+H4sIAAAAAAAAA61TwW7bMAy99yuM3Gc5BTo3gKL2MPQLtrMhW3RCRJYESW63vx9tyXbS9tBDT
+6YeyUc+kuZPfwddvIIPaM1xty+rXQGmswrN6bj78/vlx+OueBJ3vAdQrewu4q4ouAdnfWwGiF
+LJKCeMUOtPjZEDiF8YnA2y1VDAIFEXWracre4UPXtEYgrPHjp0CCaWEULkLHlTZK6GSmhrL1L
+jBeaocl8fqsOhfni4X8yf9YGzLT7lU4vQeGlOuTRBLZzQiC2fs4QsfjBKXFNO70TGbtnWatez
+4M5q7P41bmw1hjOsjVhSZd6pIMYEpxipLjgIz1kyMhhcP2PTN0FOGGuAM5ffYQHCgrguin1VU
+QgZc6sf26LZdtartFT7tnDZ0XfQoKP8sq7LqtwTzYamqM6OhipwloxcNJWAV6lHGpRaJ6rmm8
+BIZ5YbvUbWqEmzkyGQe5U/q+szvE2AfVaL9pFkcFR0TdgjnXZOOINU4Jve2+HDDq59M827dC7
+HeG48hFHHhe+mwy/sdj7liSBLyY/lrrZ1rxq/gzeT0fHcKJjC0uo5W//t/9VTJ64OBAAA
+------=_NextPart_b5a94fa8-6e12-40fd-b2b5-41101dc563cc--
+send data for 2 domains (from 1 to 2)
+successfully sent a report for sender.test: 1829 bytes sent
+successfully sent a report for lookalike.test: 1716 bytes sent
+set last report date to 1790997679
+Reporting collection has finished 1 dates processed, 2 reports: 2 completed, 0 failed

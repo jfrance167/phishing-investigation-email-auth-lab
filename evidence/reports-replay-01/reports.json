@@ -1,0 +1,82 @@
+[
+  {
+    "domain": "lookalike.test",
+    "begin": 1790997552,
+    "end": 1790997679,
+    "rows": [
+      {
+        "source_ip": "10.77.0.10",
+        "count": 1,
+        "disposition": "none",
+        "aligned_spf": "pass",
+        "aligned_dkim": "pass",
+        "header_from": "lookalike.test"
+      }
+    ],
+    "capture_id": "2EiLZYWEk159abMfsVUcfd"
+  },
+  {
+    "domain": "sender.test",
+    "begin": 1790997552,
+    "end": 1790997679,
+    "rows": [
+      {
+        "source_ip": "10.77.0.10",
+        "count": 1,
+        "disposition": "none",
+        "aligned_spf": "pass",
+        "aligned_dkim": "fail",
+        "header_from": "sender.test"
+      },
+      {
+        "source_ip": "10.77.0.10",
+        "count": 1,
+        "disposition": "none",
+        "aligned_spf": "pass",
+        "aligned_dkim": "pass",
+        "header_from": "sender.test"
+      },
+      {
+        "source_ip": "10.77.0.11",
+        "count": 1,
+        "disposition": "quarantine",
+        "aligned_spf": "fail",
+        "aligned_dkim": "fail",
+        "header_from": "sender.test"
+      },
+      {
+        "source_ip": "10.77.0.11",
+        "count": 1,
+        "disposition": "reject",
+        "aligned_spf": "fail",
+        "aligned_dkim": "fail",
+        "header_from": "sender.test"
+      },
+      {
+        "source_ip": "10.77.0.30",
+        "count": 1,
+        "disposition": "none",
+        "aligned_spf": "fail",
+        "aligned_dkim": "fail",
+        "header_from": "sender.test"
+      },
+      {
+        "source_ip": "10.77.0.30",
+        "count": 1,
+        "disposition": "none",
+        "aligned_spf": "fail",
+        "aligned_dkim": "pass",
+        "header_from": "sender.test"
+      },
+      {
+        "source_ip": "10.77.0.11",
+        "count": 2,
+        "disposition": "none",
+        "aligned_spf": "fail",
+        "aligned_dkim": "fail",
+        "header_from": "sender.test"
+      }
+    ],
+    "capture_id": "5TGnCAjPwGEwMAUB1XpsRj"
+  }
+]

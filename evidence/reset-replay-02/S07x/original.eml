@@ -1,0 +1,10 @@
+From: Synthetic Lab Analyst <analyst@sender.test>
+To: Analyst <analyst@recipient.test>
+Subject: Synthetic S07x Failed DMARC reject
+Message-ID: <S07x@sender.test>
+X-Lab-Scenario: S07x
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+X-Lab-Run: b2c40cd4c8194a088a6b433aaa98c410
+
+Harmless synthetic lab content. No real credentials or attachments.

@@ -1,0 +1,69 @@
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 7191
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: fc162f332d3bfe2b010000006abfc6567ae56354a5605247 (good)
+;; QUESTION SECTION:
+;sender.test.			IN	TXT
+
+;; AUTHORITY SECTION:
+test.			30	IN	SOA	ns.recipient.test. analyst.recipient.test. 2026100101 30 30 3600 30
+
+;; Query time: 4 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Fri Oct 02 14:57:26 UTC 2026
+;; MSG SIZE  rcvd: 125
+
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 _dmarc.sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2173
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 689609be98b6c75e010000006abfc6561720fdde35a4ff6f (good)
+;; QUESTION SECTION:
+;_dmarc.sender.test.		IN	TXT
+
+;; ANSWER SECTION:
+_dmarc.sender.test.	30	IN	TXT	"v=DMARC1; p=none; rua=mailto:reports@recipient.test; adkim=r; aspf=r"
+
+;; Query time: 0 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Fri Oct 02 14:57:26 UTC 2026
+;; MSG SIZE  rcvd: 156
+
+
+; <<>> DiG 9.20.29-1~deb13u1-Debian <<>> @10.77.0.20 lab1._domainkey.sender.test TXT
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8685
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: f2275c48466cb3d2010000006abfc6569ab479b16e9f3d07 (good)
+;; QUESTION SECTION:
+;lab1._domainkey.sender.test.	IN	TXT
+
+;; ANSWER SECTION:
+lab1._domainkey.sender.test. 30	IN	TXT	"v=DKIM1; k=rsa; " "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwwJ5N+Vlpns5X5aXNMNeg8ySGkGjIl9m2oDpdlgAhvHD3KVRpZGRt0DuYtQwY+U8aF6s9Pb91X4cbsMy2lGQNumwPYPnUwpH7qG9+5E8UiS/7EhLoX3nmdTiW1YC1oUjRnWgWyVIGEohxARRDWneCKOduy5dIaFEg1p2Lij+31Rx9Gci17U1DwEpAXFJiAbOwZ5iUpZ9r+HXiP9dw" "1MmyM5sX0+9s829+Utz/ywSjc5SKvempqQ9GkWKmGa/iAoyV9AuNr3RLHTa+TRZjVDWeGnpVgEHPgL5fX0QDSiNKmdZMNllrRYY4uX9P3Bg4ITIbIQcM3lKS8dct0GvUEPxJwIDAQAB"
+
+;; Query time: 0 msec
+;; SERVER: 10.77.0.20#53(10.77.0.20) (UDP)
+;; WHEN: Fri Oct 02 14:57:26 UTC 2026
+;; MSG SIZE  rcvd: 509
+

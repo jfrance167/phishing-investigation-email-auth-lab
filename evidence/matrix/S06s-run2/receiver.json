@@ -1,0 +1,102 @@
+{
+    "envelope_to": [
+        {
+            "domain": "recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "user": "analyst",
+            "addr": "analyst@recipient.test"
+        }
+    ],
+    "header_from": [
+        {
+            "domain": "mail.sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@mail.sender.test>",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "user": "analyst",
+            "addr": "analyst@mail.sender.test"
+        }
+    ],
+    "action": "no action",
+    "scenario_claim": "S06s",
+    "symbols": [
+        {
+            "score": -0.100000,
+            "options": [
+                "sender.test:s=lab1"
+            ],
+            "name": "R_DKIM_ALLOW",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 1
+        },
+        {
+            "score": 0,
+            "options": [
+                "mail.sender.test"
+            ],
+            "name": "DMARC_NA",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "weight": 0
+        },
+        {
+            "score": -0.200000,
+            "options": [
+                "+ip4:10.77.0.10"
+            ],
+            "name": "R_SPF_ALLOW",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "weight": 1
+        },
+        {
+            "score": 0,
+            "options": [
+                "sender.test:+"
+            ],
+            "name": "DKIM_TRACE",
+            "group": "policies",
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0
+        }
+    ],
+    "source": "receiver-rspamd-milter",
+    "collected_unix": 1790952545,
+    "ip": "10.77.0.10",
+    "queue_id": "7672F40114",
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "domain": "sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>",
+            "flags": {
+                "braced": true,
+                "valid": true
+            },
+            "user": "analyst",
+            "addr": "analyst@sender.test"
+        }
+    ]
+}

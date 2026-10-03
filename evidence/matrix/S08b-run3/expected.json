@@ -1,0 +1,14 @@
+{
+  "id": "S08b",
+  "name": "Malformed duplicate DMARC",
+  "from": "sender.test",
+  "envelope": "sender.test",
+  "ip": "10.77.0.11",
+  "signed": false,
+  "dns": "duplicate-dmarc",
+  "spf": "fail",
+  "dkim": "none",
+  "dmarc": "permerror",
+  "policy": "none",
+  "disposition": "delivered"
+}

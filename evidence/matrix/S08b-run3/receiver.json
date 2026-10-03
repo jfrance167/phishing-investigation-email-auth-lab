@@ -1,0 +1,87 @@
+{
+    "helo": "sender.sender.test",
+    "envelope_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "domain": "sender.test",
+            "addr": "analyst@sender.test",
+            "name": "",
+            "raw": "<analyst@sender.test>"
+        }
+    ],
+    "envelope_to": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "domain": "recipient.test",
+            "addr": "analyst@recipient.test",
+            "name": "",
+            "raw": "<analyst@recipient.test>"
+        }
+    ],
+    "header_from": [
+        {
+            "flags": {
+                "valid": true,
+                "braced": true
+            },
+            "user": "analyst",
+            "domain": "sender.test",
+            "addr": "analyst@sender.test",
+            "name": "Synthetic Lab Analyst",
+            "raw": "<analyst@sender.test>"
+        }
+    ],
+    "collected_unix": 1790953055,
+    "scenario_claim": "S08b",
+    "run_claim": "21748e433d9847d0ae0910069b364d55",
+    "ip": "10.77.0.11",
+    "source": "receiver-rspamd-milter",
+    "symbols": [
+        {
+            "groups": [
+                "policies",
+                "dkim"
+            ],
+            "weight": 0,
+            "score": 0,
+            "name": "R_DKIM_NA",
+            "group": "policies"
+        },
+        {
+            "groups": [
+                "policies",
+                "spf"
+            ],
+            "options": [
+                "-all"
+            ],
+            "weight": 1,
+            "score": 1,
+            "name": "R_SPF_FAIL",
+            "group": "policies"
+        },
+        {
+            "groups": [
+                "policies",
+                "dmarc"
+            ],
+            "options": [
+                "sender.test : Multiple policies defined in DNS"
+            ],
+            "weight": 0,
+            "score": 0,
+            "name": "DMARC_BAD_POLICY",
+            "group": "policies"
+        }
+    ],
+    "action": "no action",
+    "queue_id": "C8A2040142"
+}

@@ -1,0 +1,35 @@
+=== Trying 127.0.0.1:25...
+=== Connected to 127.0.0.1.
+<-  220 sender.sender.test ESMTP Postfix (Debian)
+ -> EHLO sender.sender.test
+<-  250-sender.sender.test
+<-  250-PIPELINING
+<-  250-SIZE 2097152
+<-  250-VRFY
+<-  250-ETRN
+<-  250-ENHANCEDSTATUSCODES
+<-  250-8BITMIME
+<-  250-DSN
+<-  250-SMTPUTF8
+<-  250 CHUNKING
+ -> MAIL FROM:<analyst@sender.test>
+<-  250 2.1.0 Ok
+ -> RCPT TO:<analyst@recipient.test>
+<-  250 2.1.5 Ok
+ -> DATA
+<-  354 End data with <CR><LF>.<CR><LF>
+ -> From: Synthetic Lab Analyst <analyst@sender.test>
+ -> To: Analyst <analyst@recipient.test>
+ -> Subject: Synthetic S05a Changed body with aligned SPF remaining
+ -> Message-ID: <S05a@sender.test>
+ -> X-Lab-Scenario: S05a
+ -> MIME-Version: 1.0
+ -> Content-Type: text/plain; charset=utf-8
+ -> 
+ -> Harmless synthetic lab content. No real credentials or attachments.
+ -> 
+ -> .
+<-  250 2.0.0 Ok: queued as D39DC90E
+ -> QUIT
+<-  221 2.0.0 Bye
+=== Connection closed with remote host.

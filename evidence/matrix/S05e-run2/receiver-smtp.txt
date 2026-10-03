@@ -1,0 +1,55 @@
+=== Trying 10.77.0.20:25...
+=== Connected to 10.77.0.20.
+<-  220 receiver.recipient.test ESMTP Postfix (Debian)
+ -> EHLO sender.sender.test
+<-  250-receiver.recipient.test
+<-  250-PIPELINING
+<-  250-SIZE 2097152
+<-  250-VRFY
+<-  250-ETRN
+<-  250-ENHANCEDSTATUSCODES
+<-  250-8BITMIME
+<-  250-DSN
+<-  250-SMTPUTF8
+<-  250 CHUNKING
+ -> MAIL FROM:<analyst@sender.test>
+<-  250 2.1.0 Ok
+ -> RCPT TO:<analyst@recipient.test>
+<-  250 2.1.5 Ok
+ -> DATA
+<-  354 End data with <CR><LF>.<CR><LF>
+ -> Received: from sender.sender.test (localhost [127.0.0.1])
+ -> 	by sender.sender.test (Postfix) with ESMTP id D391990E
+ -> 	for <analyst@recipient.test>; Fri, 02 Oct 2026 14:48:39 +0000 (UTC)
+ -> DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sender.test; s=lab1;
+ -> 	t=1790952520;
+ -> 	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ -> 	 to:to:cc:mime-version:mime-version:content-type:content-type;
+ -> 	bh=F6/Z4+G9ScVE4XVokclfnPEtsf3vWF2T8Tukt3biHMI=;
+ -> 	b=CwbMcufA6qmtq/rk7/81/o0BwEyZA7QMUlTd7D3028AgZ00C2lFcbjjDLD71X3WQX53cI9
+ -> 	UUQNqoqB4/oWy+dJIypiYDYaFr5G5W37HRq5dszW+265drGeYckGHt2AH3PkM1RgEP6a9O
+ -> 	ulKek2PmEEL4VV/+5AS2nibnAswcwPd3X/TKu4fv6NbQnNcEuMN1l7j3rv33cGV5pcWN3W
+ -> 	EyxrYjt6mLBrLJvFMi0K/noI1xJMmxmgg5kWRiTa6zQJDjYSVyAQjhpiNEtwnnT/Q6H3zs
+ -> 	k9G6noB65I5Sc/GG9ePJOpeLPgYwqcmAArKtoGJnhjkyzHyyszlbH9iQ6daAhA==
+ -> Authentication-Results: sender.sender.test;
+ -> 	dkim=none;
+ -> 	spf=fail (sender.sender.test: domain of analyst@sender.test does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=analyst@sender.test;
+ -> 	dmarc=fail reason="No valid SPF, No valid DKIM" header.from=sender.test (policy=none)
+ -> From: Synthetic Lab Analyst <analyst@sender.test>
+ -> To: Analyst <analyst@recipient.test>
+ -> Subject: Synthetic S05e Wrong DKIM public key
+ -> Message-ID: <S05e@sender.test>
+ -> X-Lab-Scenario: S05e
+ -> MIME-Version: 1.0
+ -> Content-Type: text/plain; charset=utf-8
+ -> Date: Fri, 02 Oct 2026 14:48:39 +0000 (UTC)
+ -> X-Rspamd-Queue-Id: D391990E
+ -> 
+ -> Harmless synthetic lab content. No real credentials or attachments.
+ -> 
+ -> 
+ -> .
+<-  250 2.0.0 Ok: queued as C742840114
+ -> QUIT
+<-  221 2.0.0 Bye
+=== Connection closed with remote host.
