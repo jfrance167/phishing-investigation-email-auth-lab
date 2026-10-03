@@ -133,7 +133,7 @@ Independent human/security review remains required. Prepared CodeQL/test/Bandit 
 run on GitHub. After explicit publication approval, inspect visibility/default branch/CodeQL eligibility,
 enable applicable code and secret scanning/push protection/Dependabot, configure reviews/checks without
 weakening protections, run hosted checks and address findings. No remote settings were changed here.
-The relevant Obsidian milestone is saved as a pending note outside this repo; the vault was not updated.
+The October 3 portfolio review updated the Obsidian codebase/review notes. Raw evidence remains in Git; no credentials or operational inventory were imported.
 
 ## Portfolio review follow-up — October 3, 2026
 
